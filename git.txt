@@ -672,6 +672,14 @@ Push all branches (including new)
 
 	git push --all
 
+Push current branch and set it to automatically track the named remote branch
+
+    git push -u <remote> <branch>
+
+For example, to push to origin master and set your current branch to track master
+
+    git push -u origin master
+
 Show the name of the remote repository
 
 	git remote show
