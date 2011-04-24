@@ -1,9 +1,7 @@
 
 # Git
 
-Reference for working with Git.
-
-Examples in the code below include placeholders in the format of `<identifier>`. Replace these with your own text.
+Reference for working with [Git](http://git-scm.com/).
 
 ## Installing git
 
