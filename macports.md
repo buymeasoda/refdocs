@@ -1,10 +1,7 @@
 
 # MacPorts
 
-Reference for working with MacPorts.
-
-Examples in the code below include placeholders in the format of `<identifier>`. Replace these with your own text.
-
+Reference for working with [MacPorts](http://www.macports.org/).
 
 ## MacPorts help
 
