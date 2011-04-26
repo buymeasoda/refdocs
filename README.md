@@ -10,3 +10,4 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 
 * Git
 * MacPorts
+* MySQL
