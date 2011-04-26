@@ -3,7 +3,7 @@
 
 Reference for working with [MySQL](http://www.mysql.com/).
     
-For database, table and column names that are reserved words or irregular names, surround the names with backticks ` `` `. For string values, wrap the values with single `'` or double `"` quotes.
+For database, table and column names that are reserved words or irregular names, surround the names with backticks `` ` ``. For string values, wrap the values with single `'` or double `"` quotes.
 
 If you are operating on a local MySQL database, `<host>` in the examples below will be `localhost`.
 
