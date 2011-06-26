@@ -658,6 +658,10 @@ Clone a remote repository that requires a username
 
     git clone user@<host>:<path>
 
+Clone a remote repository without the history (retrieves the latest code version)
+
+    git clone --depth 1 <repourl>
+
 Pull changes from remote repo
 
     git pull
