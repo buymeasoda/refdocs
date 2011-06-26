@@ -677,6 +677,10 @@ Push current branch and set it to automatically track the named remote branch
 For example, to push to origin master and set your current branch to track master
 
     git push -u origin master
+    
+Assign the current branch to track the named remote branch
+
+    git branch --track <remote>/<branch> 
 
 Show the name of the remote repository
 
