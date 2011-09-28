@@ -74,7 +74,26 @@ Interactively stage files
 Interactive add allows selective staging, unstaging of changed files as well as partial commits of specific lines.
 Partial commits can be created by choosing the `patch` option and then specifying `split` to further refine chunks.
 After exiting interactive adding, you need to the commit the index.
-		
+
+Stage all tracked, changed files
+	
+	git add --update
+	git add -u
+
+Add all files in the current repository
+
+	git add -all
+	git add --A
+
+Add parts of the changes with each file (interactively add)
+
+	git add --patched
+	git add -p
+
+Open the current diff in text editor
+
+	git add -e
+
 ## Removing files from the index
 
 Removing a file from the index (unstaging files)
@@ -94,6 +113,11 @@ Discard local changes to a modified, unstaged file
 Discard local changes for all modified, unstaged files
 
 	git checkout -- .
+
+Remove newly added, but previously uncommitted, file from staged file list
+Only affects index not file
+
+	git rm --cached	
 		
 ## Committing changes
 
@@ -150,6 +174,10 @@ To force the removal of a file that has unsaved changes
 Rename file1 to file2 (Move occurs when committed)
 		
 	git mv <file1> <file2>
+
+Force overwrite of file2 with file1
+	
+	git mv -f <file1> <file2>
 		
 Show the full log history for a file that has been renamed. Without --follow, the log stops at the rename point		
 		
@@ -464,6 +492,10 @@ Force the deletion of a branch even if there are unmerged changes
 
 	git branch -D <branch>
 
+Delete a remote branch
+
+	git push <remote> :<branch>
+
 ## Renaming branches
 
 Rename an existing branch (-m merges current branch entirely into the new branch)
@@ -513,6 +545,10 @@ Conflicted files from a merge contain standard merge markers (`<<<<<<<`, `======
 Merge a specified branch into the current branch
 
 	git merge <branch>
+
+Merge a specified branch from a remote into the current branch
+
+	git merge <remote>/<branch>
 
 Switch to the specified branch and merge in the contents of the current branch (merge only occurs on filesystem, no commit is made)
 
@@ -577,6 +613,12 @@ Resolve conflicts by selecting wholesale our version (`--ours`), or their versio
 Check out a single file from another branch into the current branch
 
 	git checkout <otherbranch> <file>
+
+## Rebase branch
+
+Rebase takes the current branch, sets it to state of the target branch specified, the 'replays' all the branch change sets over the top.
+
+	git rebase master
 
 ## Create and manage tags
 
@@ -662,17 +704,30 @@ Clone a remote repository without the history (retrieves the latest code version
 
     git clone --depth 1 <repourl>
 
+Clone a remote repository to a given depth
+
+	git clone --depth <depth> <repourl>
+	
+Note: Repos created with depth limit cannot be recloned into new repos, but they are good for quick checkout and development 
+
 Pull changes from remote repo
 
     git pull
 
 Push current branch
+Pushing a local branch to a non-existant remote branch name will create the remote branch
 
 	git push
 
 Push all branches (including new)
 
 	git push --all
+
+To push and pull from specific remote repositories with the current active local branch
+
+	git pull <remote> <branch>
+	git push <remote> <branch>
+
 
 Push current branch and set it to automatically track the named remote branch
 
@@ -685,6 +740,10 @@ For example, to push to origin master and set your current branch to track maste
 Assign the current branch to track the named remote branch
 
     git branch --track <remote>/<branch> 
+
+Assign the current branch to track the named remote branch
+
+    git branch --track <local-branch> <remote>/<branch>
 
 Show the name of the remote repository
 
@@ -745,6 +804,10 @@ Append the SVN ignore info to the git exclude file
 Create a .gitignore file based on the SVN ignore output
 
 	git svn create-ignore
+
+The git-svn-id that is included in the log info of each commit reveals the upstream repo, branch and commit info. This is the svn area dcommits will get pushed to.
+ 
+	git-svn-id: svn://<url>/branches/<branch>@<svn-commit-id> <git-commit-id>
 
 # Git Bisect
 		
@@ -1011,7 +1074,17 @@ Pipe output from any command into TextMate (or another text editor)
 A visual view of the commit graph showing the repository history, commits and branches    
 
 	gitk
+
+Start and detach instance of gitk
+
+	gitk &
+
+## Utility Commands
+
+Clean up and compact repo
 	
+	git gc
+
 # Good git GUI clients
 
 * [Git Tower](http://www.git-tower.com)
