@@ -1,6 +1,10 @@
 
 # System and user information
 
+Show distrubtion specific version information
+
+	cat /etc/lsb-release
+
 Display system uptime, memory, who is logged in and what they are doing
 
 	w
@@ -9,9 +13,13 @@ Display your current username
 
 	whoami
 
-Display the machine hostname
+Display the machine short hostname
 
 	hostname
+
+Display the machine fully qualified hostname
+
+	hostname -f
 
 Display the Unix system type being used
 
@@ -20,6 +28,14 @@ Display the Unix system type being used
 Display real time information about process
 
 	top
+
+Display detailed real time information about the system
+
+	htop
+
+Show memory usage (in megabytes)
+
+	free -m
 
 Show list of running processes
 
@@ -32,6 +48,14 @@ Network settings including computer IP
 Output key / value pairs of current environment variables
 
 	env
+
+Log files location
+
+	/var/log
+
+System uptime statistics
+
+	uptime
 
 Caclulate total disk usage / size for a folder
 
