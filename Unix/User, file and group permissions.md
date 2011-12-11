@@ -1,5 +1,11 @@
 # User, file and group permissions
 
+## Managing users
+
+Create a new user
+
+	adduser <username>
+
 ## File permissions
 
 Change file mode and access control
