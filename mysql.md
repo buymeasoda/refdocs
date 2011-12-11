@@ -8,6 +8,21 @@ For database, table and column names that are reserved words or irregular names,
 If you are operating on a local MySQL database, `<host>` in the examples below will be `localhost`.
 
 
+## Install MySQL Server
+
+    sudo apt-get install mysql-server
+    mysql_secure_installation
+
+
+## Control MySQL Server
+
+Start, stop and restart MySQL Server
+
+    sudo service mysql start
+    sudo service mysql stop
+    sudo service mysql restart
+
+
 ## Logging in and out
 
 Log into MySQL as `root`
@@ -20,7 +35,18 @@ Log into MySQL as `<user>`
     
 Exit MySQL
 
-    mysql> exit;
+    mysql> exit
+
+
+## Database files
+
+Location of MySQL databases
+
+    /var/lib/mysql
+
+Report total size of MySQL databases
+
+    sudo du -skh /var/lib/mysql
 
 
 ## Managing Users
@@ -204,6 +230,10 @@ Output MySQL settings
 
 
 ## Setting up server for utf8
+
+Show current character set configuration
+
+    mysql> show variables like 'char%';
 
 Configuring MySQL utf8
 
