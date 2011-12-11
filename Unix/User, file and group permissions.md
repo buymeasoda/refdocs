@@ -6,6 +6,10 @@ Create a new user
 
 	adduser <username>
 
+Change password for active user
+
+	passwd
+
 ## File permissions
 
 Change file mode and access control
