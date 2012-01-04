@@ -1085,7 +1085,16 @@ Clean up and compact repo
 	
 	git gc
 
+# Generating summary reports for a repository
+
+## Git statistics commands
+
+Show total commits per user
+
+	git shortlog -s -n
+
 # Good git GUI clients
 
 * [Git Tower](http://www.git-tower.com)
+* [Source Tree](http://www.sourcetreeapp.com/)
 * [GitX](http://gitx.laullon.com/) (Laullon fork)
