@@ -63,3 +63,14 @@ Word, line, character and byte count for file or piped input
 General maths interpreter (allows general equations entered into command line)
 
 	bc
+
+### Show files with non-ascii characters
+
+	grep -P "[\x80-\xFF]" <files>
+
+### Show line endings for files
+
+Unix: ASCII text
+DOS: ASCII text, with CRLF line terminators
+
+	file <file>
