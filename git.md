@@ -1089,9 +1089,17 @@ Clean up and compact repo
 
 ## Git statistics commands
 
-Show total commits per user
+Show all commit messages, grouped together by user
+
+	git shortlog
+
+Show total commit count per user
 
 	git shortlog -s -n
+
+Show total number of files changed, lines inserted and deleted
+
+	git diff <commit> --shortstat
 
 # Good git GUI clients
 
