@@ -496,6 +496,14 @@ Delete a remote branch
 
 	git push <remote> :<branch>
 
+Show stale remote branches from local (branches deleted from origin, which still exist locally)
+
+	git remote prune origin --dry-run
+
+Remove stale remote branches from local
+
+	git remote prune origin
+
 ## Renaming branches
 
 Rename an existing branch (-m merges current branch entirely into the new branch)
