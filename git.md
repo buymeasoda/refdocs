@@ -494,6 +494,10 @@ Force the deletion of a branch even if there are unmerged changes
 
 Delete a remote branch
 
+	git push <remote> --delete <branch>
+
+Alternative delete remote branch syntax
+
 	git push <remote> :<branch>
 
 Show stale remote branches from local (branches deleted from origin, which still exist locally)
