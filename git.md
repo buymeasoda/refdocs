@@ -779,6 +779,23 @@ Create a bare clone (no working directory) of an existing git repo. Useful when 
 
     git clone --bare <repourl> <newfolder>
 
+## Configuring push behaviour
+
+git config push.default allows defining what `git push` will do
+
+Using `git config push.default current` will only push the current active branch to it's tracking remote instead of pushing all tracked branches
+
+Config to set up a repository to only push to its own remote branch with `git push`
+
+	git config push.default current
+
+Config to set up all repositories to only push to its own remote branch
+
+	git config --global push.default current
+
+
+
+
 # Git and SVN
 
 ## Working with SVN repositories
