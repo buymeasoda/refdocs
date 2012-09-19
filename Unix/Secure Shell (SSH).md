@@ -27,3 +27,17 @@ Add details for a host entry
 Use SSH configuration
 
 	ssh <nickname>
+
+
+# SSH Access
+
+Connect to remote machine using SSH public / private key instead of username and password.
+
+On the remote machine, if there is no existing `~/.ssh` directory or `~/.ssh/authorized_keys` file, create one:
+
+	mkdir ~/.ssh && cd ~/.ssh
+	nano authorized_keys
+
+Then past your public key into the file and save.
+
+If an `authorized_keys` file exists, append your key to that file on a new line.
