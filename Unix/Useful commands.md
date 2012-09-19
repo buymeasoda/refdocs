@@ -3,6 +3,10 @@
 
 ## System commands
 
+Change Unix shell (enter path to new shell when prompted)
+
+	chsh
+
 Exit the current terminal session
 
 	exit

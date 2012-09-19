@@ -6,7 +6,7 @@ Perform a command as the super user
 
 	sudo <command>
 
-Become the root user
+Become the root user (`CTRL + d` to exit user mode)
 
     sudo su -
 
