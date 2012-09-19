@@ -1,5 +1,15 @@
 # User, file and group permissions
 
+## Sudo
+
+Perform a command as the super user
+
+	sudo <command>
+
+Become the root user
+
+    sudo su -
+
 ## Managing users
 
 Create a new user

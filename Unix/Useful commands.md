@@ -3,10 +3,6 @@
 
 ## System commands
 
-Perform a command as the super user
-
-	sudo <command>
-
 Exit the current terminal session
 
 	exit
