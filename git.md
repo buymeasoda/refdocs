@@ -793,9 +793,6 @@ Config to set up all repositories to only push to its own remote branch
 
 	git config --global push.default current
 
-
-
-
 # Git and SVN
 
 ## Working with SVN repositories
