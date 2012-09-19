@@ -90,7 +90,7 @@ Append text via the command line to the file (end with CTRL + s)
 Overwrite the contents of the file with text
 
 	echo "<text>" > <file>
-	
+
 Append the contents of file with the text
 
 	echo "<text>" >> <file>
@@ -99,6 +99,9 @@ Create a file called filename
 
 	touch <filename>
 	
+
+# Less and More
+
 Paginate through a text file output directly in the terminal
 
 	more <filename>
@@ -106,3 +109,21 @@ Paginate through a text file output directly in the terminal
 Paginate through a text files output directly in the terminal (includes ability to go backwards)
 
 	less <filename>
+
+## Less commands
+
+Go to end of file
+
+	>
+
+Go to end of file
+
+	<
+
+Back one page
+
+	b
+
+Forward one page
+
+	f
