@@ -9,6 +9,8 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 ## Guides
 
 * Git
-* Unix
+* Homebrew
 * MacPorts
+* MAMP
 * MySQL
+* Unix
