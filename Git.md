@@ -1127,6 +1127,22 @@ Show total number of files changed, lines inserted and deleted
 
 	git diff <commit> --shortstat
 
+
+# Checkout GitHub pull request branch locally
+
+In your `.gitconfig` file add the following fetch rule to your origin configuration:
+
+	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
+
+The fetch all pull requests with:
+
+	git fetch origin
+
+To check out a particular pull request (eg. pr/999)
+
+	git checkout pr/999
+
+
 # Good git GUI clients
 
 * [Git Tower](http://www.git-tower.com)
