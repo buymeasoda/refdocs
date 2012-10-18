@@ -68,3 +68,15 @@ Show disk space usage and available space (-h makes the output human readable va
 Find files under the root directory and below that are large than 10 MB
 
 	find / -size +10M -printf "%s - %p\n"
+
+System mail messages for users
+
+	/var/mail/<username>
+
+Show mail messages
+
+	cat /var/mail/<username>
+
+Empty mail messages (via truncate operator `>`)
+
+	> /var/mail/<username>
