@@ -936,7 +936,11 @@ To be expanded
 	git cherry-pick
 	--more	
 	--tail
-	
+
+Rewrite history replacing an incorrect email address with an updated email for a git author (Do not use on shared repositories)
+
+	git filter-branch --env-filter 'if [ $GIT_AUTHOR_EMAIL = incorrect@email ]; then GIT_AUTHOR_EMAIL=correct@email; fi; export GIT_AUTHOR_EMAIL'
+
 # Configuring Git
 
 ## Configuration files and settings
