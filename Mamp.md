@@ -67,6 +67,20 @@ Configure MySQL socket setting, find and set the following
     mysql.default_socket = /tmp/mysql.sock
     mysqli.default_socket = /tmp/mysql.sock
 
+## Command line information
+
+Show version number of installed PHP
+
+    php -v
+
+To see what compiled php modules are active
+
+    php -m
+
+To show more complete php configuration and environment information
+
+    php -i
+
 -----------------------------------------------------------------------------
 
 # MySQL
