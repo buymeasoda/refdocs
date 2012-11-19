@@ -10,6 +10,10 @@ Become the root user (`CTRL + d` to exit user mode)
 
     sudo su -
 
+Become another named user
+
+    sudo su - <user>
+
 ## Managing users
 
 Create a new user
