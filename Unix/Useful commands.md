@@ -50,6 +50,17 @@ Execute the last command (useful for something like forgetting sudo, eg. sudo !!
 	!!
 
 
+## Generate MD5 and SHA1 hashes
+
+Generate MD5 hash from file
+
+    md5 <file>
+
+Generate SHA1 hash from file
+
+    shasum <file>
+
+
 ## Other useful commands
 
 Word, line, character and byte count for file or piped input
