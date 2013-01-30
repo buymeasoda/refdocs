@@ -508,6 +508,10 @@ Remove stale remote branches from local
 
 	git remote prune origin
 
+Rename a local branch
+
+		git branch -m <original branch> <new branch>
+
 ## Renaming branches
 
 Rename an existing branch (-m merges current branch entirely into the new branch)
