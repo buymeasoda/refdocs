@@ -179,6 +179,33 @@ Insert record
     mysql> INSERT INTO <table> (<column>, <other column>) VALUES ('<value>', '<other value>');
 
 
+## Constraints
+Add a composite primary key in an existing table with a single primary key already defined
+
+    mysql> ALTER TABLE <table> DROP PRIMARY KEY, ADD CONSTRAINT <pk_name> PRIMARY KEY (<column>, <column>);
+
+Add a foreign key constraint at table creation 
+*note:* Parent table must already exist
+
+    mysql> CREATE TABLE <table> ( 
+                id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+                <column> VARCHAR(45),
+                <column> CHAR(13),
+                parent_id INT NOT NULL,
+                CONSTRAINT <fk_name> FOREIGN KEY(parent_id) REFERENCES <parent_table>(id) ON DELETE CASCADE|RESTRICT;
+           );
+
+Add a foreign key constraint to an existing table 
+*note:* Rows must already have a valid value that maps to the parent table's row for the colum which we'are making a foreign key
+
+    mysql> ALTER TABLE <table> 
+           ADD CONSTRAINT <fk_name> FOREIGN KEY(parent_id) REFERENCES <parent_table>(id) ON DELETE CASCADE|RESTRICT;
+
+Remove a foreign key constraint
+
+    mysql> ALTER TABLE <table> DROP FOREIGN KEY <fk_name>;
+
+
 ## Select, update and delete rows
 
 Select records
