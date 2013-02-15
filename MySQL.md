@@ -185,7 +185,7 @@ Add a composite primary key in an existing table with a single primary key alrea
     mysql> ALTER TABLE <table> DROP PRIMARY KEY, ADD CONSTRAINT <pk_name> PRIMARY KEY (<column>, <column>);
 
 Add a foreign key constraint at table creation 
-*note:* Parent table must already exist
+**note:** *Parent table must already exist*
 
     mysql> CREATE TABLE <table> ( 
                 id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
@@ -196,7 +196,7 @@ Add a foreign key constraint at table creation
            );
 
 Add a foreign key constraint to an existing table 
-*note:* Rows must already have a valid value that maps to the parent table's row for the colum which we'are making a foreign key
+**note:** *Rows must already have a valid value that maps to the parent table's row for the colum which we'are making a foreign key*
 
     mysql> ALTER TABLE <table> 
            ADD CONSTRAINT <fk_name> FOREIGN KEY(parent_id) REFERENCES <parent_table>(id) ON DELETE CASCADE|RESTRICT;
