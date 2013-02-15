@@ -196,7 +196,7 @@ Add a foreign key constraint at table creation
            );
 
 Add a foreign key constraint to an existing table 
-**note:** *Rows must already have a valid value that maps to the parent table's row for the colum which we'are making a foreign key*
+**note:** *Rows must already have valid values that map directly to the parent table rows for the colum we are making a foreign key*
 
     mysql> ALTER TABLE <table> 
            ADD CONSTRAINT <fk_name> FOREIGN KEY(parent_id) REFERENCES <parent_table>(id) ON DELETE CASCADE|RESTRICT;
