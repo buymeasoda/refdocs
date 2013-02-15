@@ -153,6 +153,10 @@ Create a table and columns
 Create a table and columns (example)
 
     mysql> CREATE TABLE <table> (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, <column> VARCHAR(45));
+
+Create a new table or a backup table from an existing one
+
+    mysql> CREATE TABLE <new_table> AS SELECT * FROM <existing_table>;
 	
 Rename table
 
