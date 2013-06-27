@@ -80,3 +80,7 @@ Show mail messages
 Empty mail messages (via truncate operator `>`)
 
 	> /var/mail/<username>
+
+Empty mail messages (alternative command)
+
+	cat /dev/null > /var/mail/<username>
