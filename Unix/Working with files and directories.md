@@ -72,6 +72,11 @@ Remove a directory
 
 	rmdir <dirname>
 
+## Examples of advanced file actions
+
+Create a sequence of files from a sigle copy
+
+	for FILE in {1..10}; do cp <file> <new-name>$FILE; done
 
 ## Create, read and output files
 

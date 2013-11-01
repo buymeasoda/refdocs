@@ -36,6 +36,16 @@ For destination, specify the remote server, then remote path/file separated by a
 
 Specify local file using local system path. Use a single dot to indicate current directory. Use lowercase r for recursive copy.
 
+### SCP Current directory / files
+
+Copy all files in the current directory to a remote directory
+
+	scp * <user>@<host>:<path>
+
+Recursively copy files and directories from current directory to remote directory
+
+	scp -r * <user>@<host>:<path>
+
 ### SCP Examples
 
 Copy a remote file on server user@host, located at path/file, to the local path
