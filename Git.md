@@ -58,6 +58,7 @@ Show a summary of the state of working directory and index
 	git status
 
 ## Adding files to the index
+_The `git add` command takes a path name for either a file or a directory; if it’s a directory, the command adds all the files in that directory recursively._
 
 Add a file to the index (staging files)
 
@@ -66,6 +67,14 @@ Add a file to the index (staging files)
 Add all files from the current location and below to the index.
 
 	git add .
+	
+Add all files form the **scripts/** directory and below to the index.
+
+	git add scripts/
+	
+Add all files with a **js** extension to the index.
+
+	git add '*.js'
 		
 Interactively stage files
 		
