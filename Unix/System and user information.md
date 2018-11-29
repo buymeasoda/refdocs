@@ -1,4 +1,14 @@
 
+# System maintenance
+
+Update package list
+
+	sudo apt-get update
+
+Upgrade outdated packages
+
+	sudo apt-get upgrade
+
 # System and user information
 
 Show distrubtion specific version information
@@ -24,7 +34,7 @@ Display the machine fully qualified hostname
 Display the Unix system type being used
 
 	uname -a
-	
+ 
 Display real time information about process
 
 	top
@@ -40,7 +50,7 @@ Show memory usage (in megabytes)
 Show list of running processes
 
 	ps aux | less
-	
+ 
 Network settings including computer IP
 
 	ifconfig
@@ -62,9 +72,9 @@ Caclulate total disk usage / size for a folder
 	du -sh <folder>
 
 Show disk space usage and available space (-h makes the output human readable values)
-	
+ 
 	df -h
-	
+ 
 Find files under the root directory and below that are large than 10 MB
 
 	find / -size +10M -printf "%s - %p\n"

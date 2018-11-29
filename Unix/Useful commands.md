@@ -3,6 +3,10 @@
 
 ## System commands
 
+Output current terminal settings
+
+	stty -a
+
 Change Unix shell (enter path to new shell when prompted)
 
 	chsh
@@ -25,7 +29,7 @@ Clear the current screen of text
 Copy content to the clipboard (eg. cat file.txt | pbcopy, copies contents of file.txt to the clipboard)
 
 	pbcopy
-	
+ 
 Outputs the current contents of the clipboard
 
 	pbpaste
@@ -40,11 +44,11 @@ Output a list of earlier commands with a unique ID for each command
 Delete bash history from memory (delete or edit ~/.bash_history to modify saved bash history commands)
 
 	history -c
-	
+ 
 Execute the command from the history specified by the history id (eg. !25, execute command 25)
 
 	!<history id>
-	
+ 
 Execute the last command (useful for something like forgetting sudo, eg. sudo !!)
 
 	!!
@@ -85,3 +89,13 @@ Unix: ASCII text
 DOS: ASCII text, with CRLF line terminators
 
 	file <file>
+
+## Utilities and tools
+
+Sort lines of text
+
+	sort
+
+Report or filter out repeated lines
+
+	uniq

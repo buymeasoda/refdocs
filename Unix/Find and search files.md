@@ -22,3 +22,7 @@ Search the files recursively in location for the search string
 To search only the location and not the sub dirs drop the -R flag	
 
 	grep -R '<search string>' <location>
+
+Find folders that are at a certain depth with the specified name
+
+	find . -mindepth 1 -maxdepth 1 -type d -name '<search-string>'
