@@ -69,9 +69,10 @@ Move by a count for any action (eg. move forward 3 words)
 
 ## Edit
 
-Insert text from under the cursor
+Insert text under / after the cursor
 
 	i
+	a
 
 Insert text at the beginning / end of the current line
 
@@ -83,6 +84,10 @@ Insert a line above / below and insert text
 	o
 	O
 
+Insert text at the end of the word
+
+	ea
+
 Delete to start of next word, end of current word, start / end of line
 
 	dw
@@ -90,6 +95,10 @@ Delete to start of next word, end of current word, start / end of line
 	d^
 	d$
 	d<motion>
+
+Repace a single character (without triggering insert mode)
+
+	r
 
 ## Search
 
