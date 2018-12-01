@@ -6,6 +6,8 @@
 * [XCode](http://developer.apple.com/)
 * [Homebrew](http://mxcl.github.com/homebrew/)
 * [MacPorts](http://macports.org/)
+* [iTerm2](https://www.iterm2.com/)
+* [Oh My ZSH](https://ohmyz.sh/)
 
 ## Learning
 
