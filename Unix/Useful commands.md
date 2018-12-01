@@ -23,17 +23,15 @@ Clear the current screen of text
 
 	clear
 
-
 ## Clipboard commands
 
 Copy content to the clipboard (eg. cat file.txt | pbcopy, copies contents of file.txt to the clipboard)
 
 	pbcopy
- 
+
 Outputs the current contents of the clipboard
 
 	pbpaste
-
 
 ## History commands
 
@@ -44,26 +42,24 @@ Output a list of earlier commands with a unique ID for each command
 Delete bash history from memory (delete or edit ~/.bash_history to modify saved bash history commands)
 
 	history -c
- 
+
 Execute the command from the history specified by the history id (eg. !25, execute command 25)
 
 	!<history id>
- 
+
 Execute the last command (useful for something like forgetting sudo, eg. sudo !!)
 
 	!!
-
 
 ## Generate MD5 and SHA1 hashes
 
 Generate MD5 hash from file
 
-    md5 <file>
+	md5 <file>
 
 Generate SHA1 hash from file
 
-    shasum <file>
-
+	shasum <file>
 
 ## Other useful commands
 

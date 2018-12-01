@@ -5,7 +5,7 @@
 Move cursor Up / Down, Left / Right
 
 	j = Up
-	k = Down	
+	k = Down
 	h = Left
 	l = Right
 
@@ -17,7 +17,7 @@ Move by a number of lines or characters (eg. up 4 lines)
 	4j
 
 Move cursor to top / middle / bottom (High / Middle / Bottom) of page
-	
+
 	H
 	M
 	L
@@ -160,7 +160,7 @@ Replace selected text
 ## Undo / Redo
 
 Undo
-	
+
 	u
 
 Redo

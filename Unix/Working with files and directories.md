@@ -6,11 +6,11 @@
 Open a file
 
 	open <file>
-	
+
 Open the current directory in finder
 
 	open .
-	
+
 Open a file with the specified application (Mac OSX)
 
 	open -a /Applications/<app> <file>
@@ -19,13 +19,11 @@ Open file in the nano text editor
 
 	nano <file>
 
-
 ## Work with remote mounts and external hard drives
 
 Access remote mounts (such as Samba shares and external hard drives)
 
 	cd /Volumes
-
 
 ## Copy, move and delete files
 
@@ -49,7 +47,6 @@ Symbolic link from source file to destination file
 
 	ln -s <destination> <source>
 
-
 ## Create and delete directories
 
 Create a directory
@@ -59,7 +56,7 @@ Create a directory
 Create multiple directories in one step
 
 	mkdir -p dir1 dir2/subdir1 dir2/subdir2 dir3
-	
+
 Create multiple directories in one step, alternative syntax using array of items via {}
 
 	mkdir -p dir1/{subdir1,subdir2} dir2
@@ -83,11 +80,11 @@ Create a sequence of files from a sigle copy
 Output the contents of the file
 
 	cat <file>
-	
+
 Create a new file, and add content via the command line, end with CTRL + d (on a fresh line)
 
 	cat > <file>
-	
+
 Append text via the command line to the file (end with CTRL + s)
 
 	cat >> <file>
@@ -103,7 +100,7 @@ Append the contents of file with the text
 Create a file called filename
 
 	touch <filename>
-	
+
 
 # Less and More
 

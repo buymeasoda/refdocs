@@ -10,7 +10,7 @@ Long listing (l) of all files (a) with human readable sizes (h)
 	ls -lah
 
 Change directory
-	
+
 	cd <dir>
 
 Go to home directory

@@ -18,11 +18,9 @@ Download a file
 	get <remote> <local>
 
 Quit sftp
-	
+
 	bye
-
 	exit
-
 
 ## SCP
 
@@ -51,11 +49,11 @@ Recursively copy files and directories from current directory to remote director
 Copy a remote file on server user@host, located at path/file, to the local path
 
 	scp <user>@<host>:<path/file> <local path>
-		
+
 Copy a local file at path/file to another remote server
 
 	scp <local path/file> <user>@<host>:<path>
-		
+
 Recursively copy the files and folders from local dir to the remote server home directory
 
 	scp -r <local dir> <user>@<host>:~

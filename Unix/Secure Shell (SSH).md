@@ -19,15 +19,13 @@ If an SSH config file (or the ssh directory) doesn't exist create it at:
 Add details for a host entry
 
 	Host <nickname>
-	 
-	    HostName <server>
-	    User <username>
-	    Port <port>
+		HostName <server>
+		User <username>
+		Port <port>
 
 Use SSH configuration
 
 	ssh <nickname>
-
 
 # SSH Access
 

@@ -1,3 +1,4 @@
+
 # User, file and group permissions
 
 ## Sudo
@@ -8,11 +9,11 @@ Perform a command as the super user
 
 Become the root user (`CTRL + d` to exit user mode)
 
-    sudo su -
+	sudo su -
 
 Become another named user
 
-    sudo su - <user>
+	sudo su - <user>
 
 ## Managing users
 
@@ -79,7 +80,6 @@ Set group to read and write for the directory and all sub files and folders
 
 	chmod -R g=rw <dir>
 
-
 ## Managing groups and owners
 
 List available groups
@@ -97,7 +97,6 @@ Change file group associated with the file permissions
 Change file owner
 
 	chown <user> <file>
-
 
 ## Cleaning up file permissions
 

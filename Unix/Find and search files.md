@@ -13,13 +13,13 @@ Wrap non-alphanumeric search criteria with quotes ""
 Find files that match the file pattern and pass results to grep for searching file contents
 
 	find <location> -name <file pattern> | xargs grep <search string>
-	
+
 ## Example
 
 	find . -name "*.jsp" | xargs grep <search string>
-	
+
 Search the files recursively in location for the search string
-To search only the location and not the sub dirs drop the -R flag	
+To search only the location and not the sub dirs drop the -R flag
 
 	grep -R '<search string>' <location>
 

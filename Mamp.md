@@ -1,11 +1,9 @@
 
 # MAMP Setup on OSX
 
-Setting up Apache, MySQL and PHP on Mac OSX. 
+Setting up Apache, MySQL and PHP on Mac OSX.
 
 The guide uses the default Mac OSX Apache and PHP along with [Homebrew](http://mxcl.github.com/homebrew/) for installing MySQL.
-
------------------------------------------------------------------------------
 
 # Apache Setup
 
@@ -13,75 +11,71 @@ The guide uses the default Mac OSX Apache and PHP along with [Homebrew](http://m
 
 Open the Apache server configuration file `httpd.conf` for editing.
 
-    /etc/apache2/httpd.conf
+	/etc/apache2/httpd.conf
 
 ## httpd.conf settings
 
 Set the server name to `localhost`
 
-    ServerName localhost:80
+	ServerName localhost:80
 
 Enable the PHP module
 
-    LoadModule php5_module
+	LoadModule php5_module
 
 Add index.htm to the directory index list (check if needed, php5_module may enable)
 
-    DirectoryIndex index.html index.htm index.php
+	DirectoryIndex index.html index.htm index.php
 
 Enable the virtual hosts configuration file
 
-    Include /private/etc/apache2/extra/httpd-vhosts.conf
+	Include /private/etc/apache2/extra/httpd-vhosts.conf
 
 ## Configure virtual hosts
 
 Location of Apache vhosts configuration file
 
-    /etc/apache2/extra/httpd-vhosts.conf
+	/etc/apache2/extra/httpd-vhosts.conf
 
 Open `httpd-vhosts.conf` and add your vhost entries after the line
 
-    NameVirtualHost *:80
+	NameVirtualHost *:80
 
 ## Apache Commands
 
-    sudo apachectl start|stop|restart
-
------------------------------------------------------------------------------
+	sudo apachectl start|stop|restart
 
 # Setup PHP
 
 Create a php.ini file
 
-    sudo cp /etc/php.ini.default /etc/php.ini
+	sudo cp /etc/php.ini.default /etc/php.ini
 
 Paste in the contents of `php.ini-development` from the php.net distribution download
 
 Add your timezone to date.timezone to stop PHP date warning
-    
-    date.timezone = "Australia/Brisbane"
+
+	date.timezone = "Australia/Brisbane"
 
 Configure MySQL socket setting, find and set the following
-    
-    pdo_mysql.default_socket = /tmp/mysql.sock
-    mysql.default_socket = /tmp/mysql.sock
-    mysqli.default_socket = /tmp/mysql.sock
+
+	pdo_mysql.default_socket = /tmp/mysql.sock
+	mysql.default_socket = /tmp/mysql.sock
+	mysqli.default_socket = /tmp/mysql.sock
 
 ## Command line information
 
 Show version number of installed PHP
 
-    php -v
+	php -v
 
 To see what compiled php modules are active
 
-    php -m
+	php -m
 
 To show more complete php configuration and environment information
 
-    php -i
-
------------------------------------------------------------------------------
+	php -i
 
 # MySQL
 
@@ -89,15 +83,15 @@ To show more complete php configuration and environment information
 
 Install MySQL with Homebrew
 
-    brew install mysql --with-utf8-default  
-    
+	brew install mysql --with-utf8-default
+
 Follow the homebrew instructions after installation
 
-    unset TMPDIR
-    mysql_install_db
-    mysql.server start
-    mysql_secure_installation
-    
+	unset TMPDIR
+	mysql_install_db
+	mysql.server start
+	mysql_secure_installation
+
 Step through MySQL secure installation procedure
 
 * Set a root password
@@ -110,7 +104,7 @@ Step through MySQL secure installation procedure
 
 Manage MySQL server
 
-    mysql.server start|stop|restart|reload|force-reload|stats
+	mysql.server start|stop|restart|reload|force-reload|stats
 
 `mysql.server` is a script located in: `/usr/local/Cellar/mysql/<version>/support-files`
 Run with `./mysql.server <command>` or make executable
@@ -119,44 +113,40 @@ Run with `./mysql.server <command>` or make executable
 
 Location of MySQL database files
 
-    /usr/local/var/mysql
-
------------------------------------------------------------------------------
+	/usr/local/var/mysql
 
 # Hosts File
 
 Open the etc hosts file
 
-    /etc/hosts
+	/etc/hosts
 
 Add entries for each virtual host (one per line)
 
-    127.0.0.1 <your domain>
-
------------------------------------------------------------------------------
+	127.0.0.1 <your domain>
 
 # General Information
 
 ## Useful Files and Directories
 
 Default user sites location
-    
-    ~/Sites
+
+	~/Sites
 
 Base Apache files location
 
-    /Library/WebServer
+	/Library/WebServer
 
 Default Apache page (contains default index page)
 
-    /Library/WebServer/Documents
+	/Library/WebServer/Documents
 
 ## Useful URLs
 
 Open Apache manual
 
-    http://localhost/manual/
+	http://localhost/manual/
 
 Open user default sites folder `/User/<username>/Sites/`
 
-    http://localhost/~<username>/
+	http://localhost/~<username>/
