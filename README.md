@@ -12,5 +12,7 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 * Homebrew
 * MacPorts
 * MAMP
+* Mercurial
 * MySQL
 * Unix
+* Vim
