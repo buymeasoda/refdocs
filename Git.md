@@ -747,7 +747,6 @@ To push and pull from specific remote repositories with the current active local
 	git pull <remote> <branch>
 	git push <remote> <branch>
 
-
 Push current branch and set it to automatically track the named remote branch
 
 	git push -u <remote> <branch>
@@ -772,6 +771,10 @@ Show details of the remote repo and status of branch tracking
 
 	git remote show <remote>
 
+Show full details of connected remote repositories
+
+	git remote -v
+
 Checkout and automatically add tracking for a branch in a remote repo
 
 	git checkout -t <remote>/<branch>
@@ -785,6 +788,14 @@ Allows: git push <remotename> <branch>, to push a branch to the remote
 Create a bare clone (no working directory) of an existing git repo. Useful when housing a bare repo on a remote server (use `<reponame>.git` as folder name)
 
 	git clone --bare <repourl> <newfolder>
+
+Fetch upstream changes from origin withouth merging
+
+	git fetch origin
+
+Fetch upstream changes from specific remote without merging
+
+	git fetch <upstream-name>
 
 ## Configuring push behaviour
 
@@ -935,7 +946,7 @@ A file that contains the location and source of the submodule repositories. This
 
 	.gitmodules
 
-# Other commands
+# Advanced Management
 
 To be expanded
 
@@ -943,9 +954,17 @@ To be expanded
 	--more
 	--tail
 
-Rewrite history replacing an incorrect email address with an updated email for a git author (Do not use on shared repositories)
+## Rewrite history
+
+Rewrite history replacing an incorrect email address with an updated email for a git author
 
 	git filter-branch --env-filter 'if [ $GIT_AUTHOR_EMAIL = incorrect@email ]; then GIT_AUTHOR_EMAIL=correct@email; fi; export GIT_AUTHOR_EMAIL'
+
+Remove file references from git history
+
+	git filter-branch --force --index-filter \
+	'git rm --cached --ignore-unmatch PATH_TO_FILE' \
+	--prune-empty --tag-name-filter cat -- --all
 
 # Configuring Git
 
@@ -1143,16 +1162,12 @@ In your `.gitconfig` file add the following fetch rule to your origin configurat
 
 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
 
-The fetch all pull requests with:
-
-	git fetch origin
-
 To check out a particular pull request (eg. pr/999)
 
+	git fetch origin
 	git checkout pr/999
 
 # Good git GUI clients
 
 * [Git Tower](http://www.git-tower.com)
 * [Source Tree](http://www.sourcetreeapp.com/)
-* [GitX](http://gitx.laullon.com/) (Laullon fork)
