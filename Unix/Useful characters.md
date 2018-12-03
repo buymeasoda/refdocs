@@ -61,4 +61,4 @@ Join multiple commands together, but only run the second command if the first on
 
 Example:
 
-	$ cd dir/name || mkdir dir/name
+	cd dir/name || mkdir dir/name

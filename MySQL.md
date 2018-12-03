@@ -24,11 +24,11 @@ Start, stop and restart MySQL Server
 
 Log into MySQL as `root`
 
-	$ mysql -u root -p
+	mysql -u root -p
 
 Log into MySQL as `<user>`
 
-	$ mysql -u <user> -p
+	mysql -u <user> -p
 
 Exit MySQL
 
@@ -191,12 +191,12 @@ Delete specific record
 
 Export database
 
-	$ mysqldump -u root -p <database> > <file.sql>
+	mysqldump -u root -p <database> > <file.sql>
 
 Import database
 
-	$ mysqladmin -u root -p create <database>
-	$ mysql -u root -p <database> < <file.sql>
+	mysqladmin -u root -p create <database>
+	mysql -u root -p <database> < <file.sql>
 
 Executing .sql files
 
@@ -212,9 +212,9 @@ Output MySQL settings
 
 ## Rename MySQL Database
 
-	$ mysqldump -u root -p -v <database> > <file.sql>
-	$ mysqladmin -u root -p create <new database>
-	$ mysql -u root -p <new database> < <file.sql>
+	mysqldump -u root -p -v <database> > <file.sql>
+	mysqladmin -u root -p create <new database>
+	mysql -u root -p <new database> < <file.sql>
 
 ## Setting up server for utf8
 

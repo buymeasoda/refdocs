@@ -1108,17 +1108,16 @@ Homebrew: `/usr/local/bin/git-shell`
 
 Now we can remove all the extra files OSX creates by default in a git users home directory. Make absolutely sure you are in the new user directory before using `rm`.
 
-	$ cd /Users/git
-	$ sudo rm -rf *
+	cd /Users/git
+	sudo rm -rf *
 
 Copy (or create) your bare git repos to the root of /Users/git, and set the owner to be git
 
-	$ sudo chown -R git myrepo.git
+	sudo chown -R git myrepo.git
 
 You can now clone from this repo from another machine or location on your computer
 
-	$ git clone git@<machine-address>:myrepo.git
-	Password: <git user password>
+	git clone git@<machine-address>:myrepo.git
 
 # Working with external tools
 
