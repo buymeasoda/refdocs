@@ -14,5 +14,6 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 * MAMP
 * Mercurial
 * MySQL
+* Tools
 * Unix
 * Vim

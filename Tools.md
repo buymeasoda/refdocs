@@ -1,5 +1,5 @@
 
-# Tools and Resources
+# Tools
 
 * [Xcode](http://developer.apple.com/)
 * [Android Studio](https://developer.android.com/studio/)
