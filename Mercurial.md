@@ -142,6 +142,29 @@ Show a list of new incoming remote bookmarks
 
 	hg incoming -B
 
+## Move, Rebase or Delete Commits
+
+Interactively reorder, combine, or delete commits
+
+	hg histedit
+
+Cherry pick and move revisions onto destination (specify multiple revisions with `"<rev-id1> + <rev-id2>"`)
+
+	hg rebase –d <destination> –r <rev-id>
+	hg rebase –d master –r "bug3765 + 530273"
+
+Move revision and decedents (commits below it not on target branch) to destination
+
+	hg rebase –d <destination> –b <rev-id>
+
+Move revision and ancestors (commits above it) to destination
+
+	hg rebase –d <destination> –s <rev-id>
+
+Remove commit completely
+
+	hg strip <rev-id>
+
 ## Sparse Checkout
 
 Check current sparse config
