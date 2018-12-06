@@ -1,7 +1,7 @@
 
 # Useful commands
 
-## System commands
+## System
 
 Output current terminal settings
 
@@ -23,7 +23,7 @@ Clear the current screen of text
 
 	clear
 
-## Clipboard commands
+## Clipboard
 
 Copy content to the clipboard (eg. cat file.txt | pbcopy, copies contents of file.txt to the clipboard)
 
@@ -33,21 +33,22 @@ Outputs the current contents of the clipboard
 
 	pbpaste
 
-## History commands
+## History
 
-Output a list of earlier commands with a unique ID for each command
+Show list of previous commands with ids (with timestamp `-f` and count limit `-100`)
 
 	history
+	history -f -100
 
-Delete bash history from memory (delete or edit ~/.bash_history to modify saved bash history commands)
+Clear command history
 
 	history -c
 
-Execute the command from the history specified by the history id (eg. !25, execute command 25)
+Execute command from history for history id (eg. !25, execute command 25)
 
-	!<history id>
+	!<history-id>
 
-Execute the last command (useful for something like forgetting sudo, eg. sudo !!)
+Execute the last command (useful for cases like forgetting sudo, eg. `sudo !!`)
 
 	!!
 
@@ -61,32 +62,19 @@ Generate SHA1 hash from file
 
 	shasum <file>
 
-## Other useful commands
+## Other Utilities
 
 Word, line, character and byte count for file or piped input
 
 	wc
 
-	mail
-
-	curl
-
 General maths interpreter (allows general equations entered into command line)
 
 	bc
 
-### Show files with non-ascii characters
-
-	grep -P "[\x80-\xFF]" <files>
-
-### Show line endings for files
-
-Unix: ASCII text
-DOS: ASCII text, with CRLF line terminators
+Show line endings for files (Unix: ASCII, DOS: ASCII + CRLF)
 
 	file <file>
-
-## Utilities and tools
 
 Sort lines of text
 
