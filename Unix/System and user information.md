@@ -1,5 +1,23 @@
 
-# System maintenance
+# System and user information
+
+## Session
+
+Exit the current terminal session
+
+	exit
+
+Restart the system
+
+	reboot
+
+## Terminal
+
+Change Unix shell (enter path to new shell when prompted)
+
+	chsh
+
+## Maintenance
 
 Update package list
 
@@ -9,11 +27,7 @@ Upgrade outdated packages
 
 	sudo apt-get upgrade
 
-# System and user information
-
-Show distrubtion specific version information
-
-	cat /etc/lsb-release
+## Information
 
 Display system uptime, memory, who is logged in and what they are doing
 
@@ -58,6 +72,14 @@ Network settings including computer IP
 Output key / value pairs of current environment variables
 
 	env
+
+Output current terminal settings
+
+	stty -a
+
+Show distrubtion specific version information
+
+	cat /etc/lsb-release
 
 Log files location
 

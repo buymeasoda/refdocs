@@ -1,23 +1,7 @@
 
 # Useful commands
 
-## System
-
-Output current terminal settings
-
-	stty -a
-
-Change Unix shell (enter path to new shell when prompted)
-
-	chsh
-
-Exit the current terminal session
-
-	exit
-
-Restart the system
-
-	reboot
+## Terminal
 
 Clear the current screen of text
 
