@@ -1,30 +1,54 @@
 
 # Homebrew
 
-## Install multiple versions of the same module
+## Information
 
-Install the latest version of a module
+Find formula
 
-	brew install <module>
+	brew search <formula>
 
-Keep the old version after install
+Show information for a specific formula
 
-	brew unlink <module>
+	brew info <formula>
 
-## Manage multiple versions of the same module
+## Install
 
-Show available homebrew versions of a particular module
+Install/Uninstall formula
 
-	brew versions <module>
+	brew install <formula>
+	brew uninstall <formula>
 
-Switch to a specific version
+Temporarily disable an installed formula
 
-	git checkout <hash> <path>
+	brew unlink <formula>
 
-Switch between version of a module, cleaning up state
+## Update
 
-	brew switch <module> <version>
+Fetch newest Homebrew version and formulae
 
-Remove an installed module
+	brew update
 
-	brew uninstall <module>
+Upgrade existing outdated formulae
+
+	brew upgrade
+
+Remove outdated downloads and old installed versions of formulae
+
+	brew cleanup
+
+## Versions
+
+Switch between versions of a formula
+
+	brew switch <formula> <version>
+
+## Taps
+
+List tapped repositories
+
+	brew tap
+
+Add or remove tap repository
+
+	brew tap <tap-name>
+	brew untap <tap-name>
