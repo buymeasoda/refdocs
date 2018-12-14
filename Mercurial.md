@@ -54,8 +54,10 @@ Show commit history (summary / verbose / diffs)
 	hg log -v
 	hg log -p
 
-Info about a specific commit (summary / diff)
+Info about a specific file or commit (summary / diff)
 
+	hg log <path>
+	hg log -p <path>
 	hg log -r <rev-id>
 	hg log -p -r <rev-id>
 
@@ -64,6 +66,13 @@ Example history variations (`-f` starts at your current commit and moves backwar
 	hg log -f
 	hg log --graph
 	hg log --style=compact
+
+## Search code history
+
+Grep for a specific string in file history commit messages or diffs
+
+	hg log <path> | grep <search-string>
+	hg log -p <path> | grep <search-string>
 
 ## Amend Changes
 
@@ -78,6 +87,10 @@ To amend and change the commit message via editor
 	hg ci --amend
 
 ## Purge Changes
+
+Abandon changes and update to clean master state
+
+	hg up master --clean
 
 Remove untracked files (`--all` to purge everything including ignored temp files)
 
