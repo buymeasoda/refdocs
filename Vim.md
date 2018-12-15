@@ -57,7 +57,7 @@ Move by word boundary to start of word foward / backward (delimiter / whole word
 	b
 	B
 
-Move by word boundary to end of word (delimeter / whole word)
+Move by word boundary to end of word (delimiter / whole word)
 
 	e
 	E
@@ -88,17 +88,53 @@ Insert text at the end of the word
 
 	ea
 
-Delete to start of next word, end of current word, start / end of line
+Replace a single character (without triggering insert mode)
 
-	dw
+	r<character>
+
+Replace multiple characters in replace mode
+
+	R<type>
+
+## Delete
+
+Delete text in front / behind cursor
+
+	x
+	X
+
+Delete to beginning / end of current word or start of next word
+
+	db
 	de
+	dw
+
+Delete to start / end of line
+
 	d^
 	d$
-	d<motion>
 
-Repace a single character (without triggering insert mode)
+Apply modifier to delete command (eg. Delete three words)
 
-	r
+	d<modifier><command>
+	d3w
+
+## Change
+
+Change a word to beginning / end or start of next work (combines delete and insert)
+
+	cb
+	ce
+	cw
+
+Delete to start / end of line
+
+	c^
+	c$
+
+Change from the cursor to the end of the line
+
+	C
 
 ## Search
 
@@ -159,11 +195,15 @@ Replace selected text
 
 ## Undo / Redo
 
-Undo
+Undo edits and changes
 
 	u
 
-Redo
+Redo edits and changes
+
+	CTRL+R
+
+Revert last change to original state
 
 	U
 
