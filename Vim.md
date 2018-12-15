@@ -88,13 +88,9 @@ Insert text at the end of the word
 
 	ea
 
-Replace a single character (without triggering insert mode)
+Repeat the last action or edit
 
-	r<character>
-
-Replace multiple characters in replace mode
-
-	R<type>
+	.
 
 ## Delete
 
@@ -121,7 +117,11 @@ Apply modifier to delete command (eg. Delete three words)
 
 ## Change
 
-Change a word to beginning / end or start of next work (combines delete and insert)
+Change entire line (combines delete and insert)
+
+	cc
+
+Change a word to beginning / end or start of next work
 
 	cb
 	ce
@@ -136,11 +136,25 @@ Change from the cursor to the end of the line
 
 	C
 
+Delete character / line at cursor and substitute text
+
+	s
+	S
+
+Replace a single character (without triggering insert mode)
+
+	r<character>
+
+Replace multiple characters in replace mode
+
+	R<type>
+
 ## Search
 
-Search for text
+Search forward / backwards for text
 
 	/<search-string>
+	?<search-string>
 
 Next / previous search result
 
@@ -232,3 +246,7 @@ Enable / disable line numbers
 	:set number!
 	:set nonu
 	:set nu!
+
+Set editor to paste mode (to retain pasted formatting)
+
+	:set paste
