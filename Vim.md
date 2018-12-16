@@ -1,5 +1,38 @@
 # VIM
 
+## Help
+
+Show help instructions and commands
+
+	:help
+
+Open user manual index
+
+	:help user-manual
+
+Navigate to topic (see navigation below), position cursor inside `|...|` for topic filename and open
+
+	CTRL + ]
+
+Exit help manual
+
+	:q
+
+## General
+
+Commands and actions are extended with modifiers and repeated using counts
+
+	<action><modifier>
+	<action><count>
+
+Modifiers can be combined with counts to duplicate the modified action
+
+	<action><count><modifier>
+
+For example, to delete three words (`d` delete action, `3` count, `w` word modifier)
+
+	d3w
+
 ## Navigation
 
 Move cursor Up / Down, Left / Right
@@ -50,7 +83,7 @@ Move to start, start (whitespace) and end of line
 	0
 	$
 
-Move by word boundary to start of word foward / backward (delimiter / whole word)
+Move by word boundary to start of word forward / backward (delimiter / whole word)
 
 	w
 	W
