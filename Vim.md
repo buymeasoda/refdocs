@@ -99,6 +99,10 @@ Delete text in front / behind cursor
 	x
 	X
 
+Delete current line (also cuts text to clipboard)
+
+	dd
+
 Delete to beginning / end of current word or start of next word
 
 	db
@@ -175,6 +179,17 @@ Cut current line
 Copy the current line
 
 	yy
+
+Copy to beginning / end of current word or start of next word
+
+	ye
+	yw
+	yb
+
+Copy to start / end of line
+
+	y^
+	y$
 
 Paste buffer after / before cursor
 
