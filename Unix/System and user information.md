@@ -33,6 +33,10 @@ Display system uptime, memory, who is logged in and what they are doing
 
 	w
 
+System uptime statistics
+
+	uptime
+
 Display your current username
 
 	whoami
@@ -81,25 +85,13 @@ Show distrubtion specific version information
 
 	cat /etc/lsb-release
 
+## Log Files
+
 Log files location
 
 	/var/log
 
-System uptime statistics
-
-	uptime
-
-Caclulate total disk usage / size for a folder
-
-	du -sh <folder>
-
-Show disk space usage and available space (-h makes the output human readable values)
-
-	df -h
-
-Find files under the root directory and below that are large than 10 MB
-
-	find / -size +10M -printf "%s - %p\n"
+## System Mail
 
 System mail messages for users
 
