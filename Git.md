@@ -956,9 +956,23 @@ To be expanded
 
 ## Rewrite history
 
-Rewrite history replacing an incorrect email address with an updated email for a git author
+Rewrite history correcting email address for git author
 
-	git filter-branch --env-filter 'if [ $GIT_AUTHOR_EMAIL = incorrect@email ]; then GIT_AUTHOR_EMAIL=correct@email; fi; export GIT_AUTHOR_EMAIL'
+	git filter-branch --force --env-filter '
+	if [ "$GIT_AUTHOR_EMAIL" = "incorrect@email" ]
+	then
+		export GIT_AUTHOR_EMAIL="correct@email"
+	fi
+	' --tag-name-filter cat -- --all
+
+Rewrite history correcting author name for git author
+
+	git filter-branch --force --env-filter '
+	if [ "$GIT_AUTHOR_NAME" = "Incorrect Name" ]
+	then
+		export GIT_AUTHOR_NAME="Correct Name"
+	fi
+	' --tag-name-filter cat -- --all
 
 Remove file references from git history
 
