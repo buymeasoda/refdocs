@@ -23,15 +23,19 @@ Exit help manual
 Commands and actions are extended with modifiers and repeated using counts
 
 	<action><modifier>
-	<action><count>
+	<count><modifier>
 
 Modifiers can be combined with counts to duplicate the modified action
 
 	<action><count><modifier>
 
-For example, to delete three words (`d` delete action, `3` count, `w` word modifier)
+Example: Delete three words (`d` delete action, `3` count, `w` word modifier)
 
 	d3w
+
+Example: Move forward three words (`3` count, `w` word modifier)
+
+	3w
 
 ## Navigation
 
@@ -95,11 +99,6 @@ Move by word boundary to end of word (delimiter / whole word)
 	e
 	E
 
-Move by a count for any action (eg. move forward 3 words)
-
-	<count><action>
-	3w
-
 ## Edit
 
 Insert text under / after the cursor
@@ -124,6 +123,19 @@ Insert text at the end of the word
 Repeat the last action or edit
 
 	.
+
+Join line below to the current one
+
+	J
+
+Transpose two letters (performs forward delete/cut then paste)
+
+	xp
+
+Complete current partial word based on existing word list (cycle through next / previous entries)
+
+	CTRL + N
+	CTRL + P
 
 ## Delete
 
@@ -298,3 +310,8 @@ Enable / disable line numbers
 Set editor to paste mode (to retain pasted formatting)
 
 	:set paste
+
+Set highlight search results or disable highligh
+
+	:set hlsearch
+	:set nohlsearch
