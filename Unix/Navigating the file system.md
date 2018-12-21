@@ -1,34 +1,33 @@
-
 # Navigating the file system
 
 List files in the current directory
 
-	ls
+    ls
 
 Long listing (l) of all files (a) with human readable sizes (h)
 
-	ls -lah
+    ls -lah
 
 Change directory
 
-	cd <dir>
+    cd <dir>
 
 Go to home directory
 
-	cd ~
+    cd ~
 
 Go to system root directory
 
-	cd /
+    cd /
 
 Return to last directory
 
-	cd -
+    cd -
 
 Show the path of the current directory location (print working directory)
 
-	pwd
+    pwd
 
 Display files and sub directories graphically
 
-	tree
+    tree

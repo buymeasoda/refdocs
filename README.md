@@ -8,13 +8,13 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 
 ## Guides
 
-* Git
-* Homebrew
-* MacPorts
-* MAMP
-* Mercurial
-* MySQL
-* React Native
-* Tools
-* Unix
-* Vim
+- Git
+- Homebrew
+- MacPorts
+- MAMP
+- Mercurial
+- MySQL
+- React Native
+- Tools
+- Unix
+- Vim

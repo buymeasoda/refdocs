@@ -4,314 +4,314 @@
 
 Show help instructions and commands
 
-	:help
+    :help
 
 Open user manual index
 
-	:help user-manual
+    :help user-manual
 
 Navigate to topic (see navigation below), position cursor inside `|...|` for topic filename and open
 
-	CTRL + ]
+    CTRL + ]
 
 Exit help manual
 
-	:q
+    :q
 
 ## General
 
 Commands and actions are extended with modifiers and repeated using counts
 
-	<action><modifier>
-	<count><modifier>
+    <action><modifier>
+    <count><modifier>
 
 Modifiers can be combined with counts to duplicate the modified action
 
-	<action><count><modifier>
+    <action><count><modifier>
 
 Example: Delete three words (`d` delete action, `3` count, `w` word modifier)
 
-	d3w
+    d3w
 
 Example: Move forward three words (`3` count, `w` word modifier)
 
-	3w
+    3w
 
 ## Navigation
 
 Move cursor Up / Down, Left / Right
 
-	j = Up
-	k = Down
-	h = Left
-	l = Right
+    j = Up
+    k = Down
+    h = Left
+    l = Right
 
-	h (Left) j (Up) k (Down) l (Right)
+    h (Left) j (Up) k (Down) l (Right)
 
 Move by a number of lines or characters (eg. up 4 lines)
 
-	<count>j
-	4j
+    <count>j
+    4j
 
 Move cursor to top / middle / bottom (High / Middle / Bottom) of page
 
-	H
-	M
-	L
+    H
+    M
+    L
 
 Go to start of file
 
-	gg
+    gg
 
 Go to end of file
 
-	G
+    G
 
 Page down / up (f = forward, b = back) and half page (d = down, u = up)
 
-	CTRL + f
-	CTRL + b
+    CTRL + f
+    CTRL + b
 
-	CTRL + d
-	CTRL + u
+    CTRL + d
+    CTRL + u
 
 Go to line number
 
-	<line> SHIFT + G
-	<line> gg
-	:<line> ENTER
+    <line> SHIFT + G
+    <line> gg
+    :<line> ENTER
 
 Move to start, start (whitespace) and end of line
 
-	^
-	0
-	$
+    ^
+    0
+    $
 
 Move by word boundary to start of word forward / backward (delimiter / whole word)
 
-	w
-	W
-	b
-	B
+    w
+    W
+    b
+    B
 
 Move by word boundary to end of word (delimiter / whole word)
 
-	e
-	E
+    e
+    E
 
 ## Edit
 
 Insert text under / after the cursor
 
-	i
-	a
+    i
+    a
 
 Insert text at the beginning / end of the current line
 
-	I
-	A
+    I
+    A
 
 Insert a line above / below and insert text
 
-	o
-	O
+    o
+    O
 
 Insert text at the end of the word
 
-	ea
+    ea
 
 Repeat the last action or edit
 
-	.
+    .
 
 Join line below to the current one
 
-	J
+    J
 
 Transpose two letters (performs forward delete/cut then paste)
 
-	xp
+    xp
 
 Complete current partial word based on existing word list (cycle through next / previous entries)
 
-	CTRL + N
-	CTRL + P
+    CTRL + N
+    CTRL + P
 
 ## Delete
 
 Delete text in front / behind cursor
 
-	x
-	X
+    x
+    X
 
 Delete current line (also cuts text to clipboard)
 
-	dd
+    dd
 
 Delete to beginning / end of current word or start of next word
 
-	db
-	de
-	dw
+    db
+    de
+    dw
 
 Delete to start / end of line
 
-	d^
-	d$
+    d^
+    d$
 
 Apply modifier to delete command (eg. Delete three words)
 
-	d<modifier><command>
-	d3w
+    d<modifier><command>
+    d3w
 
 ## Change
 
 Change entire line (combines delete and insert)
 
-	cc
+    cc
 
 Change a word to beginning / end or start of next work
 
-	cb
-	ce
-	cw
+    cb
+    ce
+    cw
 
 Delete to start / end of line
 
-	c^
-	c$
+    c^
+    c$
 
 Change from the cursor to the end of the line
 
-	C
+    C
 
 Delete character / line at cursor and substitute text
 
-	s
-	S
+    s
+    S
 
 Replace a single character (without triggering insert mode)
 
-	r<character>
+    r<character>
 
 Replace multiple characters in replace mode
 
-	R<type>
+    R<type>
 
 ## Search
 
 Search forward / backwards for text
 
-	/<search-string>
-	?<search-string>
+    /<search-string>
+    ?<search-string>
 
 Next / previous search result
 
-	n
-	N
+    n
+    N
 
 Next / previous word under cursor
 
-	*
-	#
+    *
+    #
 
 ## Cut, Copy, Paste
 
 Cut current line
 
-	dd
+    dd
 
 Copy the current line
 
-	yy
+    yy
 
 Copy to beginning / end of current word or start of next word
 
-	ye
-	yw
-	yb
+    ye
+    yw
+    yb
 
 Copy to start / end of line
 
-	y^
-	y$
+    y^
+    y$
 
 Paste buffer after / before cursor
 
-	p
-	P
+    p
+    P
 
 Paste multiple instances of the copied text
 
-	<num>p
-	5p
+    <num>p
+    5p
 
 Visual selection character / line (to apply commands to)
 
-	v
-	V
+    v
+    V
 
 Visual section with block select
 
-	CTRL + v
+    CTRL + v
 
 Cut text visually marked
 
-	d
+    d
 
 Copy text visually marked (yank)
 
-	y
+    y
 
 Replace selected text
 
-	c
+    c
 
 ## Undo / Redo
 
 Undo edits and changes
 
-	u
+    u
 
 Redo edits and changes
 
-	CTRL+R
+    CTRL+R
 
 Revert last change to original state
 
-	U
+    U
 
 ## Save / Quit
 
 Save file
 
-	:w
+    :w
 
 Quit vim (normal, without saving / no prompt)
 
-	:q
-	:q!
+    :q
+    :q!
 
 Write and quit
 
-	:wq
+    :wq
 
 ## Configuration
 
 Enable / disable line numbers
 
-	:set number
-	:set nu
-	:set nonumber
-	:set number!
-	:set nonu
-	:set nu!
+    :set number
+    :set nu
+    :set nonumber
+    :set number!
+    :set nonu
+    :set nu!
 
 Set editor to paste mode (to retain pasted formatting)
 
-	:set paste
+    :set paste
 
 Set highlight search results or disable highligh
 
-	:set hlsearch
-	:set nohlsearch
+    :set hlsearch
+    :set nohlsearch

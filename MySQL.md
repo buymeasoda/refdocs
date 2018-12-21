@@ -1,4 +1,3 @@
-
 # MySQL
 
 Reference for working with [MySQL](http://www.mysql.com/).
@@ -9,59 +8,59 @@ If you are operating on a local MySQL database, `<host>` in the examples below w
 
 ## Install MySQL Server
 
-	sudo apt-get install mysql-server
-	mysql_secure_installation
+    sudo apt-get install mysql-server
+    mysql_secure_installation
 
 ## Control MySQL Server
 
 Start, stop and restart MySQL Server
 
-	sudo service mysql start
-	sudo service mysql stop
-	sudo service mysql restart
+    sudo service mysql start
+    sudo service mysql stop
+    sudo service mysql restart
 
 ## Logging in and out
 
 Log into MySQL as `root`
 
-	mysql -u root -p
+    mysql -u root -p
 
 Log into MySQL as `<user>`
 
-	mysql -u <user> -p
+    mysql -u <user> -p
 
 Exit MySQL
 
-	mysql> exit
+    mysql> exit
 
 ## Database files
 
 Location of MySQL databases
 
-	/var/lib/mysql
+    /var/lib/mysql
 
 Report total size of MySQL databases
 
-	sudo du -skh /var/lib/mysql
+    sudo du -skh /var/lib/mysql
 
 ## Managing Users
 
 Create a user
 
-	mysql> CREATE USER '<user>'@'<host>' IDENTIFIED BY '<password>';
-	mysql> FLUSH PRIVILEGES;
+    mysql> CREATE USER '<user>'@'<host>' IDENTIFIED BY '<password>';
+    mysql> FLUSH PRIVILEGES;
 
 Delete a user
 
-	mysql> DROP USER '<user>'@'<host>';
+    mysql> DROP USER '<user>'@'<host>';
 
 Change a user's password (as root)
 
-	mysql> SET PASSWORD FOR '<user>'@'<host>' = PASSWORD('<password>');
+    mysql> SET PASSWORD FOR '<user>'@'<host>' = PASSWORD('<password>');
 
 Show list of users
 
-	mysql> SELECT User FROM mysql.user;
+    mysql> SELECT User FROM mysql.user;
 
 ## Managing user privileges
 
@@ -69,167 +68,167 @@ Assign database privileges
 
 Privileges:
 
-* SELECT - Read only
-* INSERT - Insert rows/data
-* UPDATE - Change inserted rows/data
-* DELETE - Delete drop rows of data
-* CREATE - Create new tables
-* ALTER - Change table/column names
-* DROP - Drop columns/tables
+- SELECT - Read only
+- INSERT - Insert rows/data
+- UPDATE - Change inserted rows/data
+- DELETE - Delete drop rows of data
+- CREATE - Create new tables
+- ALTER - Change table/column names
+- DROP - Drop columns/tables
 
 Grant all privileges
 
-	mysql> GRANT ALL PRIVILEGES ON <database>.* TO '<user>'@'<host>';
-	mysql> FLUSH PRIVILEGES;
+    mysql> GRANT ALL PRIVILEGES ON <database>.* TO '<user>'@'<host>';
+    mysql> FLUSH PRIVILEGES;
 
 Grant general privileges
 
-	mysql> GRANT SELECT, INSERT, UPDATE, DELETE ON <database>.* TO '<user>'@'<host>';
-	mysql> FLUSH PRIVILEGES;
+    mysql> GRANT SELECT, INSERT, UPDATE, DELETE ON <database>.* TO '<user>'@'<host>';
+    mysql> FLUSH PRIVILEGES;
 
 Grant table privileges
 
-	mysql> GRANT CREATE, DROP, ALTER ON <database>.* TO '<user>'@'<host>';
+    mysql> GRANT CREATE, DROP, ALTER ON <database>.* TO '<user>'@'<host>';
 
 Revoke all privileges
 
-	mysql> REVOKE ALL ON <database>.* FROM '<user>'@'<host>';
+    mysql> REVOKE ALL ON <database>.* FROM '<user>'@'<host>';
 
 Revoke specific privileges
 
-	mysql> REVOKE DELETE, INSERT ON <database>.* FROM '<user>'@'<host>';
+    mysql> REVOKE DELETE, INSERT ON <database>.* FROM '<user>'@'<host>';
 
 Show privileges
 
-	mysql> SHOW GRANTS FOR '<user>'@'<host>';
+    mysql> SHOW GRANTS FOR '<user>'@'<host>';
 
 ## Navigating Databases and Tables
 
 Show list of available databases
 
-	mysql> SHOW DATABASES;
+    mysql> SHOW DATABASES;
 
 Select database to use for subsequent SQL commands
 
-	mysql> USE <database>;
+    mysql> USE <database>;
 
 Show tables for selected database
 
-	mysql> SHOW TABLES;
+    mysql> SHOW TABLES;
 
 Show the column names and column types for a table
 
-	mysql> DESCRIBE <table>;
+    mysql> DESCRIBE <table>;
 
 Show all rows that exist in a column
 
-	mysql> SELECT * FROM <column>;
+    mysql> SELECT * FROM <column>;
 
 ## Create and delete databases
 
 Create a new database
 
-	mysql> CREATE DATABASE <database>;
+    mysql> CREATE DATABASE <database>;
 
 Delete an existing database
 
-	mysql> DROP DATABASE <database>;
+    mysql> DROP DATABASE <database>;
 
 ## Create, delete and alter tables
 
 Create a table and columns
 
-	mysql> CREATE TABLE <table> (<column> <type> <settings>);
+    mysql> CREATE TABLE <table> (<column> <type> <settings>);
 
 Create a table and columns (example)
 
-	mysql> CREATE TABLE <table> (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, <column> VARCHAR(45));
+    mysql> CREATE TABLE <table> (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, <column> VARCHAR(45));
 
 Rename table
 
-	mysql> RENAME TABLE <table> to <new table>;
+    mysql> RENAME TABLE <table> to <new table>;
 
 Delete table
 
-	mysql> DROP TABLE <table>;
+    mysql> DROP TABLE <table>;
 
 Add table column
 
-	mysql> ALTER TABLE <table> ADD <column> <type> <settings>;
+    mysql> ALTER TABLE <table> ADD <column> <type> <settings>;
 
 Add table column in location (example)
 
-	mysql> ALTER TABLE <table> ADD <new column> VARCHAR(45) NULL AFTER `<column>`;
+    mysql> ALTER TABLE <table> ADD <new column> VARCHAR(45) NULL AFTER `<column>`;
 
 Insert record
 
-	mysql> INSERT INTO <table> (<column>, <other column>) VALUES ('<value>', '<other value>');
+    mysql> INSERT INTO <table> (<column>, <other column>) VALUES ('<value>', '<other value>');
 
 ## Select, update and delete rows
 
 Select records
 
-	mysql> SELECT * FROM <table>;
+    mysql> SELECT * FROM <table>;
 
 Update record
 
-	mysql> UPDATE <table> SET <column> = '<value>';
+    mysql> UPDATE <table> SET <column> = '<value>';
 
 Update record with condition
 
-	mysql> UPDATE <table> SET <column> = '<value>' WHERE <table>.<other column> = <condition>;
+    mysql> UPDATE <table> SET <column> = '<value>' WHERE <table>.<other column> = <condition>;
 
 Delete all rows
 
-	mysql> DELETE FROM <table>;
+    mysql> DELETE FROM <table>;
 
 Delete specific record
 
-	mysql> DELETE FROM <table> WHERE <table>.<column> = '<value>';
+    mysql> DELETE FROM <table> WHERE <table>.<column> = '<value>';
 
 ## MySQL Database Import / Export
 
 Export database
 
-	mysqldump -u root -p <database> > <file.sql>
+    mysqldump -u root -p <database> > <file.sql>
 
 Import database
 
-	mysqladmin -u root -p create <database>
-	mysql -u root -p <database> < <file.sql>
+    mysqladmin -u root -p create <database>
+    mysql -u root -p <database> < <file.sql>
 
 Executing .sql files
 
-	mysql> source <file.sql>
+    mysql> source <file.sql>
 
 Alternative way to execute .sql files
 
-	mysql> \. <file.sql>
+    mysql> \. <file.sql>
 
 Output MySQL settings
 
-	mysql> \s
+    mysql> \s
 
 ## Rename MySQL Database
 
-	mysqldump -u root -p -v <database> > <file.sql>
-	mysqladmin -u root -p create <new database>
-	mysql -u root -p <new database> < <file.sql>
+    mysqldump -u root -p -v <database> > <file.sql>
+    mysqladmin -u root -p create <new database>
+    mysql -u root -p <new database> < <file.sql>
 
 ## Setting up server for utf8
 
 Show current character set configuration
 
-	mysql> show variables like 'char%';
+    mysql> show variables like 'char%';
 
 Configuring MySQL utf8
 
 In my.cnf:
 
-	[mysqld]
-	character-set-server=utf8
+    [mysqld]
+    character-set-server=utf8
 
-	[client]
-	default-character-set=utf8
+    [client]
+    default-character-set=utf8
 
 For html document creation / saving: Set file encoding type to utf8
