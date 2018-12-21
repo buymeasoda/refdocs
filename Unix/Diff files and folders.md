@@ -30,3 +30,9 @@ Pipe diff output into vim for syntax highlighting
 Compare files using the git diff tool (works outside of git repos)
 
     git diff --no-index <file1> <file2>
+
+## VS Code Diff
+
+Compare files using VS Code diff view
+
+    code -d <file1> <file2>
