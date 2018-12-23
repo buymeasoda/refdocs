@@ -1,6 +1,6 @@
 # iOS
 
-## Manage Xcode
+## Xcode
 
 Show selected Xcode
 
@@ -10,9 +10,44 @@ Switch selected version
 
     sudo xcode-select -s /Applications/Xcode<xxxx>.app
 
-## Manage Simulators
+## Simulator
 
-Install `fbsimctl`
+Open simulator app
+
+    open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/
+
+Show xcrun simulator commands
+
+    xcrun simctl help
+
+Show list of simulators (Sample device ID: `12AB3C4D-A12B-12A3-12AB-A12B34C5678D`)
+
+    xcrun simctl list
+
+Get device ID for booted simulators
+
+    xcrun simctl list | grep -i booted
+
+Boot / shutdown simulator device ID
+
+    xcrun simctl boot <device-id>
+    xcrun simctl shutdown <device-id>
+
+## Install IPA to Simulator
+
+Rename from ipa to .zip and unzip
+
+    mv YourApp.ipa YourApp.zip
+    unzip YourApp.zip
+
+Install via xcrun to the booted device or specified device ID
+
+    xcrun simctl install booted path/to/Your.app
+    xcrun simctl install <device-id> path/to/Your.app
+
+## Using FBSimulatorControl
+
+Install
 
     brew tap facebook/fb
     brew install fbsimctl
@@ -21,7 +56,7 @@ List current simulators
 
     fbsimctl list
 
-Load simulator (Sample device ID: 12AB3C4D-A12B-12A3-12AB-A12B34C5678D)
+Load simulator
 
     fbsimctl <device-id> boot
 
@@ -33,25 +68,7 @@ Clean up old simulators
 
     fbsimctl --delete-all create --all-missing-defaults
 
-## Screencast Recording
-
 Record simulator or device (CTRL + C to stop recording)
 
     fbsimrecord
     fbdevicerecord
-
-## Install IPA to Simulator
-
-Rename from ipa to .zip and unzip
-
-    mv YourApp.ipa YourApp.zip
-    unzip YourApp.zip
-
-Get device ID for running iOS Simulator
-
-    xcrun simctl install booted path/to/Your.app
-    xcrun simctl list | grep -i booted
-
-Install via xcrun
-
-    xcrun simctl install <device-id> path/to/Your.app
