@@ -73,6 +73,10 @@ Grep for a specific string in file history commit messages or diffs
     hg log <path> | grep <search-string>
     hg log -p <path> | grep <search-string>
 
+Grep mercurial history over time range for changes (eg. for last week `"date(-7)"`)
+
+    hg histgrep -r "<time-range>" "<search-string>" <path>
+
 ## Amend Changes
 
 Amend an existing commit with current changes (`-m` to update commit message)
@@ -102,9 +106,10 @@ Revert changes to an uncommitted file (return to clean, pre-edit state)
 
     hg revert <file>
 
-Revert a file to an earlier version in history
+Revert a file to an earlier version in history (`.~1` for current parent)
 
     hg revert -r <rev-id> <file>
+    hg revert -r .~1 <file>
 
 ## Squash Commits
 
@@ -154,16 +159,17 @@ Show a list of new incoming remote bookmarks
 
     hg incoming -B
 
-## Move, Rebase or Delete Commits
+## Reorder, Combine or Delete Commits
 
 Interactively reorder, combine, or delete commits
 
     hg histedit
 
-Cherry pick and move revisions onto destination (specify multiple revisions with `"<rev-id1> + <rev-id2>"`)
+Remove commit completely
 
-    hg rebase –d <destination> –r <rev-id>
-    hg rebase –d master –r "bug3765 + 530273"
+    hg strip <rev-id>
+
+## Rebase Commits
 
 Move revision and decedents (commits below it not on target branch) to destination
 
@@ -173,9 +179,21 @@ Move revision and ancestors (commits above it) to destination
 
     hg rebase –d <destination> –s <rev-id>
 
-Remove commit completely
+Recover from a failed rebase or merge
 
-    hg strip <rev-id>
+    hg rebase --abort
+
+Resolve merge conflict and continue rebase (after manual fix)
+
+    hg resolve --mark <file>
+    hg rebase --continue
+
+## Cherry Pick Commits
+
+Cherry pick and move revisions onto destination (specify multiple revisions with `"<rev-id1> + <rev-id2>"`)
+
+    hg rebase –d <destination> –r <rev-id>
+    hg rebase –d master –r "bug3765 + 530273"
 
 ## Sparse Checkout
 
