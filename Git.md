@@ -120,6 +120,18 @@ Only affects index not file
 
     git rm --cached
 
+## Clean up untracked files
+
+Show which files or files and directories that git clean will remove
+
+    git clean -n
+    git clean -nd
+
+Remove untracked files or both files and directories
+
+    git clean -f
+    git clean -fd
+
 ## Committing changes
 
 Commit current staged index
