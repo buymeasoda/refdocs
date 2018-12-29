@@ -72,3 +72,14 @@ Record simulator or device (CTRL + C to stop recording)
 
     fbsimrecord
     fbdevicerecord
+
+## Simulator Crash Logs
+
+Show iOS simulator app crash logs
+
+- Open Console.app
+- Navigate to `~/Library/Logs -> DiagnosticReports`
+
+Manual logs will show in Console.app when viewing the related simulator from "Devices"
+
+    NSLog(@"...");
