@@ -195,6 +195,30 @@ Cherry pick and move revisions onto destination (specify multiple revisions with
     hg rebase –d <destination> –r <rev-id>
     hg rebase –d master –r "bug3765 + 530273"
 
+## Bisect
+
+Reset bisect state to begin a fresh bisect, and mark the current state as bad
+
+    hg bisect --reset
+    hg bisect --bad
+
+Choose a known good point as close to now as possible (eg. 7 days ago) and mark it as good
+
+    hg bisect --good 'first(date(-7) and public())'
+
+Check the state and mark as good or bad until the problem revision is found
+
+    hg bisect --good
+    hg bisect --bad
+
+End bisect and return to the current checkout revision
+
+    hg bisect --reset
+
+Bisect and run unit test per check (First reset and mark good/bad commits)
+
+    hg bisect --command '<test-commands>'
+
 ## Sparse Checkout
 
 Check current sparse config
