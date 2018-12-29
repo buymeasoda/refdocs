@@ -66,6 +66,10 @@ Example history variations (`-f` starts at your current commit and moves backwar
     hg log --graph
     hg log --style=compact
 
+Show a summary of the files that changed for a rev set
+
+    hg status --change <rev-id>
+
 ## Search code history
 
 Grep for a specific string in file history commit messages or diffs
