@@ -4,15 +4,17 @@
 
     rsync <options> <source> <destination>
 
+## Backup Mode
+
+Perform a mirrored one way sync of source files to destination, removing deleted files from destination (Archive mode flag `-a` is the same as `-rlptgoD`)
+
+    rsync -avhP --stats --delete <source> <destination>
+
 ## Archive Mode
 
-Perform mirrored archive (deleting remote files that no longer exist locally), showing verbose, human readable output and progress.
+Perform a mirrored one way sync, deleting destination files but retain a destination backup of deleted files in a date stamped folder
 
-    rsync -avhP --delete <source> <destination>
-
-Archive mode flag
-
-- `-a` archive mode (same as `-rlptgoD`)
+    rsync -avhP --stats --delete --backup --backup-dir="backup_$(date +\%Y-\%m-\%d)" <source> <destination>
 
 ## Common Flags
 
