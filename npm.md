@@ -1,4 +1,4 @@
-# Node and npm
+# npm
 
 ## Information
 
