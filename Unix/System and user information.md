@@ -16,6 +16,10 @@ Change Unix shell (enter path to new shell when prompted)
 
     chsh
 
+Output default shell
+
+    echo $SHELL
+
 ## Maintenance
 
 Update package list
@@ -80,7 +84,7 @@ Output current terminal settings
 
     stty -a
 
-Show distrubtion specific version information
+Show distribution specific version information
 
     cat /etc/lsb-release
 
