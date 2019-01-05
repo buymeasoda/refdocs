@@ -6,16 +6,6 @@ Clear the current screen of text
 
     clear
 
-## Clipboard
-
-Copy content to the clipboard (eg. cat file.txt | pbcopy, copies contents of file.txt to the clipboard)
-
-    pbcopy
-
-Outputs the current contents of the clipboard
-
-    pbpaste
-
 ## History
 
 Show list of previous commands with ids (with timestamp `-f` and count limit `-100`)
