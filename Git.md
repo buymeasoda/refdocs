@@ -379,6 +379,10 @@ Diff local working directory against current index (staged files), exposing what
 
     git diff
 
+Diff showing further granularity of changes within lines
+
+    git diff --word-diff
+
 Diff index (staged files) against HEAD (current repo state)
 
     git diff --staged
@@ -1145,9 +1149,9 @@ You can now clone from this repo from another machine or location on your comput
 
 # Working with external tools
 
-Pipe output from any command into TextMate (or another text editor)
+Pipe output from any command into VS Code (or another text editor)
 
-    git diff | mate
+    git diff | code
 
 A visual view of the commit graph showing the repository history, commits and branches
 
