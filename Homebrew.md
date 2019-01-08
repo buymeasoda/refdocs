@@ -10,6 +10,14 @@ Show information for a specific formula
 
     brew info <formula>
 
+Show installed formula excluding dependencies
+
+    brew leaves
+
+Show all installed formula including dependencies
+
+    brew list
+
 ## Install
 
 Install/Uninstall formula
