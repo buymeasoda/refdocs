@@ -2,6 +2,10 @@
 
 ## Terminal
 
+Reload current shell in place (useful for cleanly applying recent shell config updates)
+
+    exec $SHELL
+
 Clear the current screen of text
 
     clear
