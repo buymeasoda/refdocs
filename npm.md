@@ -14,6 +14,11 @@ Show location of global modules folder
 
     npm root --global
 
+Open home page or github repo for package
+
+    npm home <package>
+    npm repo <package>
+
 ## List
 
 List installed packages (local / global)
@@ -72,6 +77,10 @@ Uninstall package (local, dev, global)
     npm uninstall --save-dev <package>
     npm uninstall --global <package>
 
+Remove packages not declared in package.json
+
+    npm prune
+
 ## Update
 
 Update all packages or specific package (local, global)
@@ -80,6 +89,10 @@ Update all packages or specific package (local, global)
     npm update <package>
     npm update --global
     npm update --global <package>
+
+Show outdated packages
+
+    npm outdated
 
 ## Scripts
 
