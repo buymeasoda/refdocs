@@ -2,6 +2,11 @@
 
 ## Information
 
+Show npm version and help
+
+    npm -v
+    npm help
+
 Search for node packages
 
     npm search <package>
