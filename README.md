@@ -23,3 +23,4 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 - Unix
 - Vim
 - VS Code
+- Yarn
