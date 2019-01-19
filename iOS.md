@@ -2,6 +2,10 @@
 
 ## Xcode
 
+Install command line developer tools
+
+    xcode-select --install
+
 Show selected Xcode
 
     xcode-select -p
