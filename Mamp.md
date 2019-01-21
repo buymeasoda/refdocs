@@ -1,16 +1,14 @@
 # MAMP Setup on OSX
 
-Setting up Apache, MySQL and PHP on Mac OSX.
+Setting up macOS with Apache, MySQL and PHP.
 
 The guide uses the default Mac OSX Apache and PHP along with [Homebrew](http://mxcl.github.com/homebrew/) for installing MySQL.
 
-# Apache Setup
+# Apache
 
-## Configure Apache
+Open the Apache server configuration file `httpd.conf` for editing
 
-Open the Apache server configuration file `httpd.conf` for editing.
-
-    /etc/apache2/httpd.conf
+    /private/etc/apache2/httpd.conf
 
 ## httpd.conf settings
 
@@ -18,77 +16,90 @@ Set the server name to `localhost`
 
     ServerName localhost:80
 
-Enable the PHP module
+Configure document root for sites folder (create `~/Sites` if needed)
 
-    LoadModule php5_module
+    DocumentRoot "/Users/<user-name>/Sites"
+    <Directory "/Users/<user-name>/Sites">
 
-Add index.htm to the directory index list (check if needed, php5_module may enable)
+Set log file location and create folder if needed
+
+    ErrorLog "/private/var/log/apache2/error_log"
+    CustomLog "/private/var/log/apache2/access_log" common
+
+Enable the PHP module (add or uncomment)
+
+    LoadModule php7_module libexec/apache2/libphp7.so
+
+Expand directory index file extensions (not required when `other/php7.conf` is used)
 
     DirectoryIndex index.html index.htm index.php
 
-Enable the virtual hosts configuration file
+Enable the virtual hosts configuration file (add or uncomment)
 
     Include /private/etc/apache2/extra/httpd-vhosts.conf
 
-## Configure virtual hosts
+## Virtual hosts
 
-Location of Apache vhosts configuration file
+Edit Apache vhosts configuration file
 
-    /etc/apache2/extra/httpd-vhosts.conf
+    /private/etc/apache2/extra/httpd-vhosts.conf
 
-Open `httpd-vhosts.conf` and add your vhost entries after the line
+Remove sample configs and add new vhost
 
-    NameVirtualHost *:80
+    <VirtualHost *:80>
+    	DocumentRoot "/Users/<user-name>/Sites/<site-name>"
+    	ServerName <server-name>
+    </VirtualHost>
 
-## Apache Commands
+## Start Apache
 
-    sudo apachectl start|stop|restart
+Start (or `restart`) Apache to activate new config
 
-# Setup PHP
+    sudo apachectl start
 
-Create a php.ini file
+# PHP
 
-    sudo cp /etc/php.ini.default /etc/php.ini
+Create a `php.ini` file
 
-Paste in the contents of `php.ini-development` from the php.net distribution download
+    sudo cp /private/etc/php.ini.default /private/etc/php.ini
 
-Add your timezone to date.timezone to stop PHP date warning
+(For additional error reporting when developing, download the related distribution from [php.net/releases](http://php.net/releases/) and use `php.ini-development` contents for `php.ini` config)
 
-    date.timezone = "Australia/Brisbane"
+Add your timezone to date.timezone to stop PHP date warning (eg. `America/Los_Angeles`)
+
+    date.timezone = "<timezone>"
 
 Configure MySQL socket setting, find and set the following
 
     pdo_mysql.default_socket = /tmp/mysql.sock
-    mysql.default_socket = /tmp/mysql.sock
     mysqli.default_socket = /tmp/mysql.sock
 
-## Command line information
+# Hosts File
 
-Show version number of installed PHP
+Open the etc hosts file
 
-    php -v
+    /private/etc/hosts
 
-To see what compiled php modules are active
+Add entries for each virtual host
 
-    php -m
-
-To show more complete php configuration and environment information
-
-    php -i
+    127.0.0.1 <domain-name>
 
 # MySQL
 
-## Install and configure MySQL
+Install MySQL with Homebrew (Latest: `msyql` or Version: `msyql@5.7`)
 
-Install MySQL with Homebrew
+    brew install mysql@5.7
 
-    brew install mysql --with-utf8-default
+And MySQL bin folder to path (reload shell to activate)
 
-Follow the homebrew instructions after installation
+    export PATH=/usr/local/opt/mysql@5.7/bin:$PATH
 
-    unset TMPDIR
-    mysql_install_db
+Start MySQL server
+
     mysql.server start
+
+Secure MySQL installation
+
     mysql_secure_installation
 
 Step through MySQL secure installation procedure
@@ -98,31 +109,6 @@ Step through MySQL secure installation procedure
 - Disallow root login remotely
 - Remove test databases
 - Reload privileges
-
-## MySQL Commands
-
-Manage MySQL server
-
-    mysql.server start|stop|restart|reload|force-reload|stats
-
-`mysql.server` is a script located in: `/usr/local/Cellar/mysql/<version>/support-files`
-Run with `./mysql.server <command>` or make executable
-
-## MySQL Databases
-
-Location of MySQL database files
-
-    /usr/local/var/mysql
-
-# Hosts File
-
-Open the etc hosts file
-
-    /etc/hosts
-
-Add entries for each virtual host (one per line)
-
-    127.0.0.1 <your domain>
 
 # General Information
 
@@ -140,12 +126,6 @@ Default Apache page (contains default index page)
 
     /Library/WebServer/Documents
 
-## Useful URLs
+Location of MySQL database files
 
-Open Apache manual
-
-    http://localhost/manual/
-
-Open user default sites folder `/User/<username>/Sites/`
-
-    http://localhost/~<username>/
+    /usr/local/var/mysql
