@@ -8,18 +8,29 @@ If you are operating on a local MySQL database, `<host>` in the examples below w
 
 ## Install MySQL Server
 
+Linux
+
     sudo apt-get install mysql-server
+
+macOS
+
+    brew install mysql
+
+Secure MySQL installation
+
     mysql_secure_installation
 
 ## Control MySQL Server
 
-Start, stop and restart MySQL Server
+Linux
 
-    sudo service mysql start
-    sudo service mysql stop
-    sudo service mysql restart
+    service mysql start | stop | restart | status
 
-## Logging in and out
+macOS
+
+    mysql.server start | stop | restart | status
+
+## Log In/Out
 
 Log into MySQL as `root`
 
@@ -33,17 +44,21 @@ Exit MySQL
 
     mysql> exit
 
-## Database files
+## Database Files
 
-Location of MySQL databases
+Linux
 
     /var/lib/mysql
 
+macOS
+
+    /usr/local/var/mysql
+
 Report total size of MySQL databases
 
-    sudo du -skh /var/lib/mysql
+    sudo du -skh <mysql-directory>
 
-## Managing Users
+## Manage Users
 
 Create a user
 
@@ -62,7 +77,7 @@ Show list of users
 
     mysql> SELECT User FROM mysql.user;
 
-## Managing user privileges
+## Manage Privileges
 
 Assign database privileges
 
@@ -102,7 +117,7 @@ Show privileges
 
     mysql> SHOW GRANTS FOR '<user>'@'<host>';
 
-## Navigating Databases and Tables
+## Navigate Databases and Tables
 
 Show list of available databases
 
@@ -124,7 +139,7 @@ Show all rows that exist in a column
 
     mysql> SELECT * FROM <column>;
 
-## Create and delete databases
+## Create and Delete databases
 
 Create a new database
 
@@ -134,7 +149,7 @@ Delete an existing database
 
     mysql> DROP DATABASE <database>;
 
-## Create, delete and alter tables
+## Create, Delete and Alter Tables
 
 Create a table and columns
 
@@ -164,7 +179,7 @@ Insert record
 
     mysql> INSERT INTO <table> (<column>, <other column>) VALUES ('<value>', '<other value>');
 
-## Select, update and delete rows
+## Select, Update and Delete Rows
 
 Select records
 
@@ -209,26 +224,14 @@ Output MySQL settings
 
     mysql> \s
 
-## Rename MySQL Database
+## Rename Database
 
     mysqldump -u root -p -v <database> > <file.sql>
     mysqladmin -u root -p create <new database>
     mysql -u root -p <new database> < <file.sql>
 
-## Setting up server for utf8
+## Check Database Configuration
 
 Show current character set configuration
 
     mysql> show variables like 'char%';
-
-Configuring MySQL utf8
-
-In my.cnf:
-
-    [mysqld]
-    character-set-server=utf8
-
-    [client]
-    default-character-set=utf8
-
-For html document creation / saving: Set file encoding type to utf8
