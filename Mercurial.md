@@ -236,3 +236,18 @@ Add sparse configs
 Refresh sparse checkout
 
     hg sparse --refresh
+
+## Backout Commits
+
+Backout revisions one at a time in reverse order, from newest (top) commit to earliest (bottom) commit
+
+    hg backout -r <rev>
+
+Squash all backed out revisions to a single commit
+
+    hg checkout -r <top-rev>
+    hg squash -r <bottom-rev>
+
+Update the commit message with additional details including message, summary, test plan, reviewed by (self)
+
+    hg commit --amend
