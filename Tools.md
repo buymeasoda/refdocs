@@ -4,7 +4,7 @@
 
 - [Homebrew](http://mxcl.github.com/homebrew/)
 - [iTerm2](https://www.iterm2.com/)
-- [Oh My ZSH](https://ohmyz.sh/)
+- [Fish Shell](https://fishshell.com/)
 
 ## Native Development
 
