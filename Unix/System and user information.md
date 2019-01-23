@@ -1,4 +1,4 @@
-# System and user information
+# System and User Information
 
 ## Session
 
@@ -31,6 +31,15 @@ Upgrade outdated packages
     sudo apt-get upgrade
 
 ## Information
+
+Display system OS information (Linux)
+
+    cat /etc/os-release
+
+Display basic system OS information or more detailed system config (macOS)
+
+    sw_vers
+    system_profiler SPSoftwareDataType
 
 Display system uptime, memory, who is logged in and what they are doing
 
