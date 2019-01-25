@@ -1,5 +1,13 @@
 # MacOS
 
+## Troubleshooting
+
+Relaunch Mac OS features
+
+    killall Dock
+    killall Finder
+    killall ControlStrip
+
 ## Clipboard
 
 Copy content to the clipboard (eg. cat file.txt | pbcopy, copies contents of file.txt to the clipboard)
