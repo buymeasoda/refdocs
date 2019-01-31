@@ -53,3 +53,23 @@ Ignore specific package update
 Clear ignored packages list
 
     softwareupdate --reset-ignored
+
+## System Defaults
+
+List defaults preference files (or list as one per line)
+
+    defaults domains
+    defaults domains | tr ',' '\n'
+
+Show current defaults for domain
+
+    defaults read <domain>
+
+Show expected type for domain setting
+
+    defaults read-type <domain> <key>
+
+Set specific domain key
+
+    defaults write <domain> <key> <value>
+    defaults write <domain> <key> -<type> <value>
