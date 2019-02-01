@@ -4,7 +4,11 @@ List files in the current directory
 
     ls
 
-Long listing (l) of all files (a) with human readable sizes (h)
+List filenames only one per line (numerical value `1`)
+
+    ls -1
+
+Long listing (`l`) of all files (`a`) with human readable sizes (`h`)
 
     ls -lah
 
