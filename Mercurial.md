@@ -1,5 +1,12 @@
 # Mercurial
 
+## Configuration
+
+Show mercurial configuration (`--debug` includes file paths)
+
+    hg config
+    hg config --debug
+
 ## General Workflow
 
 Create new mercurial repository

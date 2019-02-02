@@ -997,26 +997,34 @@ Remove file references from git history
 
 # Configuring Git
 
-## Configuration files and settings
+## Show configuration
 
-More local configuration files override more general config files (System -> User -> Repository)
-Files can be edited directly in a text area of be set with the git config command
+List applied configuration values (later settings override earlier)
 
-Config settings applied to the current repository (`git config <settings>`)
+    git config -l
+
+Show where git configuration is set
+
+    git config --l --show-origin
+
+## Configuration files
+
+Local configuration overrides general configuration
+
+    System Config -> User Config -> Repository Config -> Local File Config
+
+Local config for specific repository (`git config <settings>`)
 
     .git/config
+    <repo>/.gitconfig
 
-Config settings applied for the current user and all repositories (`git config --global <settings>`)
+User config for all repositories (`git config --global <settings>`)
 
     ~/.gitconfig
 
-Config settings applied system wide of all repositories and all users (`git config --system <settings>`)
+System wide config for all repositories and all users (`git config --system <settings>`)
 
     /etc/gitconfig
-
-List all configuration variables that are in effect. They are listed in cascading order (older settings overwrite earlier)
-
-    git config -l
 
 ## Using the config command to apply settings
 
