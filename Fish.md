@@ -32,6 +32,10 @@ Show source for specific function (`type` provides syntax highlighting)
     functions <function-name>
     type <function-name>
 
+List Builtin function names
+
+    builtin --names
+
 ## Abbreviations
 
 List full abbreviations or abbreviation names
