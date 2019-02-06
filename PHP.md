@@ -1,4 +1,4 @@
-# PHP Debugging
+# PHP
 
 ## PHP Information
 
