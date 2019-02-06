@@ -73,3 +73,14 @@ Set specific domain key
 
     defaults write <domain> <key> <value>
     defaults write <domain> <key> -<type> <value>
+
+## Quick Look Plugins
+
+List all registered quick look plugins (includes ones provided internally by apps)
+
+    qlmanage -m
+
+Directories for stand along quick look providers
+
+    /Library/QuickLook
+    ~/Library/QuickLook
