@@ -7,6 +7,10 @@ Show mercurial configuration (`--debug` includes file paths)
     hg config
     hg config --debug
 
+Edit mercurial config (Scope: local `-l`, user `-e`, global `-g`)
+
+    hg config <scope>
+
 ## General Workflow
 
 Create new mercurial repository
