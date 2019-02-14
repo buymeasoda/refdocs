@@ -24,6 +24,10 @@ Open home page or github repo for package
     npm home <package>
     npm repo <package>
 
+Check if npm requires updating
+
+    npm outdated -g npm
+
 ## List
 
 List installed packages (local / global)
