@@ -10,6 +10,12 @@ Clear the current screen of text
 
     clear
 
+## Prevent sleep
+
+Prevent computer from sleeping
+
+    caffeinate -u -t <seconds>
+
 ## Generate MD5 and SHA1 hashes
 
 Generate MD5 hash from file
@@ -20,7 +26,7 @@ Generate SHA1 hash from file
 
     shasum <file>
 
-## Other Utilities
+## Other utilities
 
 Word, line, character and byte count for file or piped input
 
