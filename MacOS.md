@@ -84,3 +84,13 @@ Directories for stand along quick look providers
 
     /Library/QuickLook
     ~/Library/QuickLook
+
+## SF Mono Fonts
+
+Xcode SF Mono font assets
+
+    /Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework/Versions/A/Resources/Fonts/
+
+Terminal SF Mono font assets
+
+    /Applications/Utilities/Terminal.app/Contents/Resources/Fonts
