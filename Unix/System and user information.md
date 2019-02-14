@@ -1,45 +1,31 @@
-# System and User Information
+# System Information
 
-## Session
+## User
 
-Exit the current terminal session
+Display your current username
 
-    exit
+    whoami
 
-Restart the system
+## Operating System
 
-    reboot
+Display the Unix system type being used
 
-## Terminal
-
-Change Unix shell (enter path to new shell when prompted)
-
-    chsh
-
-Output default shell
-
-    echo $SHELL
-
-## Maintenance
-
-Update package list
-
-    sudo apt-get update
-
-Upgrade outdated packages
-
-    sudo apt-get upgrade
-
-## Information
+    uname -a
 
 Display system OS information (Linux)
 
     cat /etc/os-release
 
+Show distribution specific version information (Linux)
+
+    cat /etc/lsb-release
+
 Display basic system OS information or more detailed system config (macOS)
 
     sw_vers
     system_profiler SPSoftwareDataType
+
+## Uptime
 
 Display system uptime, memory, who is logged in and what they are doing
 
@@ -49,9 +35,7 @@ System uptime statistics
 
     uptime
 
-Display your current username
-
-    whoami
+## Hostname
 
 Display the machine short hostname
 
@@ -61,9 +45,7 @@ Display the machine fully qualified hostname
 
     hostname -f
 
-Display the Unix system type being used
-
-    uname -a
+## Processes
 
 Display real time information about process
 
@@ -73,17 +55,23 @@ Display detailed real time information about the system
 
     htop
 
-Show memory usage (in megabytes)
-
-    free -m
-
 Show list of running processes
 
     ps aux | less
 
+## Memory
+
+Show memory usage (in megabytes)
+
+    free -m
+
+## Network
+
 Network settings including computer IP
 
     ifconfig
+
+## Terminal
 
 Output key / value pairs of current environment variables
 
@@ -92,10 +80,6 @@ Output key / value pairs of current environment variables
 Output current terminal settings
 
     stty -a
-
-Show distribution specific version information
-
-    cat /etc/lsb-release
 
 ## Log Files
 
