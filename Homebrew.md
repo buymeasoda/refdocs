@@ -49,7 +49,7 @@ Switch between versions of a formula
 
     brew switch <formula> <version>
 
-## Taps
+## Tap
 
 List tapped repositories
 
@@ -59,3 +59,21 @@ Add or remove tap repository
 
     brew tap <tap-name>
     brew untap <tap-name>
+
+## Cask
+
+Add cask to homebrew
+
+    brew tap caskroom/cask
+
+Update casks
+
+    brew cask upgrade
+
+Install cask
+
+    brew cask install <cask>
+
+List installed casks
+
+    brew cask list
