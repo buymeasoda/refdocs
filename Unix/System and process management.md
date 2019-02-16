@@ -1,4 +1,4 @@
-# System Management
+# System and process management
 
 ## Session
 
@@ -9,6 +9,12 @@ Exit the current terminal session
 Restart the system
 
     reboot
+
+## Processes
+
+Kill process you own or created
+
+    killall <process>
 
 ## Terminal
 
