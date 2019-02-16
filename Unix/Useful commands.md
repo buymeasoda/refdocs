@@ -28,22 +28,6 @@ Generate SHA1 hash from file
 
 ## Other utilities
 
-Word, line, character and byte count for file or piped input
-
-    wc
-
 General maths interpreter (allows general equations entered into command line)
 
     bc
-
-Show line endings for files (Unix: ASCII, DOS: ASCII + CRLF)
-
-    file <file>
-
-Sort lines of text
-
-    sort
-
-Report or filter out repeated lines
-
-    uniq
