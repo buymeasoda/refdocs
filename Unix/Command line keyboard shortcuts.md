@@ -6,7 +6,7 @@ Cycle through earlier commands
 
 Clear the terminal screen (Mac OSX)
 
-    CMD + K
+    CMD + k
 
 Go to the beginning of the line
 

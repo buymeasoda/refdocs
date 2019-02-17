@@ -6,13 +6,16 @@ Perform a command as the super user
 
     sudo <command>
 
-Become the root user (`CTRL + d` to exit user mode)
+## Switch users
 
-    sudo su -
+Switch to specific user
 
-Become another named user
+    su <user>
 
-    sudo su - <user>
+Switch to root or specific user and load user profile (`CTRL + d` to exit user mode)
+
+    su -
+    su - <user>
 
 ## Managing users
 

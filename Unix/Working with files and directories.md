@@ -18,6 +18,10 @@ Open file in the nano text editor
 
     nano <file>
 
+Show line endings for files (Unix: ASCII, DOS: ASCII + CRLF)
+
+    file <file>
+
 ## Work with remote mounts and external hard drives
 
 Access remote mounts (such as Samba shares and external hard drives)
@@ -48,19 +52,20 @@ Symbolic link from source file to destination file
 
 ## Create and delete directories
 
-Create a directory
+Create directories
 
-    mkdir <dirname>
+    mkdir <dir>
+    mkdir <dir1> <dir2> <dir3>
 
-Create multiple directories in one step
+Create multiple directories and subdirectories in one step
 
     mkdir -p dir1 dir2/subdir1 dir2/subdir2 dir3
 
-Create multiple directories in one step, alternative syntax using array of items via {}
+Alternative syntax for multiple directories using array of items via {}
 
     mkdir -p dir1/{subdir1,subdir2} dir2
 
-Can also nest this syntax
+Multiple directory syntax can be nested
 
     mkdir -p tmp/{d1/{sd1,sd2},d2,d3/{sd3,sd4}}
 
@@ -80,7 +85,11 @@ Output the contents of the file
 
     cat <file>
 
-Create a new file, and add content via the command line, end with CTRL + d (on a fresh line)
+Join files together
+
+    cat <file1> <file2>
+
+Create or overwrite a file and add content via the command line (end with CTRL + d on a fresh line)
 
     cat > <file>
 
@@ -96,11 +105,19 @@ Append the contents of file with the text
 
     echo "<text>" >> <file>
 
-Create a file called filename
+Create an empty file
 
-    touch <filename>
+    touch <file>
+    touch <file1> <file2> <file3>
 
-# Less and More
+## Tail and Head
+
+Display the first or last part of a file
+
+    head
+    tail
+
+## Less and More
 
 Paginate through a text file output directly in the terminal
 
@@ -127,4 +144,3 @@ Back one page
 Forward one page
 
     f
-
