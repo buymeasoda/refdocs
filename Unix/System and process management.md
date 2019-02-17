@@ -14,7 +14,20 @@ Restart the system
 
 Kill process you own or created
 
-    killall <process>
+    killall <process-name>
+
+Search to see if a process is running (returns process id)
+
+    pgrep -l <process-name>
+
+Search for process details
+
+    ps aux | grep <process-name>
+
+Kill a running process (by id)
+
+    kill <process-id>
+    sudo kill <process-id>
 
 ## Terminal
 

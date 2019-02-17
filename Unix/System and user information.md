@@ -2,9 +2,17 @@
 
 ## User
 
-Display your current username
+Display current username
 
     whoami
+
+Show permission details for current user
+
+    id
+
+Show logged in users
+
+    users
 
 ## Operating System
 
