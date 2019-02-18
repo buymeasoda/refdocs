@@ -14,6 +14,12 @@ Show php configuration and environment information
 
     php -i
 
+## Run Script
+
+Manually execute a PHP script
+
+    php -q <script>
+
 ## PHP Interactive Shell
 
 Start interactive shell from the command line
