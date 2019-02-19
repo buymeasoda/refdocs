@@ -256,10 +256,20 @@ Paste multiple instances of the copied text
     <num>p
     5p
 
-Visual selection character / line (to apply commands to)
+## Visual Mode
+
+Visual selection mode by character / line (to apply commands to)
 
     v
     V
+
+Exit visual selection mode
+
+    ESC
+
+Move visual marker to opposite end of selection
+
+    o
 
 Visual section with block select
 
@@ -332,7 +342,7 @@ Split window horizontally
 
     ctrl + ws
 
-Split windows vertically
+Split window vertically
 
     ctrl + wv
 
