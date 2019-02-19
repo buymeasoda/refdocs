@@ -215,6 +215,16 @@ Next / previous word under cursor
     *
     #
 
+## Replace
+
+Replace all instances of string `old` with string `new` in current file
+
+    :%s/old/new/g
+
+Replace all instances with per item confirmation
+
+    :%s/old/new/gc
+
 ## Cut, Copy, Paste
 
 Cut current line
