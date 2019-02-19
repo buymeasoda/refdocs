@@ -325,3 +325,21 @@ Set highlight search results or disable highligh
 
     :set hlsearch
     :set nohlsearch
+
+## Split Windows
+
+Split window horizontally
+
+    ctrl + ws
+
+Split windows vertically
+
+    ctrl + wv
+
+Switch between windows
+
+    ctrl + ww
+
+Quit active window
+
+    ctrl + wq
