@@ -16,9 +16,13 @@ Kill process you own or created
 
     killall <process-name>
 
-Search to see if a process is running (returns process id)
+Search for named running process and return process id (`-l` to include process name)
 
     pgrep -l <process-name>
+
+Kill named process (`-l` to include process name)
+
+    pkill -l <process-name>
 
 Search for process details
 

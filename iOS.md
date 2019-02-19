@@ -6,9 +6,13 @@ Install command line developer tools
 
     xcode-select --install
 
-Show selected Xcode
+Show selected command line tools
 
     xcode-select -p
+
+Reset to default command line tools path
+
+    xcode-select --reset
 
 Switch selected version
 
