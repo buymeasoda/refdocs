@@ -6,13 +6,22 @@ Display current username
 
     whoami
 
-Show permission details for current user
+Show currently logged in user
+
+    who
+
+Permission details for current user
 
     id
 
-Show logged in users
+List users for system
 
     users
+
+Show login history for system (or system reboot history)
+
+    last
+    last reboot
 
 ## Operating System
 
