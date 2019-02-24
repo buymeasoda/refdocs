@@ -308,3 +308,50 @@ Send a test email one line command (add `-v` to generate debug information `/var
 Install and configure git
 
     sudo apt-get install git
+
+# Database Setup
+
+## Import/Export Database
+
+Export database data from existing DB
+
+    mysqldump -u root -p <database> > <file.sql>
+
+Import database data into new DB
+
+    mysqladmin -u root -p create <database>
+    mysql -u root -p <database> < <file.sql>
+
+## Configure Database
+
+Log in to MySQL Server
+
+    mysql -u root -p
+
+List the databases
+
+    show databases;
+
+Create general user
+
+    CREATE USER <user>@localhost IDENTIFIED BY '<password>';
+    FLUSH PRIVILEGES;
+
+Grant general privileges
+
+    GRANT SELECT, INSERT, UPDATE, DELETE ON <database>.* TO <user>@localhost;
+    FLUSH PRIVILEGES;
+
+Get list of users
+
+    SELECT User FROM mysql.user;
+
+Show permission for user
+
+    SHOW GRANTS FOR <user>@localhost;
+
+General database commands
+
+    use <database>;
+    show tables;
+    select * from <table>;
