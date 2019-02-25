@@ -309,6 +309,23 @@ Install and configure git
 
     sudo apt-get install git
 
+# Web site setup
+
+## Manage sites with git
+
+Create bare repo on server
+
+    git init --bare <path>/<repo>
+
+Add remote bare repo as an origin for local repo and push
+
+    git remote add origin ssh://<server>/<path>/<repo>
+    git push origin master
+
+Clone repo to www directory on server
+
+    sudo git clone <path>/<repo> /var/www/<site>
+
 # Database Setup
 
 ## Import/Export Database
