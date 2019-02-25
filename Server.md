@@ -367,3 +367,50 @@ List (`-l`), edit (`-e`) and remove (`-r`) crontab entries
 Edit crontab for a different user
 
     sudo -u <user> crontab -e
+
+# Additional debugging and logs
+
+## Admin Mail
+
+Local user mail messages
+
+    cat /var/mail/<user>
+
+Empty system mail file for user using `>`
+
+    > /var/mail/<user>
+
+## DNS Status
+
+Check DNS status and update time remaining ("Answer" section shows time remaining in seconds)
+
+    dig <domain>
+
+Check DNS status for a specific domain name server
+
+    dig @<dns-server> <domain>
+
+## Logs
+
+View PHP and Apache error log output
+
+    tail -f /var/log/php/error.log
+    sudo tail -f /var/log/apache2/error.log
+
+Browse other log files
+
+    cd /var/log/
+
+Empty log files using `>`
+
+    > /var/log/<log-file>
+
+## Apache
+
+View server status web summary
+
+    curl localhost/server-status
+
+Test mod default gzip (fetch with and without gzip header to compare) on a uncompressed js or css file
+
+    wget --header="Accept-Encoding: gzip" http://<domain>/<file>
