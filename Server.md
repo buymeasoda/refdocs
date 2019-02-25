@@ -326,6 +326,13 @@ Clone repo to www directory on server
 
     sudo git clone <path>/<repo> /var/www/<site>
 
+## Set folder and file permissions
+
+Allow Apache write permission for folders used by upload scripts (eg. CMS uploads)
+
+    sudo chmod 775 <folder>
+    sudo chgrp www-data <folder>
+
 # Database Setup
 
 ## Import/Export Database
