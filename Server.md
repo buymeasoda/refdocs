@@ -355,3 +355,15 @@ General database commands
     use <database>;
     show tables;
     select * from <table>;
+
+# Crontab Setup
+
+List (`-l`), edit (`-e`) and remove (`-r`) crontab entries
+
+    crontab -l
+    crontab -e
+    crontab -r
+
+Edit crontab for a different user
+
+    sudo -u <user> crontab -e
