@@ -333,6 +333,12 @@ Allow Apache write permission for folders used by upload scripts (eg. CMS upload
     sudo chmod 775 <folder>
     sudo chgrp www-data <folder>
 
+## Add Subdomains
+
+- Using DNS Manager add a new A/AAAA record for the domain
+- Add a virtual hosts entry for your subdomain in the Apache site conf
+- Reload Apache configuration (DNS propagation for new entries will depend on TTL)
+
 # Database Setup
 
 ## Import/Export Database
@@ -391,6 +397,12 @@ List (`-l`), edit (`-e`) and remove (`-r`) crontab entries
 Edit crontab for a different user
 
     sudo -u <user> crontab -e
+
+# Server Reboot Management
+
+Display which services are currently running, and which are listed to start on boot
+
+    sudo service --status-all
 
 # Domain management and DNS configuration
 
