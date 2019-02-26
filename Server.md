@@ -392,6 +392,28 @@ Edit crontab for a different user
 
     sudo -u <user> crontab -e
 
+# Domain management and DNS configuration
+
+## Set name servers
+
+Set domain name server entries for host via domain registrar admin
+
+## Add email SPF rules
+
+Add A record for SPF rule to allow scripts to send email from server via google
+
+Google sending only
+
+    v=spf1 include:_spf.google.com ~all
+
+Google and domain allowed to send
+
+    v=spf1 a include:_spf.google.com ~all
+
+## Configure Reverse DNS
+
+Set reverse DNS via host DNS manager to use server configured fully qualified domain name (FQDN)
+
 # Additional debugging and logs
 
 ## Admin Mail
