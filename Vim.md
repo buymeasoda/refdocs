@@ -316,6 +316,30 @@ Write and quit
 
     :wq
 
+## Editing Multiple Files
+
+Edit a file in a new view/buffer (Tab key to display filenames in current directory)
+
+    :e <file-name>
+
+Go to next file (buffer next)
+
+    :bnext
+    :bn
+
+Go to previous file (buffer previous)
+
+    :bprev
+    :bp
+
+Remove file from editor view/buffer (buffer delete)
+
+    :bd
+
+Open file in a new split view of the current window
+
+    :sp <file-name>
+
 ## Configuration
 
 Enable / disable line numbers
