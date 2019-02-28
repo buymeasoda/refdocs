@@ -333,6 +333,25 @@ Allow Apache write permission for folders used by upload scripts (eg. CMS upload
     sudo chmod 775 <folder>
     sudo chgrp www-data <folder>
 
+## Configure and enable sites
+
+Web server site directories
+
+    /var/www/<site>
+
+Create and edit virtual host configuration file
+
+    sudo nano /etc/apache2/sites-available/<site>.conf
+
+Enable/Disable site configuration
+
+    sudo a2ensite <site>.conf
+    sudo a2dissite <site>.conf
+
+Reload Apache to apply changes
+
+    sudo systemctl reload apache2
+
 ## Add Subdomains
 
 - Using DNS Manager add a new A/AAAA record for the domain
