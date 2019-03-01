@@ -187,16 +187,6 @@ Reload apache configuration and show status
     sudo systemctl reload apache2
     systemctl status apache2
 
-Check apache configuration changes
-
-    apachectl configtest
-
-Output summary debug information for Apache (modules, vhosts, config)
-
-    apachectl -t -D DUMP_MODULES
-    apachectl -t -D DUMP_VHOSTS
-    apachectl -t -D DUMP_RUN_CFG
-
 ## MySQL Server
 
 Install MySQL Server (add a root user password when prompted)
