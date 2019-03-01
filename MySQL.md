@@ -20,6 +20,13 @@ Secure MySQL installation
 
     mysql_secure_installation
 
+macOS post install instructions via homebrew
+
+    unset TMPDIR
+    mysql_install_db
+    mysql.server start
+    mysql_secure_installation
+
 ## Control MySQL Server
 
 Linux
@@ -29,6 +36,15 @@ Linux
 macOS
 
     mysql.server start | stop | restart | status
+    mysql.server reload | force-reload
+
+Run MySQL as a background service (Homebrew / macOS)
+
+    brew services start mysql@<version>
+
+macOS homebrew executable location
+
+    /usr/local/Cellar/mysql/<version>/support-files
 
 ## Log In/Out
 
