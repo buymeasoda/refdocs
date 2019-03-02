@@ -72,6 +72,6 @@ Open in browser first
 
     http://localhost:8081/debugger-ui/
 
-And/or run ADB reverse
+Configure reverse socket connection for react native server
 
     adb reverse tcp:8081 tcp:8081
