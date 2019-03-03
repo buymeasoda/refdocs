@@ -50,6 +50,19 @@ Symbolic link from source file to destination file
 
     ln -s <destination> <source>
 
+## Rename files
+
+Requires `rename` via `brew install rename`
+
+Replace search string with replace string for matching files
+
+    rename -s <search> <replace> <file-glob>
+
+Rename all `txt` files with a sequential number in the format `text-1.txt`
+
+    rename -e 's/.*/text-$N.txt/' *.txt
+    rename -N ...01 -X -e '$_ = "text-$N"' *.txt
+
 ## Create and delete directories
 
 Create directories
