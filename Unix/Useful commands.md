@@ -12,9 +12,15 @@ Clear the current screen of text
 
 ## Prevent sleep
 
-Prevent computer from sleeping
+Prevent computer from sleeping and declare user as active
 
     caffeinate -u -t <seconds>
+
+Other caffeinate options
+
+- `-d` Prevent display sleep
+- `-i` Prevent system idle sleep
+- `-m` Prevent disk idle sleep
 
 ## Generate MD5 and SHA1 hashes
 
