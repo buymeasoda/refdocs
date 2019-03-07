@@ -18,6 +18,25 @@ Outputs the current contents of the clipboard
 
     pbpaste
 
+## Screen Capture
+
+Capture entire screen to file (default format: PNG)
+
+    screencapture <file>
+
+Activate interactive screen capture mode (CTRL clipboard, SPACE selection/window, ESC cancel)
+
+    screencapture -i <file>
+
+Other useful screen capture options
+
+- `-t <format>` png, pdf, jpg
+- `-c` Send to clipboard
+- `-P` Send to Preview app
+- `-S` Capture screen instead of window
+- `-o` Exclude window shadow
+- `-T <secs>` Capture after elapsed seconds
+
 ## Audio
 
 Show audio file information
