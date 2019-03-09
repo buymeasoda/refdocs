@@ -81,6 +81,12 @@ Show a summary of the files that changed for a rev set
 
     hg status --change <rev-id>
 
+## Smartlog
+
+Short truncated history graph summary of commits (requires smartlog extension)
+
+    hg smartlog
+
 ## Search code history
 
 Grep for a specific string in file history commit messages or diffs

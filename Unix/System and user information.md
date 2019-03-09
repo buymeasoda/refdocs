@@ -42,6 +42,12 @@ Display basic system OS information or more detailed system config (macOS)
     sw_vers
     system_profiler SPSoftwareDataType
 
+## Command Info
+
+Search system commands and display description
+
+    whatis <command>
+
 ## Uptime
 
 Display system uptime, memory, who is logged in and what they are doing
