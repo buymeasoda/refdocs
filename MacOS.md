@@ -1,5 +1,19 @@
 # MacOS
 
+## Information
+
+Show operating system version
+
+    sw_vers
+
+Report detailed system configuration
+
+    system_profiler
+
+View and set macOS system settings
+
+    sudo systemsetup
+
 ## Troubleshooting
 
 Relaunch Mac OS features
