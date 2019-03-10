@@ -20,7 +20,7 @@ Search for named running process and return process id (`-l` to include process 
 
     pgrep -l <process-name>
 
-Kill named process (`-l` to include process name)
+Kill named process (`-l` for long output, `-f` to match against full arguments)
 
     pkill -l <process-name>
 
