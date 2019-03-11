@@ -81,12 +81,6 @@ Show a summary of the files that changed for a rev set
 
     hg status --change <rev-id>
 
-## Smartlog
-
-Short truncated history graph summary of commits (requires smartlog extension)
-
-    hg smartlog
-
 ## Search code history
 
 Grep for a specific string in file history commit messages or diffs
@@ -268,3 +262,9 @@ Squash all backed out revisions to a single commit
 Update the commit message with additional details including message, summary, test plan, reviewed by (self)
 
     hg commit --amend
+
+## Commit ID
+
+Commit IDs contain local and global unique identifiers separated by `:`
+
+    xxxxlocal:xxxxglobal
