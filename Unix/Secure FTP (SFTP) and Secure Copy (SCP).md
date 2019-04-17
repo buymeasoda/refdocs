@@ -23,7 +23,7 @@ Quit sftp
 
 ## SCP
 
-Secure copy files to or from remote server
+Secure copy files to or from remote server (with custom port `-P <port>`)
 
     scp <source> <destination>
 
@@ -42,6 +42,10 @@ Copy all files in the current directory to a remote directory
 Recursively copy files and directories from current directory to remote directory
 
     scp -r * <user>@<host>:<path>
+
+Quote source / destination paths when using wildcards for Fish Shell
+
+    "/path/with/wildcard/*"
 
 ### SCP Examples
 
