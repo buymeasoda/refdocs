@@ -26,6 +26,10 @@ Use SSH configuration
 
     ssh <nickname>
 
+Add SSH key passphrase to MacOS Keychain
+
+    ssh-add -K ~/.ssh/<key-file>
+
 # SSH Access
 
 Connect to remote machine using SSH public / private key instead of username and password.
