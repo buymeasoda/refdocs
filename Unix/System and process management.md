@@ -33,6 +33,28 @@ Kill a running process (by id)
     kill <process-id>
     sudo kill <process-id>
 
+## Open File Processes
+
+List open files for all processes
+
+    lsof
+
+List open files for a user
+
+    lsof -u <username>
+
+List processes for a specific file
+
+    lsof <file>
+
+List open files for internet address processes
+
+    lsof -i
+
+Filter internet address listing by port
+
+    lsof -i :<port>
+
 ## Terminal
 
 Change Unix shell (enter path to new shell when prompted)
