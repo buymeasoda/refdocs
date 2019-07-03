@@ -49,3 +49,27 @@ Remove abbreviation
 Rename abbreviation
 
     abbr -r <old-abbr> <new-abbr>
+
+## Command History
+
+Show all command history
+
+    history
+
+Clear all command history items
+
+    history clear
+
+Show command history that matches search string
+
+    history search --contains <string>
+    history search --prefix <string>
+
+Remove specific entries from command history that match search string
+
+    history delete --contains <string>
+    history delete --delete <string>
+
+Search command history from string using grep
+
+    history | grep -i <string>

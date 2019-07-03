@@ -24,9 +24,14 @@ Relaunch Mac OS features
 
 ## Clipboard
 
-Copy content to the clipboard (eg. cat file.txt | pbcopy, copies contents of file.txt to the clipboard)
+Copy input content to the clipboard
 
     pbcopy
+
+Examples for copy to clipboard from files
+
+    pbcopy < <file>
+    cat <file> | pbcopy
 
 Outputs the current contents of the clipboard
 

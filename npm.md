@@ -126,6 +126,16 @@ When executing scripts `pre` and `post` versions will automatically run if defin
 - `-g` (`--global`)
 - `-D` (`--save-dev`)
 
+## Configuration
+
+Global configuration file
+
+    ~/.npmrc
+
+Set npm configuration values for specified keys
+
+    npm set <key> <value>
+
 # Manage package.json init defaults
 
 Set default init config values
