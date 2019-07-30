@@ -134,6 +134,25 @@ Set specific domain key
     defaults write <domain> <key> <value>
     defaults write <domain> <key> -<type> <value>
 
+## Kernel Extensions
+
+List all kernel extensions
+
+    kextstat
+
+Show only third party kernel extensions
+
+    kextstat | grep -v com.apple
+
+Unload kernel extension
+
+    sudo kextunload <extension.kext>
+
+Location of kernel extension files
+
+    /System/Library/Extensions
+    /Library/Extensions
+
 ## Quick Look Plugins
 
 List all registered quick look plugins (includes ones provided internally by apps)
