@@ -12,6 +12,21 @@ Long listing (`l`) of all files (`a`) with human readable sizes (`h`)
 
     ls -lah
 
+Reverse sort order
+
+    ls -r
+
+Recursively list subdirectories
+
+    ls -R
+
+Useful sort order flags
+
+- Modified time `-t`
+- Last accessed time `-u`
+- Creation time `-U`
+- File size `-S`
+
 Change directory
 
     cd <dir>
