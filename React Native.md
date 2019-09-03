@@ -2,13 +2,30 @@
 
 ## Setup
 
-Install development environment
+Development setup
 
 - [Xcode](https://developer.apple.com/xcode/)
 - [Xcode Command Line Tools](https://developer.apple.com/download/more/)
 - [Android Studio](https://developer.android.com/studio/)
-- [Node](https://nodejs.org/en/) (`brew install node`)
-- [Watchman](https://facebook.github.io/watchman/) (`brew install watchman`)
+- [Node](https://nodejs.org/en/)
+- [Watchman](https://facebook.github.io/watchman/)
+- [OpenJDK](https://adoptopenjdk.net/)
+
+Install base environment
+
+    brew install node
+    brew install watchman
+    brew tap AdoptOpenJDK/openjdk
+    brew cask install adoptopenjdk8
+
+Install Android environment
+
+    brew cask install android-studio
+    brew cask install android-sdk
+
+Install iOS environment
+
+- Manually install Xcode via the Apple App Store
 
 Install React Native command line tool
 
