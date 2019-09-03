@@ -91,3 +91,13 @@ Show iOS simulator app crash logs
 Manual logs will show in Console.app when viewing the related simulator from "Devices"
 
     NSLog(@"...");
+
+## SDK Configuration
+
+Show current iPhone OS SDK path
+
+    xcrun -k --sdk iphoneos --show-sdk-path
+
+When no SDK is selected switch Xcode versions
+
+    sudo xcode-select --switch /Applications/Xcode.app
