@@ -37,3 +37,16 @@ Verbose activity information
 Resume partially downloaded file
 
     curl -C - -O <url>
+
+## Sending requests
+
+Send GET/POST request
+
+    curl -X <method> -H "<headers>" -d '<params>' <url>
+
+Example: Send post request for JSON content type to GraphQL endpoint
+
+    curl -X POST \
+      -H "Content-Type: application/json" \
+      -d '{"query": "{ field }"}' \
+      http://server/graphql
