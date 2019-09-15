@@ -42,3 +42,7 @@ Pipe content into grep (eg. via `cat` or `echo`)
 
     cat <file> | grep '<string>'
     echo '<text>' | grep '<string>'
+
+Show context lines after (`-A`), before (`-B`) or both sides (`-C`) of search results
+
+    grep '<string>' -C <line-count>
