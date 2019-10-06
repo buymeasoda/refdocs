@@ -18,6 +18,14 @@ Show all installed formula including dependencies
 
     brew list
 
+Show all installed formula with associated dependencies
+
+    brew deps --installed
+
+Show all installed formula with associated dependencies in a tree
+
+    brew deps --installed --tree
+
 ## Install
 
 Install/Uninstall formula
