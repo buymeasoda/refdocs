@@ -594,6 +594,7 @@ Switch to the specified branch and discard current branch changes
 
 Abort a merge (any time before committing) and return to the state of the branch before initiating the merge
 
+    git merge --abort
     git reset --hard HEAD
 
 Abort a merge (after committing) and return to the state prior to merging (any dirty working directory files will be lost)
