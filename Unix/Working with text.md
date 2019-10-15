@@ -12,15 +12,21 @@ Sort lines of text in standard or reverse order (`-r`)
 
     <input> | sort
 
-Sort by general numerical value
+Sort by numerical (`-n`) or general numerical values (`-g` handles floating points)
 
+    <input> | sort -n
     <input> | sort -g
 
 ## Unique
 
-Report or filter out repeated lines
+Filter out repeat lines (`-c` to output repeated count for each entry)
 
     <input> | uniq
+    <input> | uniq -c
+
+Show ordered count of each repeated line (filtering out single non-repeated lines)
+
+    <input> | uniq -c | grep -v '^ *1 ' | sort -nr
 
 ## Text replace
 
