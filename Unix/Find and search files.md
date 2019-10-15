@@ -1,5 +1,7 @@
 # Find and search files
 
+## Find
+
 Find allows searching file names and directories under the current location
 
     find <path> <settings>
@@ -23,15 +25,30 @@ Find folders that are at a certain depth with the specified name
 
     find . -mindepth 1 -maxdepth 1 -type d -name '<search-string>'
 
+Find files containing case insensitive `<search-string>` somewhere in their name
+
+    find <path> -iname '*<search-string>*' -type f
+
+## Grep
+
+Output files with content matching (`-l`) or not matching (`-L`) the search string
+
+    grep -l '<search-string>' <path>
+    grep -L '<search-string>' <path>
+
 Search files recursively for search string below path location
 
     grep -R '<search-string>' <path>
 
+Search using extended regex (`-E`)
+
+    grep -E '<extended-regex>' <path>
+
+Only show matches (`-o`) and do not print filenames (`-h`)
+
+    grep -ho '<search-string>' <path>
+
 ## Advanced Examples
-
-Find files with case insensitive `<search-string>` in their name
-
-    find <path> -iname '*<search-string>*' -type f
 
 Find files and print with sizes
 
@@ -44,3 +61,7 @@ Find files without `*.orig` and format output to include timestamp and path, the
 Show files with non-ascii characters
 
     grep -P "[\x80-\xFF]" <files>
+
+List all image filenames
+
+    ls | grep -iE ".*\.(gif|jpe?g|png|svg)"
