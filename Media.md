@@ -8,11 +8,15 @@ Show basic information about media file
 
     file <media-file>
 
-Show detailed information about media file (macOS only)
+Show detailed information about image files (macOS only)
 
-    sips -g all <media-file>
+    sips -g all <image-file>
 
-## Sips
+Show detailed information about audio files (macOS only)
+
+    afinfo <audio-file>
+
+## Sips (Images)
 
 Sips - Scriptable image processing system (macOS only)
 
@@ -89,3 +93,17 @@ Demuxing raw PCM audio for playback
 Example 2 channel PCM audio at 8kHz
 
     vlc --demux=rawaud --rawaud-channels 2 --rawaud-samplerate 8000 audio.pcm
+
+## YouTube
+
+Install YouTube-DL
+
+    brew install youtube-dl
+
+Download mp4 video file
+
+    youtube-dl -f best[ext=mp4] '<youtube-url>'
+
+Download mp3 audio file
+
+    youtube-dl -fx best --audio-format mp3 '<youtube-url>'
