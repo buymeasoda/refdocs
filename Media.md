@@ -16,7 +16,9 @@ Show detailed information about audio files (macOS only)
 
     afinfo <audio-file>
 
-## Sips (Images)
+# Images
+
+## Sips
 
 Sips - Scriptable image processing system (macOS only)
 
@@ -83,6 +85,19 @@ Decompress all WebP images in current directory to PNG images (processing 8 in p
 Compress image to WebP format using specified quality from 0 to 100
 
     cwebp -q <quality> <input-file> -o <output-file>
+
+# Audio / Video
+
+## FFmpeg
+
+Install FFmpeg audio / video processor
+
+    brew install ffmpeg
+
+Play audio file (`-nodisp` for direct CLI playback without GUI)
+
+    ffplay <audio-file>
+    ffplay -nodisp <audio-file>
 
 ## VLC
 
