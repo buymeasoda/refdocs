@@ -15,6 +15,7 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 - Fish
 - Git
 - GitHub
+- Gmail
 - iOS
 - Homebrew
 - MacOS
