@@ -6,13 +6,35 @@ Show operating system version
 
     sw_vers
 
-Report detailed system configuration
-
-    system_profiler
-
 View and set macOS system settings
 
     sudo systemsetup
+
+## System Profiler
+
+Report detailed system configuration (`-detailLevel` mini, basic, full)
+
+    system_profiler
+
+List all available profile data types
+
+    system_profiler -listDataTypes
+
+System hardware and software summary
+
+    system_profiler SPHardwareDataType
+    system_profiler SPSoftwareDataType
+
+Other system information (storage, memory, display, audio, network, battery, USB, bluetooth)
+
+    system_profiler SPStorageDataType
+    system_profiler SPMemoryDataType
+    system_profiler SPDisplaysDataType
+    system_profiler SPAudioDataType
+    system_profiler SPNetworkDataType
+    system_profiler SPPowerDataType
+    system_profiler SPUSBDataType
+    system_profiler SPBluetoothDataType
 
 ## Troubleshooting
 
