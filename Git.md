@@ -4,30 +4,16 @@ Reference for working with [Git](http://git-scm.com/).
 
 ## Installing git
 
-If you are on Mac OSX, you can install git using one of the following options:
-
-With [Homebrew](http://mxcl.github.com/homebrew/)
+For macOS install git using [Homebrew](http://mxcl.github.com/homebrew/)
 
     brew install git
 
-With [MacPorts](http://www.macports.org/)
-
-    sudo port install git-core +svn
-
-Or use a pre-built [installer package](http://git-scm.com/download).
-
 ## Getting help
 
-Show a list of basic git commands
+Show a list of basic commands, all (`-a`) commands or help for a specific command
 
     git help
-
-Show a list of all git commands
-
     git help -a
-
-Display help for a command
-
     git help <command>
 
 Display the man page for a command
@@ -50,33 +36,29 @@ Create a bare git repository (bare repositories don't have a working directory o
 
     git init --bare
 
-## Status of the index
+## Status
 
 Show a summary of the state of working directory and index
 
     git status
 
-## Adding files to the index
+Show a list of all merged branches
 
-Add a file to the index (staging files)
+    git branch --merged
+
+## Staging files
+
+Add a specific file to the index, add all files `.` or add interactively `-i`
 
     git add <file>
-
-Add all files from the current location and below to the index.
-
     git add .
-
-Interactively stage files
-
     git add -i
 
 Interactive add allows selective staging, unstaging of changed files as well as partial commits of specific lines.
 
-Partial commits can be created by choosing the `patch` option and then specifying `split` to further refine chunks.
+Partial commits can be created by choosing the `patch` option and then specifying `split` to further refine chunks. After exiting interactive adding, you need to the commit the index.
 
-After exiting interactive adding, you need to the commit the index.
-
-Stage all tracked, changed files
+Stage all tracked / changed files
 
     git add --update
     git add -u
@@ -146,17 +128,9 @@ Verbose commit, include a diff of the commit in the commit message
 
     git commit -v
 
-## Altering Commits
-
-Adjusting last commit
+Adjust the last commit
 
     git commit --amend
-
-Amend is useful for quickly correcting or updating the most recent commit. If you haven't changed any files since committing, amend will simply allow you to update or correct the commit message.
-
-Alternatively, if you wish to alter the committed files, make relevant edits in the working directory and stage the files as you want them to appear in the commit then run --amend.
-
-The updated files will become part of the commit.
 
 ## Resetting Commits
 
@@ -649,6 +623,13 @@ Check out a single file from another branch into the current branch
 
     git checkout <otherbranch> <file>
 
+## Revert branch state
+
+Revert local branch to upstream origin state
+
+    git fetch <origin>
+    git reset --hard <origin>/<branch>
+
 ## Rebase branch
 
 Rebase takes the current branch, sets it to state of the target branch specified, the 'replays' all the branch change sets over the top.
@@ -805,12 +786,9 @@ Create a bare clone (no working directory) of an existing git repo. Useful when 
 
     git clone --bare <repourl> <newfolder>
 
-Fetch upstream changes from origin withouth merging
+Fetch upstream changes from origin or a named upstream without merging
 
     git fetch origin
-
-Fetch upstream changes from specific remote without merging
-
     git fetch <upstream-name>
 
 ## Configuring push behaviour
@@ -826,6 +804,8 @@ Config to set up a repository to only push to its own remote branch with `git pu
 Config to set up all repositories to only push to its own remote branch
 
     git config --global push.default current
+
+## Setting upstream
 
 # Git and SVN
 
