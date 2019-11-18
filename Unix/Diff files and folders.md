@@ -36,3 +36,37 @@ Compare files using the git diff tool (works outside of git repos)
 Compare files using VS Code diff view
 
     code -d <file1> <file2>
+
+# Comm
+
+Select or reject lines common to two files (requires sorted files as input)
+
+    comm <file1> <file2>
+
+Generates output in three columns (Disable columns using `-<column-number...>`)
+
+- Column 1: Lines only in file 1
+- Column 2: Lines only in file 2
+- Column 3: Lines common in both files
+
+Show only the common lines (eg. hide column 1 and 2 `-12` and keep column 3)
+
+    comm -12 <file1> <file2>
+
+Show lines only in file 1
+
+    comm -23 <file1> <file2>
+
+Show lines only in file 2
+
+    comm -13 <file1> <file2>
+
+# Sort
+
+List lines that intersect between file 1 and file 2
+
+    sort <file1> <file2> | uniq -d
+
+List lines only in file one
+
+    sort <file1> <file2> | uniq -u
