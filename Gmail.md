@@ -74,7 +74,7 @@ Show messages from specified location
 
 ## Date Filters
 
-Show emails that match date criteria (format: `dd/mm/yyyy` and other standard variations)
+Show emails that match date criteria (format: `yyyy/mm/dd` and other standard variations)
 
     after: <date>
     before: <date>
