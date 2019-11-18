@@ -52,11 +52,11 @@ Only show matches (`-o`) and do not print filenames (`-h`)
 
 Find files and print with sizes
 
-    find -type f -printf '%6s %p\n'
+    find . -type f -printf '%6s %p\n'
 
 Find files without `*.orig` and format output to include timestamp and path, then sort and grab the first 100
 
-    find -type f -not -name '*.orig' -printf '%T+ %p\n' | sort | head -n 100
+    find . -type f -not -name '*.orig' -printf '%T+ %p\n' | sort | head -n 100
 
 Show files with non-ascii characters
 
