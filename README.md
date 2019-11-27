@@ -30,6 +30,7 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 - PHP
 - React Native
 - Server
+- Slack
 - Tools
 - Unix
 - Vim
