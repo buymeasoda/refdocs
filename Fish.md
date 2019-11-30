@@ -73,3 +73,9 @@ Remove specific entries from command history that match search string
 Search command history from string using grep
 
     history | grep -i <string>
+
+## String Functions
+
+Search and replace string content (`-r` for regex)
+
+    string replace -r <search> <replace> <input>
