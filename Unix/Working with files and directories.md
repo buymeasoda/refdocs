@@ -1,5 +1,15 @@
 # Working with files and directories
 
+## Output file and directory information
+
+Output filename portion of file path
+
+    basename <path/file>
+
+Output directory portion of file path
+
+    dirname <path/file>
+
 ## Open and edit files
 
 Open a file
