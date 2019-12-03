@@ -12,6 +12,11 @@ Combine string search with filters
 
 ## Sender/Recipient Filter
 
+Message from or to you
+
+    from:me
+    to:me
+
 Messages from sender or to recipient
 
     from:<username>
