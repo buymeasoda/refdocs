@@ -50,3 +50,7 @@ Show the path of the current directory location (print working directory)
 Display files and sub directories graphically
 
     tree
+
+List files via tree with full paths (`-f`), no indents (`-i`) and unescaped characters (`-N`)
+
+    tree -ifN

@@ -33,7 +33,19 @@ Kill a running process (by id)
     kill <process-id>
     sudo kill <process-id>
 
+Hangup process
+
+    kill -1 <process-id>
+
+Kill process
+
+    kill -9 <process-id>
+
 ## Open File Processes
+
+List open process IDs for file
+
+    fuser <file>
 
 List open files for all processes
 
