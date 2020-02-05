@@ -78,28 +78,6 @@ Other useful screen capture options
 - `-o` Exclude window shadow
 - `-T <secs>` Capture after elapsed seconds
 
-## Audio
-
-Show audio file information
-
-    afinfo <file>
-
-Play audio file
-
-    afplay <file>
-
-Play audio file with volume (`-v`), playback rate (`-r`) and duration in seconds (`-t`)
-
-    afplay <file> -v <volume> -r <rate> -t <time>
-
-Convert audio file format
-
-    afconvert -f <file-format> -d <data-format> -b <bit-rate> <input-file> <output-file>
-
-Example converting audio file from wav to mp3 at 128kbps
-
-    afconvert -f mp4f -d aac -b 128000 input.wav output.mp3
-
 ## App Store
 
 Show software update history (`--all` includes initial app installs)

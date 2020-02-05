@@ -16,6 +16,10 @@ Show detailed information about audio files (macOS only)
 
     afinfo <audio-file>
 
+Show information from multimedia streams and files (requires ffmpeg)
+
+    ffprobe <audio-file>
+
 # Images
 
 ## Sips
@@ -87,6 +91,24 @@ Compress image to WebP format using specified quality from 0 to 100
     cwebp -q <quality> <input-file> -o <output-file>
 
 # Audio / Video
+
+## Audio File Utilities
+
+Play audio file (macOS only)
+
+    afplay <file>
+
+Play audio file with volume (`-v`), playback rate (`-r`) and duration in seconds (`-t`)
+
+    afplay <file> -v <volume> -r <rate> -t <time>
+
+Convert audio file format
+
+    afconvert -f <file-format> -d <data-format> -b <bit-rate> <input-file> <output-file>
+
+Example converting audio file from wav to mp3 at 128kbps
+
+    afconvert -f mp4f -d aac -b 128000 input.wav output.mp3
 
 ## FFmpeg
 
