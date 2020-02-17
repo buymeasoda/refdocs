@@ -50,7 +50,7 @@ Only show matches (`-o`) and do not print filenames (`-h`)
 
 ## Advanced Examples
 
-Find files and print with sizes
+Find files and print with sizes (Note: `-printf` is not POSIX and only available with GNU `find`)
 
     find . -type f -printf '%6s %p\n'
 

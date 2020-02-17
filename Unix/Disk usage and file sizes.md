@@ -8,7 +8,7 @@ Show disk space usage and available space (-h makes the output human readable va
 
     df -h
 
-Find files under the root directory and below that are large than 10 MB
+Find files under the root directory and below that are large than 10 MB (Note: `-printf` is not POSIX and only available with GNU `find`)
 
     find / -size +10M -printf "%s - %p\n"
 

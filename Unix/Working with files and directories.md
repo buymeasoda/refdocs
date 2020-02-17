@@ -133,6 +133,16 @@ Create an empty file
     touch <file>
     touch <file1> <file2> <file3>
 
+## File Status
+
+Output status information for file (use `-f` for selective metadata and output format)
+
+    stat <file>
+
+Output file size followed by the file name
+
+    stat -f "%z %N" <file>
+
 ## Tail and Head
 
 Display the first or last part of a file
