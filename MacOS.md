@@ -153,7 +153,11 @@ Location of kernel extension files
     /System/Library/Extensions
     /Library/Extensions
 
-## Quick Look Plugins
+## Quick Look
+
+Open quick look for file
+
+    qlmanage -p <file>
 
 List all registered quick look plugins (includes ones provided internally by apps)
 
