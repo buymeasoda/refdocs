@@ -4,6 +4,16 @@ Install Yarn
 
     brew install yarn
 
+Switch yarn to specific version / latest version (yarn 1.x)
+
+    yarn policies set-version <version>
+    yarn policies set-version
+
+Switch yarn to specific version / latest version (yarn 2.x)
+
+    yarn set version <version>
+    yarn set version latest
+
 ## Information
 
 Show yarn version and help
