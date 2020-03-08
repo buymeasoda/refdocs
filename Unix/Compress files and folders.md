@@ -1,5 +1,15 @@
 # Compress files and folders
 
+## Zip
+
+Collect and compress files and directories into a zip file
+
+    zip -r <output-file> <source-files>
+
+Unzip a standard zip file archive
+
+    unzip <file>
+
 ## Gzip
 
 Gzip file and keep (`-k`) original source file
