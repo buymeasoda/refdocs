@@ -35,6 +35,12 @@ Pipe text into `tr` to replace content (eg. replace commas with new lines)
     <input> | tr <search> <replace>
     <input> | tr ',' '\n'
 
+# Extracting text
+
+Output printable strings contained in file (useful for extracting metadata from binary files)
+
+    strings <file>
+
 # Searching text
 
 ## Grep
