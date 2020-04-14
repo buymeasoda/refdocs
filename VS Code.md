@@ -28,3 +28,19 @@ Show list of installed extensions or list with versions
 
     code --list-extensions
     code --list-extensions --show-versions
+
+## Useful Commands
+
+Open quick search panel
+
+    CMD+P
+
+Search for symbols (across files, in the current file, grouped by category)
+
+    <file-name>@<symbol>
+    @<symbol>
+    @:<symbol>
+
+Search for string within directory (separate string and directory by space)
+
+    <string> <directory>
