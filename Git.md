@@ -255,6 +255,11 @@ Show commits older than a specific date. Date can be formatted date or human rea
     git log --until="<date>"
     git log --before="<date>"
 
+Show log history for a set of lines using absolute or relative ranges
+
+    git log -L <start-line>,<end-line>:<file>
+    git log -L <start-line>,+<line-count>:<file>
+
 ## Show details about commits, tags, branches & files
 
 Show details of the latest commit
@@ -341,9 +346,10 @@ Show blame details for a file
 
     git blame <file>
 
-Start the blame output at a particular line number
+Show blame output for a set of lines using absolute or relative ranges
 
-    git blame -L <linenumber>, <file>
+    git blame -L <start-line>,<end-line> -- <file>
+    git blame -L <start-line>,+<line-count> -- <file>
 
 ## Comparing changes using diff
 
