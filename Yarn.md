@@ -25,6 +25,10 @@ Show information for a package
 
     yarn info <package>
 
+Show why a package was installed
+
+    yarn why <package>
+
 ## List
 
 List installed packages (local / global)
