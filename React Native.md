@@ -1,31 +1,65 @@
 # React Native
 
-## Setup
+## Setup Overview
 
-Development setup
+Development Tools
 
 - [Xcode](https://developer.apple.com/xcode/)
 - [Xcode Command Line Tools](https://developer.apple.com/download/more/)
+- [Cocoapods](https://cocoapods.org/)
 - [Android Studio](https://developer.android.com/studio/)
 - [Node](https://nodejs.org/en/)
 - [Watchman](https://facebook.github.io/watchman/)
 - [OpenJDK](https://adoptopenjdk.net/)
 
+## Base Setup
+
 Install base environment
 
     brew install node
     brew install watchman
+
+## Android Setup
+
+Install Java 8
+
     brew tap AdoptOpenJDK/openjdk
     brew cask install adoptopenjdk8
 
-Install Android environment
+Install Android Studio
 
     brew cask install android-studio
-    brew cask install android-sdk
+
+Android environment instructions
+
+- https://reactnative.dev/docs/environment-setup
+- Refer to: React Native CLI Quickstart -> macOS -> Android
+
+Configure Android SDK and Android Platform Tools via Android Studio
+
+- Run Android Studio
+- Section "Custom" setup option
+
+Specify the following options during install
+
+- Android SDK (Build and Command Line Tools)
+- Android SDK Platform
+- Performance (Intel HAXM)
+- Android Virtual Device
+
+Follow React Native guide for additional required SDK package and build tool version requirements
+
+## iOS Setup
 
 Install iOS environment
 
 - Manually install Xcode via the Apple App Store
+
+Install Cocoapods (iOS)
+
+    brew install cocoapods
+
+## React Native Setup
 
 Install React Native command line tool
 
@@ -45,7 +79,7 @@ Start Metro server (and optionally reset cache)
     react-native start
     react-native start --reset-cache
 
-## Install App
+## Install and Run App
 
 Build, install and run app on iOS Simulator / Android Emulator
 
