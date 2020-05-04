@@ -21,7 +21,7 @@ Install base environment
 
 ## Android Setup
 
-Install Java 8
+Install Java 8 JDK
 
     brew tap AdoptOpenJDK/openjdk
     brew cask install adoptopenjdk8

@@ -2,7 +2,7 @@
 
 ## Install Prerequisites
 
-Install Java 8
+Install Java 8 JDK
 
     brew tap AdoptOpenJDK/openjdk
     brew cask install homebrew/cask-versions/adoptopenjdk8
