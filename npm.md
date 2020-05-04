@@ -15,9 +15,10 @@ Show information for a package
 
     npm info <package>
 
-Show available versions for a package
+Show available versions or publish dates for a package
 
     npm view <package> versions --json
+    npm view <pacakge> time --json
 
 Show location of global modules folder
 
