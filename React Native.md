@@ -65,6 +65,8 @@ Install React Native command line tool
 
     npm install -g react-native-cli
 
+# Projects
+
 ## Create Project
 
 Initialize new project
@@ -96,20 +98,9 @@ Link native dependencies and update native build files (then rebuild)
 
     react-native link <package-name>
 
-# Android
+## Android Tips
 
-## Emulator
-
-List available Android emulators
-
-    emulator -list-avds
-
-Run Android emulator
-
-    emulator @<avd-name>
-    emulator @Nexus_5X_Nougat_
-
-Show react native debug menu
+Show React Native debug menu
 
     CMD + M
 
@@ -117,7 +108,9 @@ Allow React Native debugger menu to work with emulator (search settings for "dra
 
     Settings -> Apps -> Your-App -> Advanced -> Draw over other app -> Permit
 
-## Unable to connect to remote debugger
+## Android Troubleshooting
+
+Unable to connect to remote debugger
 
 Open in browser first
 
