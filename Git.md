@@ -506,11 +506,11 @@ Remove stale remote branches from local
 
     git remote prune origin
 
+## Renaming branches
+
 Rename a local branch
 
       git branch -m <original branch> <new branch>
-
-## Renaming branches
 
 Rename an existing branch (-m merges current branch entirely into the new branch)
 
@@ -519,6 +519,10 @@ Rename an existing branch (-m merges current branch entirely into the new branch
 Delete the original branch
 
     git branch -d <original branch>
+
+Relocate any existing branch pointer to a reference a new commit
+
+    git branch -f <branch name> <commit>
 
 ## Switching branches
 
@@ -950,11 +954,13 @@ A file that contains the location and source of the submodule repositories. This
 
 # Advanced Management
 
-To be expanded
+Note: The following commands rewrite history and should be used with caution on published repos and pushed commits
 
-    git cherry-pick
-    --more
-    --tail
+## Cherry Pick
+
+Cherry pick a specified commit onto the current checkout out commit
+
+    git cherry-pick <commit>
 
 ## Rewrite history
 
