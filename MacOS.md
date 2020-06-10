@@ -10,6 +10,10 @@ View and set macOS system settings
 
     sudo systemsetup
 
+List daemons, agents and XPC services
+
+    launchctl list
+
 ## System Profiler
 
 Report detailed system configuration (`-detailLevel` mini, basic, full)
@@ -167,6 +171,38 @@ Directories for stand along quick look providers
 
     /Library/QuickLook
     ~/Library/QuickLook
+
+## Security and Privacy Permissions
+
+Manage associated app permissions (listed in System Preferences -> Security & Privacy -> Privacy)
+
+Reset app access permissions for category
+
+    tccutil reset <app-category>
+
+Reset specific app access permissions for category
+
+    tccutil reset <app-category> <app-bundle-id>
+
+Available app categories
+
+- `Accessibility`
+- `AddressBook`
+- `AppleEvents`
+- `Calendar`
+- `Camera`
+- `Microphone`
+- `Photos`
+- `Reminders`
+- `ScreenCapture`
+- `SystemPolicyAllFiles`
+- `SystemPolicyDesktopFolder`
+- `SystemPolicyDeveloperFiles`
+- `SystemPolicyDocumentsFolder`
+- `SystemPolicyDownloadsFolder`
+- `SystemPolicyNetworkVolumes`
+- `SystemPolicyRemovableVolumes`
+- `SystemPolicySysAdminFiles`
 
 ## SF Mono Fonts
 
