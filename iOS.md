@@ -22,6 +22,10 @@ Switch selected version
 
 Open simulator app
 
+    open -a simulator
+
+Open simulator app (direct path alternative)
+
     open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/
 
 Show xcrun simulator commands
