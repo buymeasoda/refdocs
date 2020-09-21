@@ -50,6 +50,10 @@ Search file for string (case insensitive `-i`, display line numbers `-n`)
     grep '<string>' <file>
     grep -in '<string>' <file>
 
+Search for multiple strings
+
+    grep '<string1>\|<string2>\|<string3>' <file>
+
 Pipe content into grep (eg. via `cat` or `echo`)
 
     cat <file> | grep '<string>'
