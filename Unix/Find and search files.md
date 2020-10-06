@@ -6,8 +6,7 @@ Find allows searching file names and directories under the current location
 
     find <path> <settings>
 
-Show files that match the search criteria. The criteria can be a literal name or use wildcards `*`
-Wrap non-alphanumeric search criteria with quotes
+Show files that match the search criteria. The criteria can be a literal name or use wildcards `*` (wrap non-alphanumeric search criteria with quotes)
 
     find . -name '<file-pattern>'
 
@@ -28,6 +27,20 @@ Find folders that are at a certain depth with the specified name
 Find files containing case insensitive `<search-string>` somewhere in their name
 
     find <path> -iname '*<search-string>*' -type f
+
+Find files under path that match file pattern excluding those inside specified directory
+
+    find <path> -type d -name <dir-name> -prune -false -o -name '<file-pattern>'
+
+Find files under path that match file pattern excluding those inside multiple directories
+
+    find <path> -type d \( -name <dir1> -o -name <dir2> -o -name <dir3> \) -prune -false -o -name '<file-pattern>'
+
+Notes on using find
+
+- `-o` is an OR operator
+- `-prune` excludes directory contents from search
+- `-false` when paired with prune removes pruned directories name appearing in output
 
 ## Grep
 
