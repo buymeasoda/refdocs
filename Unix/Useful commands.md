@@ -10,6 +10,12 @@ Clear the current screen of text
 
     clear
 
+## Timing
+
+Time current command execution and output user and system timing information
+
+    time <command>
+
 ## Prevent sleep
 
 Prevent computer from sleeping and declare user as active
