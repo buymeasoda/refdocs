@@ -42,6 +42,10 @@ Show a summary of the state of working directory and index
 
     git status
 
+Show status including ignored files
+
+    git status --ignored
+
 Show a list of all merged branches
 
     git branch --merged
@@ -91,6 +95,7 @@ Unstage all files from the index
 
 Discard local changes to a modified, unstaged file
 
+    git restore <file>
     git checkout -- <file>
 
 Discard local changes for all modified, unstaged files
