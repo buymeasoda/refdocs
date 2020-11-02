@@ -82,11 +82,16 @@ Uninstall package (local, dev, global)
 
 ## Upgrade
 
-Update all packages or specific package (local, global)
+Upgrade packages or specific package (local, global) for current major
 
     yarn upgrade
     yarn upgrade <package>
     yarn global upgrade <package>
+
+Upgrade packages to latest version regardless of `package.json` version ranges
+
+    yarn upgrade --latest
+    yarn upgrade -L
 
 Show outdated packages where new version exists
 
