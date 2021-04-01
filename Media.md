@@ -123,6 +123,10 @@ Play audio file (`-nodisp` for direct CLI playback without GUI)
 
 ## VLC
 
+Open network stream
+
+    vlc <stream-url>
+
 Demuxing raw PCM audio for playback
 
     vlc --demux=rawaud --rawaud-channels <channel-count> --rawaud-samplerate <sample-rate> <file>
