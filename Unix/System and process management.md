@@ -55,9 +55,10 @@ List open files for a user
 
     lsof -u <username>
 
-List processes for a specific file
+List processes for a specific file or volume
 
     lsof <file>
+    lsof <volume>
 
 List open files for internet address processes
 

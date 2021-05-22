@@ -14,6 +14,10 @@ List daemons, agents and XPC services
 
     launchctl list
 
+List system extensions
+
+    systemextensionsctl list
+
 ## System Profiler
 
 Report detailed system configuration (`-detailLevel` mini, basic, full)
