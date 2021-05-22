@@ -52,7 +52,7 @@ Rename abbreviation
 
 ## Command History
 
-Show all command history
+Show all command history items
 
     history
 
@@ -60,15 +60,41 @@ Clear all command history items
 
     history clear
 
-Show command history that matches search string
+Limit history results (show `count` most recent entries, eg. `-5` five entries)
+
+    history -<count>
+    history -5
+
+Include timestamp of command in history output
+
+    --show-time -t
+
+Show history matching filter and string criteria (optionally limit to `-n` results)
+
+    history search <filter> <string>
+    history search <filter> <string> -n <count>
+
+Delete history matching filter and string criteria
+
+    history delete <filter> <string>
+
+History result filters
+
+    --exact -e
+    --prefix -p
+    --contains -c
+
+Set filter string to be case sensitive
+
+    --case-sensitive -C
+
+List history entries that contain the specified string
 
     history search --contains <string>
-    history search --prefix <string>
 
-Remove specific entries from command history that match search string
+Delete history entries that contain the specified string
 
     history delete --contains <string>
-    history delete --delete <string>
 
 Search command history from string using grep
 
