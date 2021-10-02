@@ -135,16 +135,28 @@ Example 2 channel PCM audio at 8kHz
 
     vlc --demux=rawaud --rawaud-channels 2 --rawaud-samplerate 8000 audio.pcm
 
-## YouTube
+## youtube-dl
 
-Install YouTube-DL
+Install youtube-dl
 
     brew install youtube-dl
 
+List media format and quality options available
+
+    youtube-dl -F '<video-url>'
+
 Download mp4 video file
 
-    youtube-dl -f best[ext=mp4] '<youtube-url>'
+    youtube-dl -f best[ext=mp4] '<video-url>'
 
 Download mp3 audio file
 
-    youtube-dl -fx best --audio-format mp3 '<youtube-url>'
+    youtube-dl -fx best --audio-format mp3 '<video-url>'
+
+Pipe output directly to VLC
+
+    youtube-dl -o - '<video-url>' | vlc -
+
+Pipe output directly to Chromecast via VLC
+
+    youtube-dl -o - '<video-url> | vlc --sout="#chromecast{ip=<chromecast-ip>}" -
