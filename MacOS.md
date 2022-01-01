@@ -10,13 +10,30 @@ View and set macOS system settings
 
     sudo systemsetup
 
-List daemons, agents and XPC services
+## System and Kernel Extensions
+
+List daemons, agents and XPC services (list all / list third party only)
 
     launchctl list
+    launchctl list | grep -v com.apple
 
 List system extensions
 
     systemextensionsctl list
+
+List kernel extensions (list all / list third party only)
+
+    kextstat
+    kextstat | grep -v com.apple
+
+Unload kernel extension
+
+    sudo kextunload <extension.kext>
+
+Location of kernel extension files
+
+    /System/Library/Extensions
+    /Library/Extensions
 
 ## System Profiler
 
@@ -141,25 +158,6 @@ Set specific domain key
 
     defaults write <domain> <key> <value>
     defaults write <domain> <key> -<type> <value>
-
-## Kernel Extensions
-
-List all kernel extensions
-
-    kextstat
-
-Show only third party kernel extensions
-
-    kextstat | grep -v com.apple
-
-Unload kernel extension
-
-    sudo kextunload <extension.kext>
-
-Location of kernel extension files
-
-    /System/Library/Extensions
-    /Library/Extensions
 
 ## Quick Look
 
