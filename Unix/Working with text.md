@@ -19,10 +19,14 @@ Sort by numerical (`-n`) or general numerical values (`-g` handles floating poin
 
 ## Unique
 
-Filter out repeat lines (`-c` to output repeated count for each entry)
+Filter out repeat / duplicate lines that are adjacent (`-c` to output repeated count for each entry)
 
     <input> | uniq
     <input> | uniq -c
+
+Sort lines first to position duplicate lines together for removal
+
+    <input> | sort | uniq
 
 Show ordered count of each repeated line (filtering out single non-repeated lines)
 
