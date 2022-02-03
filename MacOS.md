@@ -10,6 +10,25 @@ View and set macOS system settings
 
     sudo systemsetup
 
+## Power Settings
+
+Show current power settings in use
+
+    pmset -g
+
+Show power information for battery and ac adapter
+
+    pmset -g batt
+    pmset -g ac
+
+List sleep and wake counts since boot
+
+    pmset -g stats
+
+Output all power setting stats
+
+    pmset -g everything
+
 ## System and Kernel Extensions
 
 List daemons, agents and XPC services (list all / list third party only)
