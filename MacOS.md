@@ -29,6 +29,17 @@ Output all power setting stats
 
     pmset -g everything
 
+## System Integrity Protection
+
+Show System Integrity Protection status
+
+    csrutil status
+
+Enable / Disable System Integrity Protection (requires Safe Mode to run)
+
+    csrutil enable
+    csrutil disable
+
 ## System and Kernel Extensions
 
 List daemons, agents and XPC services (list all / list third party only)
