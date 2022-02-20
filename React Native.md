@@ -65,6 +65,10 @@ Install React Native command line tool
 
     npm install -g react-native-cli
 
+Show system and React Native info
+
+    npx react-native info
+
 # Projects
 
 ## Create Project

@@ -88,10 +88,11 @@ Upgrade packages or specific package (local, global) for current major
     yarn upgrade <package>
     yarn global upgrade <package>
 
-Upgrade packages to latest version regardless of `package.json` version ranges
+Upgrade packages or specific package to latest version regardless of `package.json` version ranges
 
     yarn upgrade --latest
     yarn upgrade -L
+    yarn upgrade -L <package>
 
 Show outdated packages where new version exists
 
