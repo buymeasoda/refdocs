@@ -6,11 +6,11 @@ Development Tools
 
 - [Xcode](https://developer.apple.com/xcode/)
 - [Xcode Command Line Tools](https://developer.apple.com/download/more/)
-- [Cocoapods](https://cocoapods.org/)
+- [CocoaPods](https://cocoapods.org/)
 - [Android Studio](https://developer.android.com/studio/)
 - [Node](https://nodejs.org/en/)
 - [Watchman](https://facebook.github.io/watchman/)
-- [OpenJDK](https://adoptopenjdk.net/)
+- [OpenJDK](https://adoptium.net/)
 
 ## Base Setup
 
@@ -21,33 +21,18 @@ Install base environment
 
 ## Android Setup
 
-Install Java 8 JDK
+Install Java 11 JDK
 
-    brew tap AdoptOpenJDK/openjdk
-    brew cask install adoptopenjdk8
+    brew install --cask adoptopenjdk/openjdk/adoptopenjdk11
 
 Install Android Studio
 
-    brew cask install android-studio
+    brew install --cask android-studio
 
-Android environment instructions
+Android environment setup instructions
 
 - https://reactnative.dev/docs/environment-setup
 - Refer to: React Native CLI Quickstart -> macOS -> Android
-
-Configure Android SDK and Android Platform Tools via Android Studio
-
-- Run Android Studio
-- Section "Custom" setup option
-
-Specify the following options during install
-
-- Android SDK (Build and Command Line Tools)
-- Android SDK Platform
-- Performance (Intel HAXM)
-- Android Virtual Device
-
-Follow React Native guide for additional required SDK package and build tool version requirements
 
 ## iOS Setup
 
@@ -57,13 +42,18 @@ Install iOS environment
 
 Install Cocoapods (iOS)
 
-    brew install cocoapods
+    sudo gem install cocoapods
 
-## React Native Setup
+iOS environment setup instructions
 
-Install React Native command line tool
+- https://reactnative.dev/docs/environment-setup
+- Refer to: React Native CLI Quickstart -> macOS -> iOS
 
-    npm install -g react-native-cli
+## React Native CLI
+
+Run React Native CLI commands
+
+    npx react-native <command>
 
 Show system and React Native info
 
@@ -75,44 +65,37 @@ Show system and React Native info
 
 Initialize new project
 
-    react-native init <app-name>
+    npx react-native init <app-name>
     cd <app-name>
 
-## Run Metro
+## Run Server
 
-Start Metro server (and optionally reset cache)
+Start server (and optionally reset cache)
 
-    react-native start
-    react-native start --reset-cache
+    npx react-native start
+    npx react-native start --reset-cache
 
 ## Install and Run App
 
 Build, install and run app on iOS Simulator / Android Emulator
 
-    react-native run-ios
-    react-native run-android
+    npx react-native run-ios
+    npx react-native run-android
 
-## Install Packages
+## Emulator / Simulator Commands
 
-Install package for use in the app
+Show development / debug menu
 
-    npm install <package-name> --save
+- CMD + M (Android)
+- CMD + D (iOS)
+- Shake (Hardware Device)
 
-Link native dependencies and update native build files (then rebuild)
+Reload application
 
-    react-native link <package-name>
+- R + R (Android)
+- R (iOS)
 
 ## Android Tips
-
-Show React Native debug menu
-
-    CMD + M
-
-Allow React Native debugger menu to work with emulator (search settings for "draw over")
-
-    Settings -> Apps -> Your-App -> Advanced -> Draw over other app -> Permit
-
-## Android Troubleshooting
 
 Unable to connect to remote debugger
 
@@ -123,3 +106,9 @@ Open in browser first
 Configure reverse socket connection for react native server
 
     adb reverse tcp:8081 tcp:8081
+
+## iOS Tips
+
+Install pods (run from within project directory)
+
+    npx pod-install
