@@ -125,6 +125,12 @@ When executing scripts `pre` and `post` versions will automatically run if defin
     pre<script-name>
     post<script-name>
 
+## Global Packages and Cache
+
+Clear the global cache
+
+    npm cache clean --force
+
 ## Command Aliases
 
 - `npm i` (`npm install`)
