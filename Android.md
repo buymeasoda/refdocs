@@ -173,6 +173,11 @@ Configure reverse socket connection
 
     adb reverse tcp:<port> tcp:<port>
 
+Send key event to device (eg. `KEYCODE_MENU` for Menu Key)
+
+    adb shell input keyevent <event-id>
+    adb shell input keyevent 82
+
 ## Add Test Media
 
 - Drag image to emulator
