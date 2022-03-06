@@ -2,16 +2,17 @@
 
 ## Install Prerequisites
 
-Install Java 8 JDK
+Install Java 11 JDK
 
-    brew tap AdoptOpenJDK/openjdk
-    brew cask install homebrew/cask-versions/adoptopenjdk8
+    brew install --cask adoptopenjdk/openjdk/adoptopenjdk11
+
+Note: For any commands below that present MacOS "Unidentified Developer" dialog - Locate the command in Finder, right click and choose "Open" to approve running command
 
 ## Recommended Install (via Android Studio)
 
 Install Android Studio
 
-    brew cask install android-studio
+    brew install --cask android-studio
 
 Configure Android SDK and Android Platform Tools via Android Studio
 
@@ -29,21 +30,7 @@ Specify the following options during install
 
 Install Android SDK and Android Platform Tools via Homebrew
 
-    brew cask install android-sdk android-platform-tools
-
-Add SDK to path (Bash / ZDH)
-
-    export ANDROID_SDK_ROOT="$(brew --prefix)/share/android-sdk"
-
-Add SDK to path (Fish)
-
-    set -x ANDROID_SDK_ROOT (brew --prefix)/share/android-sdk
-
-Create repositories configuration file (if one does not exist)
-
-    touch ~/.android/repositories.cfg
-
-Note: For commands that present MacOS "Unidentified Developer" dialog - Locate the command in Finder, right click and choose "Open" to approve running command
+    brew install --cask android-sdk android-platform-tools
 
 ## Configure Environment
 
@@ -60,6 +47,7 @@ Add Android Tools to path (example bash configuration for use with Android Studi
     export ANDROID_HOME=<android-sdk-path>
     export PATH=$PATH:$ANDROID_HOME/emulator
     export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
     export PATH=$PATH:$ANDROID_HOME/tools/bin
     export PATH=$PATH:$ANDROID_HOME/platform-tools
 
