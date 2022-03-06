@@ -2,21 +2,24 @@
 
 ## Information
 
-Find formula
+Find formula or cask
 
-    brew search <formula>
+    brew search <name>
+    brew search --cask <name>
 
-Show information for a specific formula
+Show information for a specific formula or cask
 
-    brew info <formula>
+    brew info <name>
+    brew info --cask <name>
 
 Show installed formula excluding dependencies
 
     brew leaves
 
-Show all installed formula including dependencies
+Show all installed formula or casks including dependencies
 
     brew list
+    brew list --cask
 
 Show all installed formula with associated dependencies
 
@@ -28,10 +31,15 @@ Show all installed formula with associated dependencies in a tree
 
 ## Install
 
-Install/Uninstall formula
+Install formula or cask
 
-    brew install <formula>
-    brew uninstall <formula>
+    brew install <name>
+    brew install --cask <name>
+
+Uninstall formula or cask
+
+    brew uninstall <name>
+    brew uninstall --cask <name>
 
 Temporarily disable an installed formula
 
@@ -43,9 +51,10 @@ Fetch newest Homebrew version and formulae
 
     brew update
 
-Upgrade existing outdated formulae
+Upgrade existing outdated formulae or casks
 
     brew upgrade
+    brew upgrade --cask
 
 Remove outdated downloads and old installed versions of formulae
 
@@ -67,21 +76,3 @@ Add or remove tap repository
 
     brew tap <tap-name>
     brew untap <tap-name>
-
-## Cask
-
-Add cask to homebrew
-
-    brew tap caskroom/cask
-
-Update casks
-
-    brew cask upgrade
-
-Install cask
-
-    brew cask install <cask>
-
-List installed casks
-
-    brew cask list
