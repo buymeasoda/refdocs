@@ -76,8 +76,8 @@ Show messages from specified location
 
 Show emails that match date criteria (format: `yyyy/mm/dd` and other standard variations)
 
-    after: <date>
-    before: <date>
+    after:<date>
+    before:<date>
 
 Combine to narrow results to specific time range
 
@@ -113,9 +113,9 @@ Google drive, docs and YouTube attachments
 
 Show messages larger than specified size
 
-    size: <size-bytes>
+    size:<size-bytes>
 
 Show messages are larger or smaller than the specified sizes (combine for ranges)
 
-    larger: <size-bytes>
-    smaller: <size-bytes>
+    larger:<size-bytes>
+    smaller:<size-bytes>

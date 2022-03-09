@@ -41,8 +41,8 @@ Repeat to search across multiple channels
 
 Show messages that match date criteria (format: `yyyy-mm-dd`)
 
-    after: <date>
-    before: <date>
+    after:<date>
+    before:<date>
 
 Combine to narrow results to specific time range
 
