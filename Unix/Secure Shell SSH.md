@@ -1,4 +1,4 @@
-# Secure Shell (SSH)
+# Secure Shell SSH
 
 Connect as <user> to remote <host> on specified <port>
 If you do not specify a username it uses your current username

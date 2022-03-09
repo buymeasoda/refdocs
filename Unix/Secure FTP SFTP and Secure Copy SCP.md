@@ -1,4 +1,4 @@
-# Secure FTP (SFTP) and Secure Copy (SCP)
+# Secure FTP SFTP and Secure Copy SCP
 
 ## SFTP
 
