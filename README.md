@@ -31,6 +31,7 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 - React Native
 - Server
 - Slack
+- Sourcegraph
 - Tools
 - Unix
 - Vim
