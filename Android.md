@@ -143,11 +143,27 @@ Run Android emulator
     emulator @<avd-name>
     emulator @Nexus_5X_Nougat_
 
-## Android Debug Bridge
+## Android Debug Bridge (ADB)
 
 Show list of available android devices
 
     adb devices
+
+Install APK on device (enable `USB Debugging` via device `Developer Options` settings)
+
+    adb install <apk-file>
+
+## ADB Key Management
+
+Create public key from private key (inside `~/.android/`)
+
+    adb pubkey adbkey > adbkey.pub
+
+Output signature of public key (for checking USB Debugging match)
+
+    cat adbkey.pub | base64 --decode | md5
+
+## ADB Device Logs
 
 Show all crash logs
 
@@ -160,6 +176,8 @@ Show only errror logs
 Configure reverse socket connection
 
     adb reverse tcp:<port> tcp:<port>
+
+## ADB Device Events
 
 Send key event to device (eg. `KEYCODE_MENU` for Menu Key)
 
