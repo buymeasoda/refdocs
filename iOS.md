@@ -18,6 +18,10 @@ Switch selected version
 
     sudo xcode-select -s /Applications/Xcode<xxxx>.app
 
+List available developer tools (location via `xcode-select -p` eg. Xcode)
+
+    ls -l /Applications/Xcode.app/Contents/Developer/usr/bin/
+
 ## Simulator
 
 Open simulator app
@@ -57,44 +61,45 @@ Install via xcrun to the booted device or specified device ID
     xcrun simctl install booted path/to/Your.app
     xcrun simctl install <device-id> path/to/Your.app
 
-## Using FBSimulatorControl
+## iOS Development Bridge (idb)
+
+- https://fbidb.io/
 
 Install
 
-    brew tap facebook/fb
-    brew install fbsimctl
+    brew install facebook/fb/idb-companion
+    pip install fb-idb
 
-List current simulators
+If `fb-idb` fails to install globally use `--user` install and add user location to path
 
-    fbsimctl list
+    pip install fb-idb --user
+
+List current simulators (shows device udid)
+
+    idb list-targets
 
 Load simulator
 
-    fbsimctl <device-id> boot
+    idb boot <udid>
 
 Shut down simulators
 
-    fbsimctl shutdown
+    idb shutdown <udid>
 
-Clean up old simulators
-
-    fbsimctl --delete-all create --all-missing-defaults
-
-Record simulator or device (CTRL + C to stop recording)
-
-    fbsimrecord
-    fbdevicerecord
-
-## Simulator Crash Logs
+## Simulator Logs
 
 Show iOS simulator app crash logs
 
 - Open Console.app
-- Navigate to `~/Library/Logs -> DiagnosticReports`
+- Navigate to "Diagnostic Reports"
 
 Manual logs will show in Console.app when viewing the related simulator from "Devices"
 
     NSLog(@"...");
+
+Open system log from simulator (Shortcut: `CMD + /`)
+
+    Debug -> Open System Log...
 
 ## SDK Configuration
 
