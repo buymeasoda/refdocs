@@ -40,9 +40,11 @@ Access remote mounts (such as Samba shares and external hard drives)
 
 ## Copy, move and delete files
 
-Copy a file
+Copy a file (recursive copy / preserve symlinks)
 
     cp <source> <destination>
+    cp -r <source> <destination>
+    cp -a <source> <destination>
 
 Move or rename a file
 
