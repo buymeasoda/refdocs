@@ -94,6 +94,10 @@ Network settings including computer IP
 
     ifconfig
 
+Local machine IP
+
+    ipconfig getifaddr en0
+
 ## Terminal
 
 Output key / value pairs of current environment variables
