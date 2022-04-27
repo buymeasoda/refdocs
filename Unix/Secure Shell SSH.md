@@ -11,9 +11,11 @@ Location of SSH settings and host configuration
 
     ~/.ssh
 
-If an SSH config file (or the ssh directory) doesn't exist create it at:
+If an SSH config file doesn't exist create it at `~/.ssh/config`
 
-    ~/.ssh/config
+    cd ~/.ssh
+    touch config
+    chmod 600 config
 
 Add details for a host entry
 
