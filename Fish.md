@@ -35,6 +35,12 @@ List Builtin function names
 
     builtin --names
 
+## Environment
+
+Set environment variable for command
+
+    env <variable>=<value> <command>
+
 ## Abbreviations
 
 List full abbreviations or abbreviation names
