@@ -133,6 +133,12 @@ Other useful screen capture options
 - `-o` Exclude window shadow
 - `-T <secs>` Capture after elapsed seconds
 
+## Extended Attributes
+
+Show macOS extended attributes for file
+
+    xattr -l <file>
+
 ## App Store
 
 Show software update history (`--all` includes initial app installs)
