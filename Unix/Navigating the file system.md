@@ -47,10 +47,27 @@ Show the path of the current directory location (print working directory)
 
     pwd
 
+## Tree
+
 Display files and sub directories graphically
 
     tree
 
-List files via tree with full paths (`-f`), no indents (`-i`) and unescaped characters (`-N`)
+Ignore (or include) specific files and directories
 
-    tree -ifN
+    tree -I <path>
+    tree -P <path>
+
+Limit output to set folder depth (eg. 2 levels `-L 2`)
+
+    tree -L <depth>
+
+Other useful options
+
+- `-a` All files (including hidden)
+- `-d` List directories only
+- `-f` Print full paths
+- `-i` Do not indent output
+- `-h` Print human readable size
+- `-s` Print size in raw bytes
+- `-C` Colourize output
