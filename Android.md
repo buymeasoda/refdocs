@@ -143,13 +143,34 @@ Run Android emulator
     emulator @<avd-name>
     emulator @Nexus_5X_Nougat_
 
+Alternative run command
+
+    emulator -avd  <avd-name>
+
 ## Android Debug Bridge (ADB)
 
 Show list of available android devices
 
     adb devices
 
-Install APK on device (enable `USB Debugging` via device `Developer Options` settings)
+Start adb shell for connected device (interact with device filesystem)
+
+    adb shell
+
+Output path to device storage eg. `sdcard/` (while in device shell)
+
+    echo $EXTERNAL_STORAGE
+
+Copy files from device storage (eg. Device camera photos to Downloads folder)
+
+    adb pull <remote> <local>
+    adb pull sdcard/DCIM/Camera ~/Downloads
+
+Transfer files to device storage
+
+    adb push <local> <remote>
+
+Install APK on device or emulator (enable `USB Debugging` via device `Developer Options` settings for physical devices)
 
     adb install <apk-file>
 
@@ -161,7 +182,7 @@ Create public key from private key (inside `~/.android/`)
 
 Output signature of public key (for checking USB Debugging match)
 
-    cat adbkey.pub | base64 --decode | md5
+    cat ~/.android/adbkey.pub | base64 --decode | md5
 
 ## ADB Device Logs
 
