@@ -10,6 +10,10 @@ Unzip a standard zip file archive
 
     unzip <file>
 
+List files contained inside zip file without extracting
+
+    unzip -l <file>
+
 ## Gzip
 
 Gzip file and keep (`-k`) original source file
