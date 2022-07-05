@@ -17,13 +17,11 @@ Install Android Studio
 Configure Android SDK and Android Platform Tools via Android Studio
 
 - Run Android Studio
-- Section "Custom" setup option
 
 Specify the following options during install
 
 - Android SDK (Build and Command Line Tools)
 - Android SDK Platform
-- Performance (Intel HAXM)
 - Android Virtual Device
 
 ## Alternate Install (via Homebrew)
@@ -50,6 +48,91 @@ Add Android Tools to path (example bash configuration for use with Android Studi
     export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
     export PATH=$PATH:$ANDROID_HOME/tools/bin
     export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+## Emulator
+
+Emulator command manages loading available AVDs (AVD: Android Virtual Devices) into Android Emulator
+
+Emulator AVD location
+
+    ~/.android/avd/
+
+List available Android emulators
+
+    emulator -list-avds
+
+Run Android emulator
+
+    emulator @<avd-name>
+    emulator @Nexus_5X_Nougat_
+
+Alternative run command
+
+    emulator -avd <avd-name>
+
+## Android Debug Bridge (ADB)
+
+Show list of available android devices
+
+    adb devices
+
+Start adb shell for connected device (interact with device filesystem)
+
+    adb shell
+
+Output path to device storage eg. `sdcard/` (while in device shell)
+
+    echo $EXTERNAL_STORAGE
+
+Copy files from device storage (eg. Device camera photos to Downloads folder)
+
+    adb pull <remote> <local>
+    adb pull sdcard/DCIM/Camera ~/Downloads
+
+Transfer files to device storage
+
+    adb push <local> <remote>
+
+Install APK on device or emulator (enable `USB Debugging` via device `Developer Options` settings for physical devices)
+
+    adb install <apk-file>
+
+## ADB Key Management
+
+Create public key from private key (inside `~/.android/`)
+
+    adb pubkey adbkey > adbkey.pub
+
+Output signature of public key (for checking USB Debugging match)
+
+    cat ~/.android/adbkey.pub | base64 --decode | md5
+
+## ADB Device Logs
+
+Show all crash logs
+
+    adb logcat
+
+Show only errror logs
+
+    adb logcat '*:E'
+
+Configure reverse socket connection
+
+    adb reverse tcp:<port> tcp:<port>
+
+## ADB Device Events
+
+Send key event to device (eg. `KEYCODE_MENU` for Menu Key)
+
+    adb shell input keyevent <event-id>
+    adb shell input keyevent 82
+
+## Add Test Media
+
+- Drag image to emulator
+- Open: Settings (app) -> Storage -> Internal Storage -> Explore
+- View the image, and add to Gallery
 
 ## Manage SDKs
 
@@ -125,88 +208,3 @@ Create AVD
 Example AVD for Pixel device running Android API 29 (x86)
 
     avdmanager --verbose create avd --name Pixel_API_29 --device "pixel" --package  "system-images;android-29;google_apis;x86" --abi "x86"
-
-## Emulator
-
-Emulator command manages loading available AVDs (AVD: Android Virtual Devices) into Android Emulator
-
-Emulator AVD location
-
-    ~/.android/avd/
-
-List available Android emulators
-
-    emulator -list-avds
-
-Run Android emulator
-
-    emulator @<avd-name>
-    emulator @Nexus_5X_Nougat_
-
-Alternative run command
-
-    emulator -avd  <avd-name>
-
-## Android Debug Bridge (ADB)
-
-Show list of available android devices
-
-    adb devices
-
-Start adb shell for connected device (interact with device filesystem)
-
-    adb shell
-
-Output path to device storage eg. `sdcard/` (while in device shell)
-
-    echo $EXTERNAL_STORAGE
-
-Copy files from device storage (eg. Device camera photos to Downloads folder)
-
-    adb pull <remote> <local>
-    adb pull sdcard/DCIM/Camera ~/Downloads
-
-Transfer files to device storage
-
-    adb push <local> <remote>
-
-Install APK on device or emulator (enable `USB Debugging` via device `Developer Options` settings for physical devices)
-
-    adb install <apk-file>
-
-## ADB Key Management
-
-Create public key from private key (inside `~/.android/`)
-
-    adb pubkey adbkey > adbkey.pub
-
-Output signature of public key (for checking USB Debugging match)
-
-    cat ~/.android/adbkey.pub | base64 --decode | md5
-
-## ADB Device Logs
-
-Show all crash logs
-
-    adb logcat
-
-Show only errror logs
-
-    adb logcat '*:E'
-
-Configure reverse socket connection
-
-    adb reverse tcp:<port> tcp:<port>
-
-## ADB Device Events
-
-Send key event to device (eg. `KEYCODE_MENU` for Menu Key)
-
-    adb shell input keyevent <event-id>
-    adb shell input keyevent 82
-
-## Add Test Media
-
-- Drag image to emulator
-- Open: Settings (app) -> Storage -> Internal Storage -> Explore
-- View the image, and add to Gallery
