@@ -68,6 +68,11 @@ Filter internet address listing by port
 
     lsof -i :<port>
 
+List and kill processes when unable to unmount volume (eg. external hard drive)
+
+    lsof /Volumes/<volume-name>
+    kill <process-id>
+
 ## Terminal
 
 Change Unix shell (enter path to new shell when prompted)
