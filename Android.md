@@ -2,9 +2,9 @@
 
 ## Install Prerequisites
 
-Install Java 11 JDK
+Install Java 11 OpenJDK
 
-    brew install --cask adoptopenjdk/openjdk/adoptopenjdk11
+    brew install --cask homebrew/cask-versions/zulu11
 
 Note: For any commands below that present MacOS "Unidentified Developer" dialog - Locate the command in Finder, right click and choose "Open" to approve running command
 
