@@ -23,7 +23,7 @@ Install base environment
 
 Install Java 11 JDK
 
-    brew install --cask adoptopenjdk/openjdk/adoptopenjdk11
+    brew install --cask homebrew/cask-versions/zulu11
 
 Install Android Studio
 
