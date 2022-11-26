@@ -10,6 +10,16 @@ View and set macOS system settings
 
     sudo systemsetup
 
+## Power Metrics
+
+Show all system power / hardware metrics (CPU, GPU, Network etc)
+
+    sudo powermetrics
+
+Show specific power metrics (eg. `smc` for System Management Controller stats)
+
+    sudo powermetrics --samplers smc
+
 ## Power Settings
 
 Show current power settings in use

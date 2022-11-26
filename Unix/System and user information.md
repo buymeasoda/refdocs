@@ -29,6 +29,12 @@ Display the Unix system type being used
 
     uname -a
 
+Display the processor architecture (`-p`) or machine hardware (`-m`).
+(Examples: Processor `arm`, `i386` / Hardware `arm64`, `x86_64`)
+
+    uname -p
+    uname -m
+
 Display system OS information (Linux)
 
     cat /etc/os-release
