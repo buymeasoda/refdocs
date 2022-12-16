@@ -109,6 +109,12 @@ Relaunch Mac OS features
     killall Finder
     killall ControlStrip
 
+## Rosetta
+
+Show Rosetta process if installed and available
+
+    pgrep oahd
+
 ## Clipboard
 
 Copy input content to the clipboard
