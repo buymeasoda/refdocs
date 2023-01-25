@@ -70,6 +70,14 @@ Alternative run command
 
     emulator -avd <avd-name>
 
+Output more verbose logs
+
+    emulator @<avd-name> -verbose
+
+Output detailed real time logs
+
+    emulator @<avd-name> -logcat '*:v'
+
 ## Android Debug Bridge (ADB)
 
 Show list of available android devices
