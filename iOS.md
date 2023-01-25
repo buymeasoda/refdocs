@@ -110,3 +110,13 @@ Show current iPhone OS SDK path
 When no SDK is selected switch Xcode versions
 
     sudo xcode-select --switch /Applications/Xcode.app
+
+## Cocoapods
+
+Install cocoapods
+
+    brew install cocoapods
+
+Check pod version
+
+    pod --version
