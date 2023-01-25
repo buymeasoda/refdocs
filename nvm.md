@@ -24,10 +24,11 @@ Install latest node release
 
     nvm install node
 
-Install specific node release (or latest LTS version)
+Install specific node release (eg. LTS or version number)
 
-    nvm install <version>
     nvm install --lts
+    nvm install <version>
+    nvm install v16
 
 Install node version specified in project via `.nvmrc` file
 
@@ -39,10 +40,11 @@ Switch to system node version
 
     nvm use system
 
-Switch to a specific node version (or latest LTS version)
+Switch to a specific node version (eg. LTS or version number)
 
-    nvm use <version>
     nvm use --lts
+    nvm use <version>
+    nvm use v16
 
 Use node version specified in project via `.nvmrc` file
 
