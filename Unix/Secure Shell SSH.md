@@ -1,6 +1,6 @@
 # Secure Shell SSH
 
-Connect as <user> to remote <host> on specified <port>
+Connect as `<user>` to remote `<host>` on specified `<port>`
 If you do not specify a username it uses your current username
 
     ssh -p <port> <user>@<host>
@@ -10,6 +10,11 @@ If you do not specify a username it uses your current username
 Location of SSH settings and host configuration
 
     ~/.ssh
+
+If the SSH directory does not exist create it at `~/.ssh`
+
+    mkdir ~/.ssh
+    chmod 700 ~/.ssh
 
 If an SSH config file doesn't exist create it at `~/.ssh/config`
 
