@@ -52,10 +52,14 @@ Enable / Disable System Integrity Protection (requires Safe Mode to run)
 
 ## System and Kernel Extensions
 
-List daemons, agents and XPC services (list all / list third party only)
+List user daemons, agents and XPC services (list all / list third party only)
 
     launchctl list
     launchctl list | grep -v com.apple
+
+List system daemons, agents and XPC services
+
+    sudo launchctl list
 
 List system extensions
 
