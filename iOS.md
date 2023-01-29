@@ -22,6 +22,10 @@ List available developer tools (location via `xcode-select -p` eg. Xcode)
 
     ls -l /Applications/Xcode.app/Contents/Developer/usr/bin/
 
+Xcode launch helper (command line tool for opening Xcode documents)
+
+    xed
+
 ## Simulator
 
 Open simulator app
