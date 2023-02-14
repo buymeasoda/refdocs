@@ -10,6 +10,12 @@ View and set macOS system settings
 
     sudo systemsetup
 
+## Disk Utility
+
+List available internal / external disk volumes
+
+    diskutil list
+
 ## Power Metrics
 
 Show all system power / hardware metrics (CPU, GPU, Network etc)
@@ -133,6 +139,22 @@ Examples for copy to clipboard from files
 Outputs the current contents of the clipboard
 
     pbpaste
+
+## Spotlight
+
+Search spotlight file contents and names (or file name only via `-name`)
+
+    mdfind <search-a> <search-b>
+    mdfind -name <search>
+
+Filter for specific file type (eg. `image`)
+
+    mdfind kind:<type>
+    mdfind kind:image
+
+Limit search to specific directory
+
+     mdfind -onlyin <directory> <search>
 
 ## Screen Capture
 
