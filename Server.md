@@ -16,7 +16,7 @@ Update server packages and upgrade system
     sudo apt-get update
     sudo apt-get upgrade
 
-## Set Hostname
+## Set / Check Hostname
 
 Set machine hostname
 
@@ -27,9 +27,11 @@ Alternatively set hostname manually
     echo "<host-name>" > /etc/hostname
     hostname -F /etc/hostname
 
-Check hostname
+Show hostname, FQDN and DNS domain name
 
     hostname
+    hostname --fqdn
+    dnsdomainname
 
 ## Set Hosts
 
