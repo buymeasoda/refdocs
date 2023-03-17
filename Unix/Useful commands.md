@@ -38,8 +38,13 @@ Generate SHA1 hash from file
 
     shasum <file>
 
-## Other utilities
+## Math utilities
 
 General maths interpreter (allows general equations entered into command line)
 
     bc
+
+Calculate result of math query using `bc`
+
+    echo <calculation> | bc
+    echo '5 * 8' | bc
