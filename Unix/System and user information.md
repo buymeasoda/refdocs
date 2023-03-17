@@ -18,6 +18,10 @@ List users for system
 
     users
 
+Display information about system user
+
+    finger <username>
+
 Show login history for system (or system reboot history)
 
     last
@@ -50,9 +54,17 @@ Display basic system OS information or more detailed system config (macOS)
 
 ## Command Info
 
-Search system commands and display description
+Search system commands and display short description
 
     whatis <command>
+
+Show location of command for current user path config
+
+    which <command>
+
+Show all locations for command
+
+    whereis <command>
 
 ## Uptime
 

@@ -6,8 +6,9 @@ Exit the current terminal session
 
     exit
 
-Restart the system
+Shutdown or restart the system
 
+    shutdown
     reboot
 
 ## Processes
@@ -37,7 +38,7 @@ Hangup process
 
     kill -1 <process-id>
 
-Kill process
+Kill process (using force kill signal `-9`)
 
     kill -9 <process-id>
 
