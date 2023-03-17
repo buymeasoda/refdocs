@@ -61,7 +61,7 @@ Only show matches (`-o`) and do not print filenames (`-h`)
 
     grep -ho '<search-string>' <path>
 
-## Advanced Examples
+## Advanced Grep Examples
 
 Find files and print with sizes (Note: `-printf` is not POSIX and only available with GNU `find`)
 

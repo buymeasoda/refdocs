@@ -39,24 +39,22 @@ Pipe text into `tr` to replace content (eg. replace commas with new lines)
     <input> | tr <search> <replace>
     <input> | tr ',' '\n'
 
-# Extracting text
+## Text extract
 
 Output printable strings contained in file (useful for extracting metadata from binary files)
 
     strings <file>
 
-# Searching text
-
 ## Grep
 
-Search file for string (case insensitive `-i`, display line numbers `-n`)
+Search and output matching strings (case insensitive `-i`, display line numbers `-n`)
 
-    grep '<string>' <file>
-    grep -in '<string>' <file>
+    grep '<search-string>' <path>
+    grep -in '<search-string>' <path>
 
-Search for multiple strings
+Search and output multiple matching strings
 
-    grep '<string1>\|<string2>\|<string3>' <file>
+    grep '<search-string-1>\|<search-string-2>\|<search-string-3>' <path>
 
 Pipe content into grep (eg. via `cat` or `echo`)
 
@@ -66,3 +64,14 @@ Pipe content into grep (eg. via `cat` or `echo`)
 Show context lines after (`-A`), before (`-B`) or both sides (`-C`) of search results
 
     grep '<string>' -C <line-count>
+
+## awk
+
+Print the first (or second `$2`, third `$3` etc) field / word token for each line
+
+    awk '{print $1}' <path>
+
+Print lines longer the `<length>` characters (eg. 200)
+
+    awk 'length($0) > <length>' <path>
+    awk 'length($0) > 200' <path>

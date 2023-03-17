@@ -37,6 +37,12 @@ Compare files using VS Code diff view
 
     code -d <file1> <file2>
 
+# Compare
+
+Output if specified files differ
+
+    cmp <file1> <file2>
+
 # Comm
 
 Select or reject lines common to two files (requires sorted files as input)
