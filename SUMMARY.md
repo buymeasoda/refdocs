@@ -45,6 +45,7 @@
 - [Help and manual pages](Unix/Help%20and%20manual%20pages.md)
 - [HostName and Local HostName for Mac OSX](Unix/HostName%20and%20Local%20HostName%20for%20Mac%20OSX.md)
 - [Navigating the file system](Unix/Navigating%20the%20file%20system.md)
+- [Network and routing](Unix/Network%20and%20routing.md)
 - [Run and manage background tasks](Unix/Run%20and%20manage%20background%20tasks.md)
 - [Secure FTP SFTP and Secure Copy SCP](Unix/Secure%20FTP%20SFTP%20and%20Secure%20Copy%20SCP.md)
 - [Secure Shell SSH](Unix/Secure%20Shell%20SSH.md)
