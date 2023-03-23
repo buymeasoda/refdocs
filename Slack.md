@@ -1,5 +1,12 @@
 # Slack
 
+## Channel Notifications
+
+Notify active members of a channel (`@here`) or all members of a channel (`@channel`)
+
+    @here <message>
+    @channel <message>
+
 ## Useful Shortcuts
 
 Open results in split view (to keep current search results or thread in place)
