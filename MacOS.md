@@ -252,6 +252,22 @@ Directories for stand along quick look providers
     /Library/QuickLook
     ~/Library/QuickLook
 
+## macOS Firewall Settings
+
+List firewall rules
+
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --listapps
+
+Add or remove app from firewall rules
+
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --add <app-path>
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --remove <app-path>
+
+Block or unblock app in firewall rules
+
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --blockapp <app-path>
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --unblockapp <app-path>
+
 ## Security and Privacy Permissions
 
 Manage associated app permissions (listed in System Preferences -> Security & Privacy -> Privacy)
