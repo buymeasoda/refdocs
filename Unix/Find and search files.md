@@ -6,6 +6,10 @@ Find allows searching file names and directories under the current location
 
     find <path> <settings>
 
+Exclude specified pattern from find (eg. `'*/\.git/*'` for ignoring `.git` directories)
+
+    find <path> -not -path '<pattern>'
+
 Show files that match the search criteria. The criteria can be a literal name or use wildcards `*` (wrap non-alphanumeric search criteria with quotes)
 
     find . -name '<file-pattern>'
