@@ -14,6 +14,17 @@ List files contained inside zip file without extracting
 
     unzip -l <file>
 
+## Zip Info
+
+Show files contained in zip file (`-m` show compression rate)
+
+    zipinfo <file>
+    zipinfo -m <file>
+
+List directory and file names only
+
+    zipinfo -1 <file>
+
 ## Gzip
 
 Gzip file and keep (`-k`) original source file
