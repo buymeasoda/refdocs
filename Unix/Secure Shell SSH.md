@@ -37,6 +37,8 @@ Add SSH key passphrase to MacOS Keychain
 
     ssh-add -K ~/.ssh/<key-file>
 
+Note: If `config` file cannot be edited using `sudo` check the file is not locked via macOS Finder (File -> Get Info -> Locked)
+
 # SSH Access
 
 Connect to remote machine using SSH public / private key instead of username and password.

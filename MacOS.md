@@ -181,6 +181,12 @@ Show macOS extended attributes for file
 
     xattr -l <file>
 
+## Locked Files
+
+macOS allows locking files via Finder to prevent accidental deletion and editing (Note: This setting prevents changes via `sudo`)
+
+    File -> Get Info -> Locked
+
 ## App Store
 
 Show software update history (`--all` includes initial app installs)
