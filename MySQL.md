@@ -27,6 +27,12 @@ macOS post install instructions via homebrew
     mysql.server start
     mysql_secure_installation
 
+## MySQL Information
+
+Show installed MySQL version
+
+    mysql -V
+
 ## Control MySQL Server
 
 Linux
