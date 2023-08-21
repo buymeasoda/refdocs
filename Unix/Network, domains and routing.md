@@ -20,6 +20,8 @@ Show registration details for domain
 
     whois <domain>
 
+## DNS Records
+
 Show basic (and expanded using `any`) DNS records for domain (Note: `any` may be disabled by the DNS provider)
 
     dig <domain>
@@ -32,3 +34,15 @@ Alternative DNS lookup utility to `dig`
 Show name server record type information for domain (eg. `A`, `MX`, `NS`)
 
     nslookup -q=<record-type> <domain>
+
+## Name Servers
+
+Show authoritative name servers for domain (`+short` for minimal output)
+
+    dig NS <domain>
+    dig +short NS <domain>
+
+Alternative name server lookup utility to `dig`
+
+    host -t NS <domain>
+    nslookup -q=NS <domain>
