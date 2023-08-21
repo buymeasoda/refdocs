@@ -27,12 +27,13 @@ Show basic (and expanded using `any`) DNS records for domain (Note: `any` may be
     dig <domain>
     dig <domain> any
 
+Show specific DNS records for domain (eg. `A`, `MX`, `NS`)
+
+    dig <record-type> <domain>
+
 Alternative DNS lookup utility to `dig`
 
     host -a <domain>
-
-Show name server record type information for domain (eg. `A`, `MX`, `NS`)
-
     nslookup -q=<record-type> <domain>
 
 ## Name Servers
