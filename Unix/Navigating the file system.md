@@ -12,6 +12,10 @@ Long listing (`l`) of all files (`a`) with human readable sizes (`h`)
 
     ls -lah
 
+List directory not the files within
+
+    ls -d <dir>
+
 Reverse sort order
 
     ls -r
