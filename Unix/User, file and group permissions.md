@@ -1,5 +1,15 @@
 # User, file and group permissions
 
+## Info
+
+Show all groups a user belongs to
+
+    groups <user>
+
+Show primary groups for user
+
+    id <user>
+
 ## Sudo
 
 Perform a command as the super user
@@ -81,6 +91,16 @@ Add execute for user, remove write for group, remove rwx for other
 Set group to read and write for the directory and all sub files and folders
 
     chmod -R g=rw <dir>
+
+### Set user / group for new files
+
+Set group automatically when creating new files within `<dir>` via the `g+s` SETGID (SET Group ID) flag
+
+    chmod g+s <dir>
+
+Remove setting group automatically for new files within `<dir>` by removing set group flag
+
+    chmod g-s <dir>
 
 ## Managing groups and owners
 

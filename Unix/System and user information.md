@@ -2,9 +2,10 @@
 
 ## User
 
-Display current username
+Display current username (or user when using `sudo`)
 
     whoami
+    sudo whoami
 
 Show currently logged in user
 
