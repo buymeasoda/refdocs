@@ -66,6 +66,10 @@ Symbolic link from source file to destination file
 
 Requires `rename` via `brew install rename`
 
+Rename files (`-n` or `--dry-run` to test rename output with making changes)
+
+    rename <transform> <file-glob>
+
 Replace search string with replace string for matching files
 
     rename -s <search> <replace> <file-glob>
@@ -74,6 +78,10 @@ Rename all `txt` files with a sequential number in the format `text-1.txt`
 
     rename -e 's/.*/text-$N.txt/' *.txt
     rename -N ...01 -X -e '$_ = "text-$N"' *.txt
+
+Uppercase first letter of zip file name (`-f` to force rename on macOS when changing case)
+
+     rename -f 's/\b(\w)/\u$1/' *.zip
 
 ## Create and delete directories
 
@@ -134,6 +142,24 @@ Create an empty file
 
     touch <file>
     touch <file1> <file2> <file3>
+
+Set modified date to current time
+
+    touch <file>
+
+Set modified and accessed date to specific time (Time format: YYYYMMDDHHMM)
+
+    touch -t <time> <file>
+    touch -t 201001151445 <file>
+
+Replicate modified date of source file and copy to target file
+
+    touch -r <source> <target>
+
+Set creation date of file (SetFile requires xcode command line tools)
+
+    SetFile -d '<date> <time>' <file>
+    SetFile -d '01/15/2010 14:45:00' <file>
 
 ## File Status
 
