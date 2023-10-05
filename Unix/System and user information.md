@@ -117,6 +117,10 @@ Local machine IP
 
     ipconfig getifaddr en0
 
+Show smb info for network volumes
+
+    smbutil statshares -a
+
 ## Terminal
 
 Output key / value pairs of current environment variables
