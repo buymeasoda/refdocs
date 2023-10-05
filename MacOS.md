@@ -16,6 +16,11 @@ List available internal / external disk volumes
 
     diskutil list
 
+Show / delete APFS snapshot for volume
+
+    diskutil apfs listSnapshots <volume>
+    diskutil apfs deleteSnapshot <volume> -name <snapshot-name>
+
 ## Power Metrics
 
 Show all system power / hardware metrics (CPU, GPU, Network etc)
