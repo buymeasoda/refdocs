@@ -47,3 +47,11 @@ Alternative name server lookup utility to `dig`
 
     host -t NS <domain>
     nslookup -q=NS <domain>
+
+## Web Browsers
+
+Clear stale DNS cache in chrome (Open Chrome DNS settings -> Clear host cache)
+
+    chrome://net-internals/#dns
+
+Chrome Net Internals can also show the DNS entries for specific domains
