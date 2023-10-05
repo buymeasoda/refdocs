@@ -14,6 +14,11 @@ Diff directories and their contents, showing only the filenames of changed files
 
     diff -qr <dir1> <dir2>
 
+Diff directories ignoring specific files (eg. `.DS_Store` macOS files)
+
+    diff -x '<ignore>' -rq <dir1> <dir2>
+    diff -x '.DS_Store' -rq <dir1> <dir2>
+
 ## Vim Diff
 
 Diff files with side by side editable output
