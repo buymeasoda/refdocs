@@ -36,6 +36,27 @@ Open simulator app (direct path alternative)
 
     open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/
 
+## Gestures
+
+- Position touch gesture points using OPTION / SHIFT
+- Engage touch by pressing (eg. click and hold mouse / trackpad)
+
+Show touch gesture UI (scale distance between touches with mouse / trackpad)
+
+    OPTION
+
+Show touch gesture UI and move touches at set scale (release shift to adjust scale distance)
+
+    OPTION then SHIFT
+
+Toggle touch gesture UI to remain active with being engaged
+
+    OPTION then SHIFT (then RELEASE)
+
+Re-engage SHIFT to move touch points and hold OPTION to adjust scale distance
+
+## Simulator Commands
+
 Show xcrun simulator commands
 
     xcrun simctl help
