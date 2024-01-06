@@ -29,6 +29,7 @@ Examples in the code include placeholders in the format of `<identifier>`. Repla
 - [nvm](nvm.md)
 - [PHP](PHP.md)
 - [React Native](React%20Native.md)
+- [Rust](Rust.md)
 - [Server](Server.md)
 - [Slack](Slack.md)
 - [Sourcegraph](Sourcegraph.md)
