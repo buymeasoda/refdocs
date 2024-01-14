@@ -90,6 +90,13 @@ Location of kernel extension files
     /System/Library/Extensions
     /Library/Extensions
 
+## System Paths
+
+Location of default macOS system `$PATH` entries
+
+	/etc/paths
+	/etc/paths.d
+
 ## System Profiler
 
 Report detailed system configuration (`-detailLevel` mini, basic, full)
