@@ -2,11 +2,15 @@
 
 ## Install Prerequisites
 
-Install Java 11 OpenJDK
+Install Java JDK 17
 
-    brew install --cask homebrew/cask-versions/zulu11
+    brew tap homebrew/cask-versions
+    brew install --cask zulu17
 
-Note: For any commands below that present MacOS "Unidentified Developer" dialog - Locate the command in Finder, right click and choose "Open" to approve running command
+Notes
+
+- For any commands below that present MacOS "Unidentified Developer" dialog - Locate the command in Finder, right click and choose "Open" to approve running command
+- Shell environment configuration are shown using fish shell commands
 
 ## Recommended Install (via Android Studio)
 
@@ -30,7 +34,30 @@ Install Android SDK and Android Platform Tools via Homebrew
 
     brew install --cask android-sdk android-platform-tools
 
-## Configure Environment
+## Check and Configure Environment
+
+Show installed and active Java version
+
+    java --version
+
+### Java Home
+
+Show Java Home path and version (`-V` to show all available versions)
+
+    /usr/libexec/java_home
+    /usr/libexec/java_home -V
+
+Output path for specific Java version (can be exact or major version)
+
+    /usr/libexec/java_home -v <version>
+    /usr/libexec/java_home -v 11
+    /usr/libexec/java_home -v 17
+
+Set Java Home path for JDK (determined from `java_home` output)
+
+    set -x JAVA_HOME <java-home-path>
+
+### Android SDK
 
 Android SDK path for Android Studio install
 
@@ -40,14 +67,14 @@ Android SDK path for Homebrew install
 
     $(brew --prefix)/share/android-sdk
 
-Add Android Tools to path (example bash configuration for use with Android Studio install)
+Android Home path for sdk
 
-    export ANDROID_HOME=<android-sdk-path>
-    export PATH=$PATH:$ANDROID_HOME/emulator
-    export PATH=$PATH:$ANDROID_HOME/tools
-    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-    export PATH=$PATH:$ANDROID_HOME/tools/bin
-    export PATH=$PATH:$ANDROID_HOME/platform-tools
+    set -x ANDROID_HOME $HOME/Library/Android/sdk
+
+Add Android Tools to path
+
+    fish_add_path --path --append $ANDROID_HOME/emulator
+    fish_add_path --path --append $ANDROID_HOME/platform-tools
 
 ## Emulator
 
