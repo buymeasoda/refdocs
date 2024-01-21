@@ -21,6 +21,7 @@
 - [Node](Node.md)
 - [npm](npm.md)
 - [nvm](nvm.md)
+- [Obsidian](Obsidian.md)
 - [PHP](PHP.md)
 - [React Native](React%20Native.md)
 - [Rust](Rust.md)
