@@ -2,6 +2,10 @@
 
 ## Xcode
 
+Show Xcode app / build version
+
+    xcodebuild -version
+
 Install command line developer tools
 
     xcode-select --install
