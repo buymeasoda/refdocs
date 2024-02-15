@@ -43,6 +43,14 @@ Set environment variable for command
 
 ## Abbreviations
 
+Add (`-a`) global (`-g`) abbreviation
+
+    abbr -ag gc 'git ci -m'
+
+Add (`-a`) global (`-g`) abbreviation and set cursor position
+
+    abbr -ag gc --set-cursor=@ 'git ci -m "@"'
+
 List full abbreviations or abbreviation names
 
     abbr
