@@ -12,6 +12,7 @@
 - [Gmail](Gmail.md)
 - [Homebrew](Homebrew.md)
 - [iOS](iOS.md)
+- [iTerm](iTerm.md)
 - [MacOS](MacOS.md)
 - [MacPorts](MacPorts.md)
 - [Mamp](Mamp.md)
