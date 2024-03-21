@@ -6,6 +6,10 @@ Show Xcode app / build version
 
     xcodebuild -version
 
+Show installed SDK versions
+
+    xcodebuild -showsdks
+
 Install command line developer tools
 
     xcode-select --install
