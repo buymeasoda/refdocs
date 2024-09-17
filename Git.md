@@ -1005,6 +1005,11 @@ Show where git configuration is set
 
     git config --l --show-origin
 
+List specific configuration field value (eg. email)
+
+    git config <field>
+    git config user.email
+
 ## Configuration files
 
 Local configuration overrides general configuration
@@ -1024,7 +1029,7 @@ System wide config for all repositories and all users (`git config --system <set
 
     /etc/gitconfig
 
-## Using the config command to apply settings
+## Using the config command to apply and remove settings
 
 Set committer name and email for all git repositories
 
@@ -1035,6 +1040,11 @@ While inside a git repo, set the committer name and email for just that reposito
 
     git config user.name <name>
     git config user.email <email>
+
+Remove config field for current repo / context (eg. email)
+
+    git config --unset <field>
+    git config --unset user.email
 
 ## Configuration for setting ignore rules
 
