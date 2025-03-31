@@ -114,6 +114,13 @@ Search command history from string using grep
 
     history | grep -i <string>
 
+## Private Mode
+
+Use private mode for running commands with tokens or other context that should not be persisted to history
+
+    fish --private
+    fish -P
+
 ## String Functions
 
 Search and replace string content (`-r` for regex)
