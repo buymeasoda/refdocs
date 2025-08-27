@@ -257,3 +257,7 @@ Output MySQL settings
 Show current character set configuration
 
     mysql> show variables like 'char%';
+
+Show database variables
+
+    mysqladmin -u <user> -p variables
