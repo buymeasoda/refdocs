@@ -242,6 +242,10 @@ Output the log for the specified range. Since and until are any valid identifier
 
     git log <since>..<until>
 
+Output difference between current branch HEAD and origin/main
+
+    git log HEAD..origin/main
+
 After a merge, use --merge with log to show only the commits from files that relate to the merge conflict
 
     git log --merge
@@ -313,7 +317,7 @@ Show the second parent of HEAD
 
     git show HEAD^2
 
-Reference the next ancestor in the history (~1 is the parent, ~2 is the grandparent etc), eg. To specify the last 50 commits on branch master: `master~50`
+Reference the next ancestor in the history (~1 is the parent, ~2 is the grandparent etc), eg. To specify the last 50 commits on branch main: `main~50`
 
 Current branch, diff between commits 2 and 3 times back
 
@@ -649,7 +653,7 @@ Revert local branch to upstream origin state
 
 Rebase takes the current branch, sets it to state of the target branch specified, the 'replays' all the branch change sets over the top.
 
-    git rebase master
+    git rebase main
 
 ## Create and manage tags
 
@@ -763,9 +767,9 @@ Push current branch and set it to automatically track the named remote branch
 
     git push -u <remote> <branch>
 
-For example, to push to origin master and set your current branch to track master
+For example, to push to origin main and set your current branch to track main
 
-    git push -u origin master
+    git push -u origin main
 
 Assign the current branch to track the named remote branch
 
