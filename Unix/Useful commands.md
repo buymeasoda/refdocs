@@ -6,6 +6,10 @@ Reload current shell in place (useful for cleanly applying recent shell config u
 
     exec $SHELL
 
+Show current shell level (increases when launching additional shells via `bash`, `zsh` etc)
+
+    echo $SHLVL
+
 Clear the current screen of text
 
     clear
