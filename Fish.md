@@ -250,3 +250,9 @@ Edit current command in external editor (set via `$VISUAL` and `$EDITOR` variabl
 
     ALT + E
     ALT + V
+
+## Utilities
+
+Output performance timings for fish shell startup
+
+    fish --profile-startup <file> -i -c exit
