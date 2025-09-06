@@ -9,10 +9,20 @@ Show internet route to host
 
     traceroute <host>
 
+## Protocols / Ports
+
 Network protocol status (limit to specific protocol `-p` eg. `tcp`, `udp`)
 
     netstat
     netstat -p <protocol>
+
+Show processes that are listening on ports
+
+    lsof -i -P | grep LISTEN
+
+Check if specified port is open at IP address (macOS: `-G <timeout>` in seconds)
+
+    nc -zv -G <timeout> <ip-address> <port>
 
 ## Domains
 
