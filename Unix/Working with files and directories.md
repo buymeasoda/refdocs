@@ -184,9 +184,10 @@ Paginate through a text file output directly in the terminal
 
     more <filename>
 
-Paginate through a text files output directly in the terminal (includes ability to go backwards)
+Paginate through a text files output directly in the terminal (`+G` to jump to end of file on open)
 
     less <filename>
+    less +G <filename>
 
 ## Less commands
 
