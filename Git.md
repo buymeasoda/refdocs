@@ -176,6 +176,17 @@ Show the full log history for a file that has been renamed. Without --follow, th
 
     git log --follow <file>
 
+## Tracking empty directories
+
+Git will not track empty directories. To commit empty directories add a blank file to the directory. By convention a common empty filename is `.gitkeep`
+
+    directory/.gitkeep
+
+If the directory contents are not intended to be version controlled use the following `.gitignore` rules to track the directory (via `.gitkeep`) and ignore all other files within the directory. This is useful for directories intended for transient files like logs
+
+    directory/*
+    !directory/.gitkeep
+
 # Git repository history
 
 ## View history log
