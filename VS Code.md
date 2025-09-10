@@ -22,6 +22,11 @@ Compare files using VS Code diff view
 
     code -d <file1> <file2>
 
+Pipe command output to open in VS Code (Example: Pipe diff output of two folders)
+
+    <command> | code -
+    diff -r <folder1> <folder2> | code -
+
 ## Extensions
 
 Show list of installed extensions or list with versions
