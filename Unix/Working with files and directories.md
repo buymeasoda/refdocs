@@ -32,6 +32,18 @@ Show line endings for files (Unix: ASCII, DOS: ASCII + CRLF)
 
     file <file>
 
+## File Globbing
+
+Using `*` for path value will not match hidden files and folders beginning with a `.`
+
+List all non-hidden files and folders
+
+    ls *
+
+Remove all non-hidden files from inside `<folder>`
+
+    rm -rf <folder>/*
+
 ## Work with remote mounts and external hard drives
 
 Access remote mounts (such as Samba shares and external hard drives)
