@@ -84,20 +84,20 @@ Report total size of MySQL databases
 
 Create a user
 
-    mysql> CREATE USER '<user>'@'<host>' IDENTIFIED BY '<password>';
-    mysql> FLUSH PRIVILEGES;
+    CREATE USER '<user>'@'<host>' IDENTIFIED BY '<password>';
+    FLUSH PRIVILEGES;
 
 Delete a user
 
-    mysql> DROP USER '<user>'@'<host>';
+    DROP USER '<user>'@'<host>';
 
 Change a user's password (as root)
 
-    mysql> SET PASSWORD FOR '<user>'@'<host>' = PASSWORD('<password>');
+    SET PASSWORD FOR '<user>'@'<host>' = PASSWORD('<password>');
 
 Show list of users
 
-    mysql> SELECT User FROM mysql.user;
+    SELECT User FROM mysql.user;
 
 ## Manage Privileges
 
@@ -115,113 +115,113 @@ Privileges:
 
 Grant all privileges
 
-    mysql> GRANT ALL PRIVILEGES ON <database>.* TO '<user>'@'<host>';
-    mysql> FLUSH PRIVILEGES;
+    GRANT ALL PRIVILEGES ON <database>.* TO '<user>'@'<host>';
+    FLUSH PRIVILEGES;
 
 Grant general privileges
 
-    mysql> GRANT SELECT, INSERT, UPDATE, DELETE ON <database>.* TO '<user>'@'<host>';
-    mysql> FLUSH PRIVILEGES;
+    GRANT SELECT, INSERT, UPDATE, DELETE ON <database>.* TO '<user>'@'<host>';
+    FLUSH PRIVILEGES;
 
 Grant table privileges
 
-    mysql> GRANT CREATE, DROP, ALTER ON <database>.* TO '<user>'@'<host>';
+    GRANT CREATE, DROP, ALTER ON <database>.* TO '<user>'@'<host>';
 
 Revoke all privileges
 
-    mysql> REVOKE ALL ON <database>.* FROM '<user>'@'<host>';
+    REVOKE ALL ON <database>.* FROM '<user>'@'<host>';
 
 Revoke specific privileges
 
-    mysql> REVOKE DELETE, INSERT ON <database>.* FROM '<user>'@'<host>';
+    REVOKE DELETE, INSERT ON <database>.* FROM '<user>'@'<host>';
 
 Show privileges
 
-    mysql> SHOW GRANTS FOR '<user>'@'<host>';
+    SHOW GRANTS FOR '<user>'@'<host>';
 
 ## Navigate Databases and Tables
 
 Show list of available databases
 
-    mysql> SHOW DATABASES;
+    SHOW DATABASES;
 
 Select database to use for subsequent SQL commands
 
-    mysql> USE <database>;
+    USE <database>;
 
 Show tables for selected database
 
-    mysql> SHOW TABLES;
+    SHOW TABLES;
 
 Show the column names and column types for a table
 
-    mysql> DESCRIBE <table>;
+    DESCRIBE <table>;
 
 Show all rows that exist in a column
 
-    mysql> SELECT * FROM <column>;
+    SELECT * FROM <column>;
 
 ## Create and Delete databases
 
 Create a new database
 
-    mysql> CREATE DATABASE <database>;
+    CREATE DATABASE <database>;
 
 Delete an existing database
 
-    mysql> DROP DATABASE <database>;
+    DROP DATABASE <database>;
 
 ## Create, Delete and Alter Tables
 
 Create a table and columns
 
-    mysql> CREATE TABLE <table> (<column> <type> <settings>);
+    CREATE TABLE <table> (<column> <type> <settings>);
 
 Create a table and columns (example)
 
-    mysql> CREATE TABLE <table> (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, <column> VARCHAR(45));
+    CREATE TABLE <table> (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, <column> VARCHAR(45));
 
 Rename table
 
-    mysql> RENAME TABLE <table> to <new table>;
+    RENAME TABLE <table> to <new table>;
 
 Delete table
 
-    mysql> DROP TABLE <table>;
+    DROP TABLE <table>;
 
 Add table column
 
-    mysql> ALTER TABLE <table> ADD <column> <type> <settings>;
+    ALTER TABLE <table> ADD <column> <type> <settings>;
 
 Add table column in location (example)
 
-    mysql> ALTER TABLE <table> ADD <new column> VARCHAR(45) NULL AFTER `<column>`;
+    ALTER TABLE <table> ADD <new column> VARCHAR(45) NULL AFTER `<column>`;
 
 Insert record
 
-    mysql> INSERT INTO <table> (<column>, <other column>) VALUES ('<value>', '<other value>');
+    INSERT INTO <table> (<column>, <other column>) VALUES ('<value>', '<other value>');
 
 ## Select, Update and Delete Rows
 
 Select records
 
-    mysql> SELECT * FROM <table>;
+    SELECT * FROM <table>;
 
 Update record
 
-    mysql> UPDATE <table> SET <column> = '<value>';
+    UPDATE <table> SET <column> = '<value>';
 
 Update record with condition
 
-    mysql> UPDATE <table> SET <column> = '<value>' WHERE <table>.<other column> = <condition>;
+    UPDATE <table> SET <column> = '<value>' WHERE <table>.<other column> = <condition>;
 
 Delete all rows
 
-    mysql> DELETE FROM <table>;
+    DELETE FROM <table>;
 
 Delete specific record
 
-    mysql> DELETE FROM <table> WHERE <table>.<column> = '<value>';
+    DELETE FROM <table> WHERE <table>.<column> = '<value>';
 
 ## MySQL Database Import / Export
 
@@ -256,7 +256,7 @@ Output MySQL settings
 
 Show current character set configuration
 
-    mysql> show variables like 'char%';
+    SHOW VARIABLES LIKE 'char%';
 
 Show database variables
 
