@@ -223,6 +223,20 @@ Delete specific record
 
     DELETE FROM <table> WHERE <table>.<column> = '<value>';
 
+## Using Wildcards
+
+Wildcards via `%` can be used for grants on database names (literal underscores must be escaped `\_`)
+
+Grant select for databases that match `foo_*` (eg. `foo_bar`, `foo_qux`)
+
+    GRANT SELECT ON `foo\_%`.* TO '<user>'@'<host>';
+
+Revoke all for `foo_*`
+
+    REVOKE ALL ON `foo\_%`.* TO '<user>'@'<host>';
+
+Note: Grants and revokes made in this manner must match the same wildcard value (eg. `foo\_%`)
+
 ## MySQL Database Import / Export
 
 Export database
