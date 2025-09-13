@@ -39,20 +39,46 @@ Start a server in the current directory
 
 ## Output Strings
 
-Output a string or formatted string
-
-    echo $var
-    print($var)
-    printf($format, $value)
-
 Output readable/detailed debugging information about a variable
 
     print_r($var)
     var_dump($var)
 
-Output valid php code that describes the variable
+Outputs parsable string representation of variable
 
     var_export($var)
+
+Output string
+
+    echo $var;
+    print($var);
+
+Output formatted string
+
+    printf($format, $value)
+
+## Superglobals
+
+Context, configuration and environment variables available in all scopes
+
+- `$GLOBALS`: All variables available in global scope
+- `$_ENV`: Environment variables
+- `$_SERVER`: Server and execution environment information
+- `$_SESSION`: Session variables available to the current script
+- `$_COOKIES`: Cookie variables available to the current script via HTTP Cookies
+- `$_FILES`: Items uploaded to the current script via the HTTP POST method
+- `$_GET`: Variables passed to the current script via URL GET parameters
+- `$_POST`: Variables passed to the current script via the HTTP POST method
+- `$_REQUEST`: All variables from `$_GET`, `$_POST` and `$_COOKIE`
+
+Note: Order and availability of `$_ENV` (E), `$_GET` (G), `$_POST` (P), `$_COOKIES` (C), `$_SERVER` (S) is set by `variables_order` setting in `php.ini` (Default: `variables_order = "EGPCS"`)
+
+## Environment Values
+
+Directly query OS environment variables
+
+    getenv();
+    getenv($name);
 
 ## Introspection
 
