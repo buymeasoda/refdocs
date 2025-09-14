@@ -243,6 +243,18 @@ Export database
 
     mysqldump -u root -p <database> > <file.sql>
 
+Export database (and include `CREATE DATABASE` and `USE` commands)
+
+    mysqldump -u root -p --databases <database> > <file.sql>
+
+Export multiple databases
+
+    mysqldump -u root -p --databases <database1> <database2> > <file.sql>
+
+Export all databases
+
+    mysqldump -u root -p --all-databases > <file.sql>
+
 Import database
 
     mysqladmin -u root -p create <database>
