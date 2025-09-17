@@ -223,6 +223,10 @@ Delete specific record
 
     DELETE FROM <table> WHERE <table>.<column> = '<value>';
 
+Delete all non-matching records
+
+    DELETE FROM <table> WHERE <table>.<column> != '<value>';
+
 ## Using Wildcards
 
 Wildcards via `%` can be used for grants on database names (literal underscores must be escaped `\_`)
