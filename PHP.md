@@ -80,6 +80,13 @@ Directly query OS environment variables
     getenv();
     getenv($name);
 
+## Extensions
+
+Check if extension is loaded (eg. 'gd' image library)
+
+    extension_loaded(<extension-name>);
+    extension_loaded('gd');
+
 ## Introspection
 
 ### Class Introspection
