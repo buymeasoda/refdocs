@@ -50,8 +50,31 @@ Search for string within directory (separate string and directory by space)
 
     <string> <directory>
 
+## Multiple Cursors
+
+Find all matches for selection and insert cursors
+
+    CMD + L
+
+Find next match for selection and add cursor (repeat to create multiple cursors)
+
+    CMD + D
+
+Undo last cursor match insertion (repeat to undo multiple added cursors)
+
+    CMD + U
+
 ## Useful Commands
 
 Show inlay type hints (when set to "offUnlessPressed")
 
     CTRL + OPTION
+
+## Git
+
+Stage (or unstage) specific lines of changes inside blocks
+
+- Open Source Control panel
+- Select file from Changes list to open git diff view
+- Manually select lines to stage
+- Right click -> Stage Selected Ranges
