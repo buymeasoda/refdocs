@@ -37,7 +37,17 @@ Add SSH key passphrase to MacOS Keychain
 
     ssh-add -K ~/.ssh/<key-file>
 
-Note: If `config` file cannot be edited using `sudo` check the file is not locked via macOS Finder (File -> Get Info -> Locked)
+If `config` file cannot be edited using `sudo` check the file is not locked in macOS Finder
+
+- File -> Get Info -> General: Locked (Uncheck)
+
+Check the file for the macOS user immutable flag `uchg` (which disallows editing even by the file owner)
+
+    ls -lO ~/.ssh/config
+
+To remove the `uchg` (user immutable) flag and allow the file to be `sudo` edited by the owner
+
+    chflags nouchg ~/.ssh/config
 
 # SSH Access
 
