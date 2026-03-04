@@ -8,20 +8,24 @@ Clear the terminal screen (Mac OSX)
 
     CMD + k
 
-Go to the beginning of the line
+Go to the beginning / end of the line (`a`: beginning / alphabet, `e`: end)
 
     CTRL + a
-
-Go to the end of the line
-
     CTRL + e
 
-Delete word to the left of the cursor
+Move cursor back / forward one character (`b`: back, `f`: forward)
+
+    CTRL + b
+    CTRL + f
+
+Move cursor back / forward one word
+
+    OPTION + b
+    OPTION + f
+
+Delete word to the left / right of the cursor
 
     CTRL + w
-
-Delete all characters to the right of the cursor
-
     CTRL + k
 
 Load interactive prompt to search earlier commands
