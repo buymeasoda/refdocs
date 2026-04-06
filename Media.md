@@ -18,7 +18,12 @@ Show detailed information about audio files (macOS only)
 
 Show information from multimedia streams and files (requires ffmpeg)
 
-    ffprobe <audio-file>
+    ffprobe <media-file>
+    ffprobe -hide_banner -i <media-file>
+
+Show detailed media file information
+
+    ffprobe -hide_banner -show_streams -show_format <media-file>
 
 # Images
 
