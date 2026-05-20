@@ -18,7 +18,13 @@ Exit node REPL
 
 ## Scripts
 
+Run script
+
     node <file>
+
+Run script in watch mode
+
+    node --watch <file>
 
 # Module Versioning
 
