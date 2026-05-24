@@ -132,6 +132,14 @@ Install APK on device or emulator (enable `USB Debugging` via device `Developer 
 
     adb install <apk-file>
 
+Install APK on specific device (use `adb devices` for listing available device / emulator serials)
+
+    adb -s <serial> install <apk-file>
+
+Uninstall application from device / emulator
+
+    adb uninstall <app-id>
+
 ## ADB Key Management
 
 Create public key from private key (inside `~/.android/`)
