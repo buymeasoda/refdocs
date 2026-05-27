@@ -688,6 +688,31 @@ Checkout tag (update the working directory to reflect the history at the tag)
 
     git checkout <tag>
 
+# Git Worktree
+
+Worktrees allow branches and history states to access as separate directories while still tracking the main repo
+
+List current worktrees for repo (`git worktree` commands must be run inside git repo being operated on)
+
+    git worktree list
+
+Create new worktree (`ref`: branch / commit etc, omitting creates new branch from folder name)
+
+    git worktree add <path>
+    git worktree add <path> <ref>
+
+Create "frozen" (detached) worktree that does not update when the branch updates (eg. `ref`: `main`)
+
+    git worktree add --detach <path> <ref>
+
+Remove worktree reference and folder
+
+    git worktree remove <path>
+
+Clean up unused worktrees (eg. where worktree folder has been deleted)
+
+    git worktree prune
+
 # Git Stash
 
 ## Stash working directory changes
