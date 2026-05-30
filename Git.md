@@ -208,6 +208,10 @@ Use a double dash -- to separate a file to act on from the settings to use
 
     git log <settings> -- <file>
 
+Show all commits and history logs for specific file (provide path and filename)
+
+    git log --all -- <file>
+
 Set the output format for the commit summary (Options: oneline, short, full)
 
     git log --pretty=oneline
@@ -357,6 +361,16 @@ A temporary reference to the last branch fetched, only available immediately aft
 A temporary reference to the head of the branch that is being merged in
 
     MERGE_HEAD
+
+## Recover file from git history
+
+Show all commits related to file in history
+
+    git log --all -- <file>
+
+Restore file version from commit to current directory
+
+    git show <commit>:<source-file> > <destination-file>
 
 # Git blame and diff
 
