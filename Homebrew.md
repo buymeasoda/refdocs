@@ -29,6 +29,10 @@ Show all installed formula with associated dependencies in a tree
 
     brew deps --installed --tree
 
+Show other installed formula that depend on named formula
+
+    brew uses --installed <formula>
+
 ## Install
 
 Install formula or cask
