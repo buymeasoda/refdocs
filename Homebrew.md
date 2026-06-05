@@ -12,9 +12,13 @@ Show information for a specific formula or cask
     brew info <name>
     brew info --cask <name>
 
-Show installed formula excluding dependencies
+Show installed formula that no other formula directly depends on
 
     brew leaves
+
+Show formula installed by `brew install` (or promoted to top level formula by homebrew)
+
+    brew list --installed-on-request
 
 Show all installed formula or casks including dependencies
 
